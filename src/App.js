@@ -8,7 +8,6 @@ import Sidebar from './components/navs/Sidebar';
   return (
     <div className="App">
       <ResetUpdatePassword />
-      <Sidebar/>
     </div>
   );
  }
