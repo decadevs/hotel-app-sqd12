@@ -1,5 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import {ProfileLayout} from './layouts/userProfileLayout/ProfileLayout'
+import logo from './logo.svg';
 import './App.css';
 import ResetUpdatePassword from './components/ResetUpdatePassword/ResetUpdatePassword'
 
