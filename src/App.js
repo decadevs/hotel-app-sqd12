@@ -7,8 +7,8 @@ import Sidebar from './components/navs/Sidebar';
  function App() {
   return (
     <div className="App">
-      {/* <ResetUpdatePassword />
-      <Sidebar/> */}
+      {/* <ResetUpdatePassword /> */}
+      <Sidebar/>
     </div>
   );
  }
