@@ -1,12 +1,16 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import {ProfileLayout} from './layouts/userProfileLayout/ProfileLayout'
 import './App.css';
 import ResetUpdatePassword from '../src/components/ResetUpdatePassword/ResetUpdatePassword'
 
 function App() {
   return (
-    <div className="App">
-      <ResetUpdatePassword />
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route path ="/profile" element={<ProfileLayout/>}/>
+      <Route path ="/resetupdatepassword" element={<ResetUpdatePassword/>}/>
+    </Routes>
+    </BrowserRouter>
   );
 }
 
