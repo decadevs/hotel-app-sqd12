@@ -1,5 +1,6 @@
 import React from 'react';
 import NavLink from './NavLink';
+<<<<<<< HEAD
 import '../../style/Sidebar.css';
 import Dashboard from '../../../src/assets/Dashboard.svg';
 import Hotel from '../../../src/assets/Hotel.svg';
@@ -7,6 +8,9 @@ import Manager from '../../../src/assets/Manager.svg';
 import Transaction from '../../../src/assets/Transaction.svg';
 import Logout from '../../../src/assets/Logout.svg';
 
+=======
+import '../../componentCSS/Sidebar.css'
+>>>>>>> 32deefebc036365a9ddc4fb07decefd617685fbc
 
 export default function Sidebar(){
     function closeNav() {
@@ -16,6 +20,7 @@ export default function Sidebar(){
     
     return(
         <>
+<<<<<<< HEAD
             <NavLink/>  
             <div id="mySidenav" className="sidenav">
                 <div>
@@ -47,6 +52,16 @@ export default function Sidebar(){
                     </div>                    
                 </div>               
             </div>         
+=======
+            <div id="mySidenav" className="sidenav">
+                <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
+                <a href="#">Dashboard</a>
+                <a href="#">Hotels</a>
+                <a href="#">Manager</a>
+                <a href="#">Transactions</a>
+            </div>
+            <NavLink/>           
+>>>>>>> 32deefebc036365a9ddc4fb07decefd617685fbc
         </>
     );
 }
