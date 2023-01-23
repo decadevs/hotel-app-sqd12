@@ -4,13 +4,13 @@ import ResetUpdatePassword from '../src/components/ResetUpdatePassword/ResetUpda
 //import './App.css';
 import Sidebar from './components/navs/Sidebar';
 
-function App() {
+ function App() {
   return (
     <div className="App">
-      <ResetUpdatePassword />
-      <Sidebar/>
+      {/* <ResetUpdatePassword />
+      <Sidebar/> */}
     </div>
   );
-}
+ }
 
 export default App;
