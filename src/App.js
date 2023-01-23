@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import {ProfileLayout} from './layouts/userProfileLayout/ProfileLayout'
 import './App.css';
-import ResetUpdatePassword from '../src/components/ResetUpdatePassword/ResetUpdatePassword'
+import ResetUpdatePassword from './components/ResetUpdatePassword/ResetUpdatePassword'
 
 function App() {
   return (
