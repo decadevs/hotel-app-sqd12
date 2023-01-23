@@ -44,7 +44,7 @@ const UpdatePassword = () => {
             />
           </div>
           <div>
-            <button type="submit">Update Password</button>
+            <button type="submit">Change Password</button>
           </div>
         </form>
       </div>
