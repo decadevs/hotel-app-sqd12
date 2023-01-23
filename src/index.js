@@ -10,7 +10,7 @@ root.render(
   <React.StrictMode>
     <ErrorBoundary>
       <Suspense fallback= "loading">
-        <App/>
+        <App />
       </Suspense>
     </ErrorBoundary>
   </React.StrictMode>
