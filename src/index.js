@@ -4,8 +4,6 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ErrorBoundary from "./components/common/ErrorBoundary";
-import ResetPassword from "./ResetPassword";
-import ChangePassword from "./ChangePassword";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,8 +11,6 @@ root.render(
     <ErrorBoundary>
       <Suspense fallback="loading">
         <App />
-        <ResetPassword />
-        <ChangePassword />
       </Suspense>
     </ErrorBoundary>
   </React.StrictMode>
