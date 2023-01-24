@@ -86,7 +86,7 @@ export  function PayForHotelForm(){
                 </form>
                 
                 
-            <input type='submit' name="" value="Proceed to Checkout"/>
+            <input type='submit' name="" value="Pay For Hotel"/>
             </div>
             </div>
             
