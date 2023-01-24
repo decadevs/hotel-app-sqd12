@@ -1,17 +1,25 @@
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Login from "./components/authentication/Login";
+import Register from "./components/authentication/Register";
+import ResetUpdatePassword from "../src/components/ResetUpdatePassword/ResetUpdatePassword";
+import ResetPassword from "./components/authentication/ResetPassword";
+import ChangePassword from "./components/authentication/ChangePassword";
 import LandingPage from './components/landingPage/landingPageIndex/LandingPage';
+
 
 function App() {
   return (
-    <>
-      <Router>        
-        <Routes>
-          <Route path="landing-page" element={<LandingPage />} />
-          <Route path='/' exact/>
-        </Routes>
-      </Router>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="landing-page" element={<LandingPage />} />
+        <Route path="register" element={<Register />} />
+        <Route path="login" element={<Login />} />
+        <Route path="reset-update-password" element={<ResetUpdatePassword />} />
+        <Route path="reset-password" element={<ResetPassword />} />
+        <Route path="change-password" element={<ChangePassword />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
