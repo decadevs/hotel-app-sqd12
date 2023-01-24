@@ -26,7 +26,7 @@ function NavbarLanding() {
 
   return (
     <>
-      <nav className='navbar'>
+      <nav className='navbar-landing'>
         <div className='navbar-container'>
             <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                 LOGO 

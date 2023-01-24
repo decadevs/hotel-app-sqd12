@@ -5,9 +5,9 @@ import LandingPage from './components/landingPage/landingPageIndex/LandingPage';
 function App() {
   return (
     <>
-      <Router>
-        <LandingPage/>
+      <Router>        
         <Routes>
+          <Route path="landing-page" element={<LandingPage />} />
           <Route path='/' exact/>
         </Routes>
       </Router>
