@@ -1,0 +1,26 @@
+.input-container{
+    border: 1px solid rgba(32, 103, 161, 1);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25rem;
+    margin: 0.7rem 0;
+    border-radius: 6px;
+}
+
+.icon{
+    color:rgba(32, 103, 161, 1);
+}
+
+.input-container input
+{
+border: none;
+width: 80%;    
+padding: 0.50rem;
+outline: none;
+}
+
+.icon-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
