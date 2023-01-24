@@ -70,10 +70,10 @@ export  function PayForHotelForm(){
                         <option>2027</option>
                     </select>
              </label>
-                <label>
-                        CVV
-                        <input type='number' name='' placeholder='Enter Your CVV' />
-                </label>     
+            <div>
+            <label>CV</label>
+            </div>     
+            <input type='number' name='' placeholder='Enter Your CVV' />
                 
                         
                    
