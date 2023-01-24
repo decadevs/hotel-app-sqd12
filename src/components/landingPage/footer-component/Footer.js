@@ -12,7 +12,12 @@ function Footer() {
                 Cursus sed massa non nisi, placerat.
                 <br/>
                 <br/>
-                <i class="fa-brands fa-instagram"></i>    
+                  
+                    <i class="fa-brands fa-instagram fa-icons"></i>
+                    <i class="fa fa-globe fa-icons"></i>  
+                    <i class="fa-brands fa-twitter fa-icons"></i> 
+                    <i class="fa-brands fa-youtube fa-icons"></i>      
+
 
                 </p>
             </div>

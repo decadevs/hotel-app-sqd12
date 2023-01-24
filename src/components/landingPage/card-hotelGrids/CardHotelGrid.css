@@ -1,5 +1,5 @@
 .card_grid_container {
-    padding: 8.5rem;
+    padding: 3rem 8.5rem 0rem;
     display: grid;
     /* height: 100vh; */
     grid-template-columns: 1fr 1fr 1fr;
@@ -14,8 +14,11 @@
     align-items: center;
     justify-content: space-around;
     align-items: center;
+    background: #fafdff;
+    
     /* border: 2px solid yellowgreen */
 }
+
 
 .gridImg {
     width: 100%;
@@ -235,6 +238,6 @@
 }
 
 #h1heading {
-    margin-left: 5rem;
+    margin-left: 9rem;
     text-align: left;
 }

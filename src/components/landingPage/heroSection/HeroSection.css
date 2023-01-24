@@ -4,6 +4,7 @@
     margin: 2rem;
     align-items: center;
     text-align: center;
+    padding: 0rem 4rem 0rem;
 }
 
 .hero-container > div {
@@ -21,6 +22,7 @@
     text-align: left;
     margin-bottom: 20px;
     color: #2067A1;
+    font-size: 1em;
 }
 
 .play {
@@ -29,18 +31,21 @@
 
 .hero_images_container {
     display: flex;
+    position: relative;
     align-items: center;
 }
 
-
-.hero_images_container {
-    position: relative;
- }
  .hero_front_image {
     position: absolute;
     top: 2;
     left: 5;
-    width: 95vh;
+    width: 70vh;
+    height: 50vh;
+ }
+
+ .hero_back_image {
+    width: 80vh;
+    height: 60vh;
  }
 
 
@@ -74,7 +79,7 @@
      }
 
     .hero-p {
-        font-size: 30px;
+        /* font-size: 30px; */
     }
 
     .btn-mobile {

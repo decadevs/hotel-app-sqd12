@@ -55,7 +55,7 @@ function NavbarLanding() {
                     </Link>
                 </li>
             </ul>
-            {button && <Button buttonStyle='btn--outline'>Submit</Button>}
+            {/* {button && <Button buttonStyle='btn--outline'>Submit</Button>} */}
         </div>
       </nav>
     </>
