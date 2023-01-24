@@ -50,8 +50,8 @@ function NavbarLanding() {
                     </Link>
                 </li>
                 <li className='nav-item'>
-                    <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                        Help
+                    <Link to='/login' className='nav-links' onClick={closeMobileMenu}>
+                        Login
                     </Link>
                 </li>
             </ul>
