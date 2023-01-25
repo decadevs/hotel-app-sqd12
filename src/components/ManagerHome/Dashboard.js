@@ -18,10 +18,8 @@ function Dashboard() {
         textAlign: "left"
       }}>
       <div className="card-body" style={{
-      fontFamily: "Aribau Grotesk",
-      fontSize: "24px",
-      fontWeight: "500",
-      lineHeight: "31px",
+        fontFamily: "Aribau Grotesk", 
+        fontSize: "18px",
       letterSpacing: "0em",
       textAlign: "left"
     }}>
