@@ -7,47 +7,39 @@
   width: 455px;
   left: 345px;
   top: 312px;
-  }
-  .style {
-    font-family: Aribau Grotesk;
-    font-size: 8px;
-    font-weight: 300;
-    line-height: 23px;
-    letter-spacing: 0em;
-    text-align: left;
-  }
+}
 
-.rectangle-15 {
+.manager-admin-pane .avatar {
   position: absolute;
-  width: 5px;
-  height: 1px;
-  left: 1055px;
-  top: 312px;
-  background: #FFFFFF;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  }
-  .ellipse-1 {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    left: 374px;
-    top: 350px;
+  width: 100px;
+  height: 100px;
+  left: 20px;
+  top: 20px;
   background: url(avatar.jpg), #FFFFFF;
-  }
-  .angelo-akuhwa {
-    position: absolute;
-    width: 229px;
-    height: 61px;
-    left: 493px;
-    top: 367px;
-    font-family: 'Aribau Grotesk';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 31px;
-    color: #173752;
-  }
+  border-radius: 50%;
+}
+
+.manager-admin-pane .name {
+  position: absolute;
+  width: 229px;
+  height: 61px;
+  left: 140px;
+  top: 50px;
+  font-family: 'Aribau Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  color: #173752;
+}
+
+.manager-admin-pane .details {
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  left: 20px;
+  top: 120px;
+}
   .hotel-info {
   position: absolute;
   width: 373px;
@@ -64,6 +56,7 @@
   }
 
 .managerTable {
+  position: justify;
   width: 1020px;
   height: 1311px;
   left: 0px;

@@ -18,22 +18,26 @@ function Dashboard() {
         textAlign: "left"
       }}>
       <div className="card-body" style={{
-        fontFamily: "Aribau Grotesk", 
+        fontFamily: "Aribau Grotesk",
         fontSize: "18px",
-      letterSpacing: "0em",
-      textAlign: "left"
+        letterSpacing: "0em",
+        textAlign: "left"
     }}>
-        <div className="manager-info">
-          <img src={require('./avatar.jpg')} alt="Avatar" className="avatar" />
-          <div className="name">Angelo Akuhwa</div>
-          <div className="age-gender">28, Male</div>
+        <div className="manager-info-container" style={{ display: 'flex', flexDirection: 'card'}}>
+    <div style={{ display: 'flex' }}>
+        <img src={require('./avatar.jpg')} alt="Avatar" className="avatar" />
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div className="name"> Angelo Akuhwa </div>
+            <div className="age-gender">28, Male</div>
         </div>
-        <div className="details">
-          <div className="hotel">Hotel: Radison Blu Hotels</div>
-          <div className="mobile">Mobile: 08032342134</div>
-          <div className="email">Email: angelo.a@email.com</div>
-          <div className="address">Address: 23 Ohen Street, Edo</div>
-        </div>
+    </div>
+    <div className="details">
+        <div className="hotel">Hotel: Radison Blu Hotels</div>
+        <div className="mobile">Mobile: 08032342134</div>
+        <div className="email">Email: angelo.a@email.com</div>
+        <div className="address">Address: 23 Ohen Street, Edo</div>
+    </div>
+</div>
       </div>
             <div className="managerTable">
     <div className="ManagerSearchBar">
