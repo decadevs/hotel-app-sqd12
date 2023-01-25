@@ -1,7 +1,7 @@
 /* The side navigation menu */
 .sidenav {
     height: 200%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
+    width: 250px; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
     top: 85px; /* Stay at the top */
@@ -62,6 +62,7 @@
   
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
   #main {
+    margin-left: 250px;
     transition: margin-left .5s;
     padding: 20px;
     background-color: #F6FCFF;

@@ -5,8 +5,14 @@ import Register from "./components/authentication/Register";
 import ResetUpdatePassword from "../src/components/ResetUpdatePassword/ResetUpdatePassword";
 import ResetPassword from "./ResetPassword";
 import ChangePassword from "./ChangePassword";
-//import './App.css';
-import Sidebar from "./components/navs/Sidebar";
+import CustomerDashboard from "./components/customerHome/Dashboard";
+import ManagerDashboard from "./components/managerHome/Dashboard";
+import AdminDashboard from "./components/adminHome/Dashboard";
+import CustomerHotel from "./components/customerHome/Hotels";
+import CustomerManager from "./components/customerHome/Manager";
+import CustomerTransaction from "./components/customerHome/Transactions";
+
+
 
 function App() {
   return (
@@ -17,6 +23,12 @@ function App() {
         <Route path="reset-update-password" element={<ResetUpdatePassword />} />
         <Route path="reset-password" element={<ResetPassword />} />
         <Route path="change-password" element={<ChangePassword />} />
+        <Route path="customer-dashboard" element={<CustomerDashboard />} />
+        <Route path="manager-dashboard" element={<ManagerDashboard />} />
+        <Route path="admin-dashboard" element={<AdminDashboard />} />
+        <Route path="customer-hotel" element={<CustomerHotel/>} />
+        <Route path="customer-manager" element={<CustomerManager/>} />
+        <Route path="customer-transaction" element={<CustomerTransaction/>} />
       </Routes>
     </BrowserRouter>
   );
