@@ -12,12 +12,12 @@ function Transactions() {
   return (
     <div className="tranTable">
       <h2>Transaction</h2>
-      <div className="TransactionSearchBar">
+      <div className="earchBar">
         <span>
           <BiFilter className="TransactionFilterIcon" />
         </span>
-        <div className="TransactionsearchInput">
-          <HiMagnifyingGlass className="TransactionSearchIcon" />
+        <div className="earchInput">
+          <HiMagnifyingGlass className="earchIcon" />
           <input type="text" placeholder="Search" />
         </div>
       </div>
