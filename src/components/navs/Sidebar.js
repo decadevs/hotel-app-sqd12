@@ -14,7 +14,6 @@ export default function Sidebar({roleValue}){
         document.getElementById("main").style.marginLeft= "0";
     }
     
-
     let dashboard;
     let hotel;
     let plug;
