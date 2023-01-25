@@ -1,17 +1,24 @@
 
 
-.tranTable {
-    width: 900px;
-    /* height: 500px; */
-    overflow-x: scroll;
-    margin: 0 auto;
+.UsertranTable {
+  position: absolute;
+  width: 1020px;
+  height: 730px;
+  left: 0px;
+  top: 0px;
+  
+  /* Background */
+  
+  background: #FFFFFF;
+  border-radius: 6px;
+    
   }
   table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 1020px;
   }
-  .TransactionSearchBar {
+  .UserTransactionSearchBar {
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -20,11 +27,11 @@
   .TransactionFilterIcon {
     font-size: 20px;
   }
-  .TransactionsearchInput {
+  .UserTransactionsearchInput {
     width: max-content;
     position: relative;
   }
-  .TransactionsearchInput input {
+  .UserTransactionSearchBar input {
     width: 300px;
     font-size: 14px;
     padding: 10px 30px;
@@ -32,7 +39,7 @@
     background-color: #dae1ec;
     border: 1px solid #dae1ec;
   }
-  .TransactionSearchIcon {
+  .UserTransactionSearchIcon {
     font-size: 20px;
     position: absolute;
     top: 25%;
@@ -55,7 +62,7 @@
   Transaction-pagination h4 {
     display: inline-flex;
   }
-  .TranCheckBox {
+  .UserTranCheckBox {
     width: 20px;
   }
   tr:nth-child(even) {
@@ -94,4 +101,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    }
+    .Action{
+      display:inline-flex;
+      
     }

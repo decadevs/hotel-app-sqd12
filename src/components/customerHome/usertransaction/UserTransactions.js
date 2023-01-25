@@ -5,8 +5,8 @@ import Active from '../../../assets/Active.svg'
 import Inactive from '../../../assets/Inactive.svg';
 import Edit from '../../../assets/Edit.svg';
 import Delete from '../../../assets/Delete.svg';
+import Filter from '../../../assets/Filter.svg';
 import { HiMagnifyingGlass } from "react-icons/hi2";
-import { BiFilter } from "react-icons/bi"
 import React, { useState } from "react";
 import { FaEllipsisH, FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
@@ -118,7 +118,7 @@ function UserTransactions() {
         setCurrentPage(pageNumber);
     };
     const [currentPage, setCurrentPage] = useState(1);
-    let [transactionsPerPage,setTransactionPerPage] = useState();
+    let [transactionsPerPage,setTransactionPerPage] = useState(0);
     const page = (transactionsPerPage) => {
         if (transactions.length < 10) {
             return transactionsPerPage = transactions.length;
@@ -154,20 +154,18 @@ function UserTransactions() {
 
     return (
 
-        <div className="tranTable">
+        <div className="UsertranTable">
             <h2>Transactions</h2>
-            <div className="TransactionSearchBar">
-                <span>
-                    <BiFilter className="TransactionFilterIcon" />
-                </span>
-                <div className="TransactionsearchInput">
-                    <HiMagnifyingGlass className="TransactionSearchIcon" />
+            <div className="UserTransactionSearchBar">
+                <img src={Filter} alt='Your SVG'/>
+                <div className="UserTransactionsearchInput">
+                    <HiMagnifyingGlass className="UserTransactionSearchIcon" />
                     <input type="text" placeholder="Search" />
                 </div>
             </div>
             <table>
                 <tr>
-                    <th className="TranCheckBox">
+                    <th className="UserTranCheckBox">
                         <input type="checkbox" />
                     </th>
                     <th>NAME</th>
@@ -182,7 +180,7 @@ function UserTransactions() {
                 </tr>
                 {currentTransactions.map((transaction) => (
                     <tr key={transaction.id}>
-                        <th className="TranCheckBox">
+                        <th className="UserTranCheckBox">
                             <input type="checkbox" />
                         </th>
                         <th>{transaction.name}</th>
@@ -191,9 +189,9 @@ function UserTransactions() {
                         <th>{transaction.balance}</th>
                         <th>{transaction.deposit}</th>
                         <th>{transaction.status ? <img alt="Your SVG" src={Active} /> : <img alt="Your SVG" src={Inactive} />}</th>
-                        <th>
+                        <th className="Action">
                             <img alt="Your SVG" src={Edit} onClick={() => handleEdit(transaction.id)} />
-                            <img alt="Your SVG" src={Delete} onClick={() => handleDelete(transaction.id)} />
+                            <img alt="Your SVG" src={Delete} onClick={() => handleDelete(transaction.id)} />...
                         </th>
                     </tr>
                 ))}
