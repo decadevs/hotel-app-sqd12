@@ -3,9 +3,6 @@ import "./App.css";
 import Login from "./components/authentication/Login";
 import Register from "./components/authentication/Register";
 import ResetUpdatePassword from "../src/components/ResetUpdatePassword/ResetUpdatePassword";
-// import ResetPassword from "./ResetPassword";
-// import ChangePassword from "./ChangePassword";
-//import './App.css';
 import Sidebar from "./components/navs/Sidebar";
 import UserTransactions from "./components/customerHome/usertransaction/UserTransactions";
 import ResetPassword from "./components/authentication/ResetPassword";
@@ -26,8 +23,10 @@ function App() {
         <Route path="reset-password" element={<ResetPassword />} />
         <Route path="change-password" element={<ChangePassword />} />
         <Route path="user-transaction" element={< UserTransactions/>} />
-        <Route path="customer-transactions" element={<Transactions />}/>
+         <Route path="customer-transactions" element={<Transactions />}/> 
+      
       </Routes>
+      
       
     </BrowserRouter>
   );
