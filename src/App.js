@@ -5,6 +5,7 @@ import Register from "./components/authentication/Register";
 import ResetUpdatePassword from "../src/components/ResetUpdatePassword/ResetUpdatePassword";
 import ResetPassword from "./components/authentication/ResetPassword";
 import ChangePassword from "./components/authentication/ChangePassword";
+import Booking from "./pages/customer/Booking";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="reset-update-password" element={<ResetUpdatePassword />} />
         <Route path="reset-password" element={<ResetPassword />} />
         <Route path="change-password" element={<ChangePassword />} />
+        <Route path="booking" element={<Booking />} />
       </Routes>
     </BrowserRouter>
   );

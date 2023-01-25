@@ -1,7 +1,7 @@
-import React from 'react'
-import Button from '../common/Button'
-import Input from '../common/Input'
-import './Booking.css'
+import React from 'react';
+import Button from '../../components/common/Button';
+import Input from '../../components/common/Input';
+import '../../style/Booking.css';
 const Booking = () => {
   return (
     <div className='booking-container'>
