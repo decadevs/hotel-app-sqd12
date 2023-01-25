@@ -10,7 +10,8 @@ import Sidebar from "./components/navs/Sidebar";
 import UserTransactions from "./components/customerHome/usertransaction/UserTransactions";
 import ResetPassword from "./components/authentication/ResetPassword";
 import ChangePassword from "./components/authentication/ChangePassword";
-import LandingPage from './components/landingPage/landingPageIndex/LandingPage';
+import LandingPage from"./components/landingPage/landingPageIndex/LandingPage";
+import Transactions from "./components/customerHome/Transactions/Transactions";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="reset-password" element={<ResetPassword />} />
         <Route path="change-password" element={<ChangePassword />} />
         <Route path="user-transaction" element={< UserTransactions/>} />
+        <Route path="customer-transactions" element={<Transactions />}/>
       </Routes>
       
     </BrowserRouter>
