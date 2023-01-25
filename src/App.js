@@ -5,6 +5,7 @@ import Register from "./components/authentication/Register";
 import ResetUpdatePassword from "../src/components/ResetUpdatePassword/ResetUpdatePassword";
 import ResetPassword from "./ResetPassword";
 import ChangePassword from "./ChangePassword";
+import Dashboard from "./components/ManagerHome/Dashboard";
 //import './App.css';
 import Sidebar from "./components/navs/Sidebar";
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="reset-update-password" element={<ResetUpdatePassword />} />
         <Route path="reset-password" element={<ResetPassword />} />
         <Route path="change-password" element={<ChangePassword />} />
+        <Route path="dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );

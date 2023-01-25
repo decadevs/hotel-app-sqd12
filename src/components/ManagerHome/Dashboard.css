@@ -1,0 +1,129 @@
+.manager-admin-pane {
+  position: absolute;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  height: 370px;
+  width: 455px;
+  left: 345px;
+  top: 312px;
+  }
+  .style {
+    font-family: Aribau Grotesk;
+    font-size: 8px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+.rectangle-15 {
+  position: absolute;
+  width: 5px;
+  height: 1px;
+  left: 1055px;
+  top: 312px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  }
+  .ellipse-1 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 374px;
+  top: 350px;
+  background: url(avatar.jpg), #FFFFFF;
+  }
+  .angelo-akuhwa {
+  position: absolute;
+  width: 69px;
+  height: 61px;
+  left: 700px;
+  top: 167px;
+  font-family: 'Aribau Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2px;
+  line-height: 31px;
+  color: #173752;
+  }
+  .hotel-info {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  left: 700x;
+  top: 167px;
+  font-family: 'Aribau Grotesk';
+  font-style: normal;
+  font-weight: 30;
+  font-size: 3px;
+  line-height: 23px;
+  color: #1A2E3D;
+  }
+
+  
+.tranTable {
+  width: 900px;
+  /* height: 500px; */
+  overflow-x: scroll;
+  margin: 0 auto;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 1020px;
+}
+.TransactionSearchBar {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.TransactionFilterIcon {
+  font-size: 20px;
+}
+.TransactionsearchInput {
+  width: max-content;
+  position: relative;
+}
+.TransactionsearchInput input {
+  width: 300px;
+  font-size: 14px;
+  padding: 10px 30px;
+  border-radius: 4px;
+  background-color: #dae1ec;
+  border: 1px solid #dae1ec;
+}
+.TransactionSearchIcon {
+  font-size: 20px;
+  position: absolute;
+  top: 25%;
+  left: 7px;
+}
+td,
+th {
+  text-align: center;
+  padding: 18px 8px;
+  width: 20px;
+}
+.TransactionCrud {
+  display: flex;
+  padding: 18px 8px;
+  text-align: center;
+}
+.Transaction-pagination {
+  display: flex;
+}
+Transaction-pagination h4 {
+  display: inline-flex;
+}
+.TranCheckBox {
+  width: 20px;
+}
+tr:nth-child(even) {
+  background-color: #f4f7fc;
+}
+tr:hover {
+  background-color: #4b515b26;
+}
