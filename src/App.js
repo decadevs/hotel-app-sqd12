@@ -7,6 +7,8 @@ import Sidebar from "./components/navs/Sidebar";
 import UserTransactions from "./components/customerHome/usertransaction/UserTransactions";
 import ResetPassword from "./components/authentication/ResetPassword";
 import ChangePassword from "./components/authentication/ChangePassword";
+import './components/PayForHotel/PayForHotelForm.css';
+import {PayForHotelForm} from './components/PayForHotel/PayForHotelForm';
 import LandingPage from"./components/landingPage/landingPageIndex/LandingPage";
 import Transactions from "./components/customerHome/Transactions/Transactions";
 
@@ -16,15 +18,19 @@ function App() {
     <BrowserRouter>
     
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+         <Route path="/" element={<LandingPage />} />
         <Route path="register" element={<Register />} />
-        <Route path="login" element={<Login />} />
+        <Route path="login" element={<Login />} /> 
         <Route path="reset-update-password" element={<ResetUpdatePassword />} />
         <Route path="reset-password" element={<ResetPassword />} />
         <Route path="change-password" element={<ChangePassword />} />
         <Route path="user-transaction" element={< UserTransactions/>} />
          <Route path="customer-transactions" element={<Transactions />}/> 
       
+         {/* <Route path="reset-password" element={<ResetPassword />} />
+        <Route path="change-password" element={<ChangePassword />   */}
+      <Route path="pay-for-hotel" element={<PayForHotelForm />} /> 
+        <Route path="customer-transactions" element={<Transactions />}/>
       </Routes>
       
       
