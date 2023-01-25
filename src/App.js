@@ -4,9 +4,8 @@ import Login from "./components/authentication/Login";
 import Register from "./components/authentication/Register";
 import ResetUpdatePassword from "../src/components/ResetUpdatePassword/ResetUpdatePassword";
 import ResetPassword from "./ResetPassword";
-import ChangePassword from "./ChangePassword";
 //import './App.css';
-import Sidebar from "./components/navs/Sidebar";
+import AddRoom from "../src/pages/manager/AddRoom";
 
 function App() {
   return (
@@ -16,7 +15,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="reset-update-password" element={<ResetUpdatePassword />} />
         <Route path="reset-password" element={<ResetPassword />} />
-        <Route path="change-password" element={<ChangePassword />} />
+        <Route path="addroom" element={<AddRoom />} />
       </Routes>
     </BrowserRouter>
   );
