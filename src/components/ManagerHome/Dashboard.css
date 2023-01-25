@@ -28,74 +28,87 @@
   border-radius: 25px;
   }
   .ellipse-1 {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  left: 374px;
-  top: 350px;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 374px;
+    top: 350px;
   background: url(avatar.jpg), #FFFFFF;
   }
   .angelo-akuhwa {
-  position: absolute;
-  width: 69px;
-  height: 61px;
-  left: 700px;
-  top: 167px;
-  font-family: 'Aribau Grotesk';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 2px;
-  line-height: 31px;
-  color: #173752;
+    position: absolute;
+    width: 229px;
+    height: 61px;
+    left: 493px;
+    top: 367px;
+    font-family: 'Aribau Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    color: #173752;
   }
   .hotel-info {
   position: absolute;
-  width: 5px;
-  height: 5px;
-  left: 700x;
-  top: 167px;
+  width: 373px;
+  height: 164px;
+  left: 374x;
+  top: 489px;
+  background-color: #FFFFFF;
   font-family: 'Aribau Grotesk';
   font-style: normal;
-  font-weight: 30;
-  font-size: 3px;
+  font-weight: 300;
+  font-size: 18px;
   line-height: 23px;
   color: #1A2E3D;
   }
 
-  
-.tranTable {
-  width: 900px;
-  /* height: 500px; */
+.managerTable {
+  width: 1020px;
+  height: 1311px;
+  left: 0px;
+  top: 0px;
+  background: #F4F7FC;
   overflow-x: scroll;
   margin: 0 auto;
 }
 table {
-  font-family: arial, sans-serif;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #2E3B52;
   border-collapse: collapse;
   width: 1020px;
+  height: 1311px;
+  left: 0px;
+  right: 0px;
 }
-.TransactionSearchBar {
+.ManagerSearchBar {
   margin-bottom: 20px;
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: 30px;
 }
-.TransactionFilterIcon {
+.ManagerFilterIcon {
   font-size: 20px;
 }
-.TransactionsearchInput {
+.ManagersearchInput {
   width: max-content;
-  position: relative;
+  position: absolute;
+  border-radius: 4px;
 }
-.TransactionsearchInput input {
-  width: 300px;
+.ManagersearchInput input {
+  width: 47px;
+  height: 17px;
   font-size: 14px;
   padding: 10px 30px;
   border-radius: 4px;
   background-color: #dae1ec;
   border: 1px solid #dae1ec;
 }
-.TransactionSearchIcon {
+.ManagerSearchIcon {
   font-size: 20px;
   position: absolute;
   top: 25%;
@@ -107,18 +120,18 @@ th {
   padding: 18px 8px;
   width: 20px;
 }
-.TransactionCrud {
+.ManagerCrud {
   display: flex;
   padding: 18px 8px;
   text-align: center;
 }
-.Transaction-pagination {
+.Manager-pagination {
   display: flex;
 }
-Transaction-pagination h4 {
+Manager-pagination h4 {
   display: inline-flex;
 }
-.TranCheckBox {
+.ManagerCheckBox {
   width: 20px;
 }
 tr:nth-child(even) {
