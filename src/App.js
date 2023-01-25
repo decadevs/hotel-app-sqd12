@@ -17,6 +17,7 @@ import Delete from "./components/modals/DeleteModal";
 import Update from "./components/modals/UpdatedModal";
 import Error from "./components/modals/ErrorModal";
 import Success from "./components/modals/SuccessModal";
+import HotelReview from "./components/HotelReview/HotelReview";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <Route path="update-modal" element={<Update />} />
         <Route path="error-modal" element={<Error />} />
         <Route path="success-modal" element={<Success />} />
+        <Route path="hotel-review" element={<HotelReview />} />
       </Routes>
       
       
