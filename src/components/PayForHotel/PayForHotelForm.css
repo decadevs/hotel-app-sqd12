@@ -1,25 +1,25 @@
-*{padding:0; margin:0; box-sizing: border-box; font-family:"Goudy Bookletter 1911", sans-serif;}
-header{
+*{padding:0; margin:0; box-sizing: border-box; font-family:"Bahnschrift SemiBold", sans-serif;}
+.pay-header{
 	width: 100vw;
 	min-height: 110vh;
-	background: #7ca7d2;
+	background: #cde4fa;
 	font-size: 1.2rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.title{
+.pay-title{
   position:absolute;
   top: 0;
   font-weight: bolder;
 }
 
-.title-name{
+.pay-title-name{
   font-weight: 800;
 }
 
-.container{
-	background: rgb(240, 239, 241);
+.pay-container{
+	background: rgb(255, 255, 255);
 	max-width: 800px;
 	min-height: 500px;
 	display: flex;
@@ -30,40 +30,41 @@ header{
   border-radius: 25px;
   border: 1px solid #173752
 }
-.left{
+.pay-left{
 	flex-basis: 50%;
 }
-.right{
+.pay-right{
 	flex-basis: 50%;
 }
-form{
+#pay-form{
 	padding: 1rem;
 }
 
-h3{
+.pay-h3{
 	margin-top: 1rem;
 	color:#2c3e50;
 	}
 
-form input[type="text"]{
+#pay-form input[type="text"]{
 	width: 100%;
 	padding: 0.5rem 0.7rem;
 	margin: 0.5rem 0;
 	outline: none;
 }
 
-#zip{
+#pay-zip{
 	display: flex;
 	margin-top: 0.5rem;
 }
-#zip select{
+#pay-zip select{
 	padding: 0.5rem 0.7rem;
 }
-#zip input[type="number"]{
+#pay-zip input[type="number"]{
 	padding: 0.6rem 0.8rem;
-	margin-left: 5px;	
+	margin-left: 5px;
+	align-self: flex-start;	
 }
-input[type="submit"]{
+.pay-submit[type="submit"]{
 	width: 100%;
 	padding: 0.5rem 1.5rem;
 	background: #0d5dac;
@@ -77,19 +78,26 @@ input[type="submit"]{
  
 }
 
-input[type="submit"]:hover{
+.pay-submit[type="submit"]:hover{
 	background: #287d8e;
 }
 
-img {
-  max-width: 350px; /* sets the maximum width of the image to 100 pixels */
-  max-height: 350px; /* sets the maximum height of the image to 100 pixels */
+.pay-img {
+  max-width: 350px; 
+  max-height: 350px; 
 }
 
-#promo{
+.pay-input{
+	width: 150px;
+}
+.pay-input2{
+	width: 150px;
+}
+
+#pay-promo{
   padding: 1rem;
 }
-#promo input[type="number"]{
+#pay-promo input[type="number"]{
   width: 100%;
 	padding: 0.5rem 0.7rem;
 	margin: 0.5rem 0;
@@ -97,7 +105,7 @@ img {
 }
 
 @media only screen and (max-width: 770px){
-	.container{
+	.pay-container{
 		flex-direction: column;
 	}
 	body{

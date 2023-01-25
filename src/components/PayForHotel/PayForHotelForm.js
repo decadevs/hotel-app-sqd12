@@ -1,19 +1,20 @@
 import React from 'react';
-import bgImg from '../assets/images.jfif'
+
+import bgImg from '../../assets/images.jfif';
 
 
 export  function PayForHotelForm(){
     return(
         
-        <header>
-            <div className='title'>
-            <h2 className='title-name'>Hotel Payment Form</h2>
+        <header className='pay-header'>
+            <div className='pay-title'>
+            <h2 className='pay-title-name'>Hotel Payment Form</h2>
             </div>
               
-            <div className="container">
-            <div className='left'>
-            <h3>Billing Address</h3>
-            <form id='form' className='flex flex-col'>
+            <div className="pay-container">
+            <div className='pay-left'>
+            <h3 className='pay-h3'>Billing Address</h3>
+            <form id='pay-form' >
                 First Name
             <input type='text' name='' placeholder='First Name' required/>
             Last Name
@@ -26,7 +27,7 @@ export  function PayForHotelForm(){
             <input type='text' name='' placeholder='Address Line 2'/>
             City
             <input type="text" name='' placeholder='City'/>
-            <div id='zip'>
+            <div id='pay-zip'>
                 <label>
                     State
                     <select>
@@ -40,60 +41,53 @@ export  function PayForHotelForm(){
                     </label>
                     <label>
                         Zip Code
-                        <input type='number' name='' placeholder='Zip Code' />
+                        <input className='pay-input' type='number' name='' placeholder='Zip Code' />
                     </label>
                 
             </div>
             </form>
             </div>
-            <div class="right">
-                <h3>Payment</h3>
+            
+            <div class="pay-right">
                 <br/>
-                <form id='form' className='flex flex-col'>
+                <h3>Payment</h3>
+                
+                <form id='pay-form' className='flex flex-col'>
                 Accepted Card Payment Methods <br/>
-                <img src={bgImg} alt=''/>
+                <img src={bgImg} className='pay-img' alt=''/>
                 <br/>
                 
                  Card Number
                 <input type='text' name='' placeholder='Card Number' required/>
                 Expiry Month
                 <input type='text' name='' placeholder='Expiry Month' required />
-                <div id='zip'>
-                <label>
-                    Expiry Year
-                    <select>
-                        <option>Choose Year...</option>
-                        <option>2023</option>
-                        <option>2024</option>
-                        <option>2025</option>
-                        <option>2026</option>
-                        <option>2027</option>
-                    </select>
-             </label>
-            <div>
-            <label>CV</label>
-            </div>     
-            <input type='number' name='' placeholder='Enter Your CVV' />
-                
-                        
-                   
-            </div>
+                <div id='pay-zip'>
+                    <label>
+                        Expiry Year
+                        <select>
+                            <option>Choose Year...</option>
+                            <option>2023</option>
+                            <option>2024</option>
+                            <option>2025</option>
+                            <option>2026</option>
+                            <option>2027</option>
+                        </select>
+                    </label>
+                    <div>
+                        <p className='pay-cvv'>CVV</p>   
+                        <input className='pay-input2' type='number' name='' placeholder='Enter Your CVV' />  
+                    </div>
+                    
+                </div>
             </form>
             
-                <form id='promo'>
+                <form id='pay-promo'>
                 Promo Code
                         <input type='number' name='' placeholder='Promo Code' />
                 </form>
-                
-                
-            <input type='submit' name="" value="Pay For Hotel"/>
+                <input className='pay-submit' type='submit' name="" value="Pay For Hotel"/>
             </div>
-            </div>
-            
-
-            
-            
-        
+            </div> 
         </header>
         
     )
