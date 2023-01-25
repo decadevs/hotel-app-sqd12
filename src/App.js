@@ -7,6 +7,8 @@ import ResetPassword from "./ResetPassword";
 import ChangePassword from "./ChangePassword";
 //import './App.css';
 import Sidebar from "./components/navs/Sidebar";
+import CreateAmenity from "./components/amenity/CreateAmenity";
+import Amenities from "./components/amenity/Amenities";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="reset-update-password" element={<ResetUpdatePassword />} />
         <Route path="reset-password" element={<ResetPassword />} />
         <Route path="change-password" element={<ChangePassword />} />
+        <Route path="create-amenity" element={<CreateAmenity />} />
+        <Route path="amenities" element={<Amenities />} />
       </Routes>
     </BrowserRouter>
   );
