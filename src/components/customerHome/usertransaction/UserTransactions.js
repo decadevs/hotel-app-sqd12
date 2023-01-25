@@ -7,12 +7,30 @@ import Edit from '../../../assets/Edit.svg';
 import Delete from '../../../assets/Delete.svg';
 import Filter from '../../../assets/Filter.svg';
 import { HiMagnifyingGlass } from "react-icons/hi2";
-import React, { useState } from "react";
+import React, { useState, } from "react";
+// import axios from 'axios';
 import { FaEllipsisH, FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 
 function UserTransactions() {
     const [transactions, setTransactions] = useState([ ]);
+    // useEffect(() => {
+    //     axios
+    //       .get('https://localhost:7161/WeatherForecast')
+    //       .then(response => {
+    //         setTransactions(response.transactions);
+    //       })
+    //       .catch(error => {
+    //         console.log(error);
+    //       });
+    //   }, []);
+    fetch('https://localhost:7161/WeatherForecast')
+    .then(res=> res.json())
+    .then(json=>{
+        setTransactions({
+            transactions:json,
+        })
+    });
     const handlePageChange = pageNumber => {
         setCurrentPage(pageNumber);
     };
@@ -37,17 +55,17 @@ function UserTransactions() {
 
     // Change page
     //const paginate = (pageNumber) => setCurrentPage(pageNumber);
-    const handleEdit = (editedTransaction) => {
-        const updatedTransactions = transactions.map(transaction => {
-            if (transaction.id === editedTransaction) {
-                return editedTransaction;
+    const handleEdit = (id) => {
+        const updatedTransactions = transactions.map((transaction) => {
+            if (transaction.id === id) {
+                return transaction;
             }
             return transaction;
         });
         setTransactions(updatedTransactions);
     }
-    function handleDelete(transactionid) {
-        setTransactions(transactions.filter(transaction => transaction.id !== transactionid));
+    function handleDelete(id) {
+        setTransactions(transactions.filter((transaction) => transaction.id !== id));
     }
     const activeUsers = transactions.filter(x=> x.status ===true).length;
 
