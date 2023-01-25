@@ -1,5 +1,5 @@
 import React from "react";
-import "./Transaction.css";
+import "./Transactions.css";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { BiFilter } from "react-icons/bi";
 import { FaEllipsisH } from "react-icons/fa";

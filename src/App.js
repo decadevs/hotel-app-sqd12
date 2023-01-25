@@ -6,7 +6,7 @@ import ResetUpdatePassword from "../src/components/ResetUpdatePassword/ResetUpda
 import ResetPassword from "./components/authentication/ResetPassword";
 import ChangePassword from "./components/authentication/ChangePassword";
 import LandingPage from"./components/landingPage/landingPageIndex/LandingPage";
-import Transactions from "./components/customerHome/Transactions/Transactions";
+import Transactions from "./components/transaction/Transactions";
 
 
 function App() {
