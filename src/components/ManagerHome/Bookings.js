@@ -2,15 +2,15 @@ import Sidebar from '../navs/Sidebar';
 import NavLink from '../navs/NavLink';
 import Navbar from '../navs/Navbar';
 
-export default function Manager() {
+export default function Bookings() {
     return(
         <>
             <Navbar/>
             <NavLink>
-                <div> Admin</div>
-                <div>Manager</div>
+                <div> Bookings</div>
+                <div></div>
             </NavLink> 
-            <Sidebar roleValue={"Admin"}/>
+            <Sidebar roleValue={"Manager"}/>
         </>
         
     )

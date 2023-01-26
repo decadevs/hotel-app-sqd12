@@ -27,14 +27,14 @@ export default function Sidebar({roleValue}){
 
     }else if(roleValue === "Admin"){
         dashboard = "admin-dashboard";
-        hotel = "admin-hotel";
+        hotel = "admin-hotels";
         plug = "admin-manager";
         transaction = "admin-transaction";
 
     }else if(roleValue === "Manager"){
         dashboard = "manager-dashboard";
         hotel = "manager-hotel"
-        plug = "manager-customer"
+        plug = "manager-bookings"
         transaction = "manager-transaction";
     }else{
         dashboard = "";
