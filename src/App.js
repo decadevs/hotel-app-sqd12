@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/authentication/Login";
  import Register from "./components/authentication/Register";
 import ResetUpdatePassword from "../src/components/ResetUpdatePassword/ResetUpdatePassword";
-import ResetPassword from "./ResetPassword";
+//import ResetPassword from "./ResetPassword";
 import ChangePassword from "./ChangePassword";
 import CustomerDashboard from "./components/customerHome/Dashboard";
 import ManagerDashboard from "./components/managerHome/Dashboard";
@@ -12,10 +12,9 @@ import CustomerHotel from "./components/customerHome/Hotels";
 import CustomerManager from "./components/customerHome/Manager";
 import CustomerTransaction from "./components/customerHome/Transactions";
 import AddRoom from "../src/pages/manager/AddRoom";
-import Sidebar from "./components/navs/Sidebar";
-import UserTransactions from "./components/customerHome/usertransaction/UserTransactions";
+// import UserTransactions from "./components/customerHome/usertransaction/UserTransactions";
 import ResetPassword from "./components/authentication/ResetPassword";
-import ChangePassword from "./components/authentication/ChangePassword";
+// import ChangePassword from "./components/authentication/ChangePassword";
 import './components/PayForHotel/PayForHotelForm.css';
 import {PayForHotelForm} from './components/PayForHotel/PayForHotelForm';
 import LandingPage from"./components/landingPage/landingPageIndex/LandingPage";
@@ -42,7 +41,7 @@ function App() {
         <Route path="customer-hotel" element={<CustomerHotel/>} />
         <Route path="customer-manager" element={<CustomerManager/>} />
         <Route path="customer-transaction" element={<CustomerTransaction/>} />
-        <Route path="user-transaction" element={< UserTransactions/>} />
+        {/* <Route path="user-transaction" element={< UserTransactions/>} /> */}
         <Route path="customer-transactions" element={<Transactions />}/> 
         <Route path="pay-for-hotel" element={<PayForHotelForm />} /> 
         <Route path="addroom" element={<AddRoom />} />
