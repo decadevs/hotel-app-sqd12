@@ -7,41 +7,37 @@ import Edit from '../../../assets/Edit.svg';
 import Delete from '../../../assets/Delete.svg';
 import Filter from '../../../assets/Filter.svg';
 import { HiMagnifyingGlass } from "react-icons/hi2";
-import React, { useState, } from "react";
+import React, { useState, useEffect} from "react";
 // import axios from 'axios';
 import { FaEllipsisH, FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 
 function UserTransactions() {
-    const [transactions, setTransactions] = useState([ ]);
-    // useEffect(() => {
-    //     axios
-    //       .get('https://localhost:7161/WeatherForecast')
-    //       .then(response => {
-    //         setTransactions(response.transactions);
-    //       })
-    //       .catch(error => {
-    //         console.log(error);
-    //       });
-    //   }, []);
-    fetch('https://localhost:7161/WeatherForecast')
+    const [currentPage, setCurrentPage] = useState(1);
+    let [transactionsPerPage,setTransactionPerPage] = useState(10);
+    const [transactions, setTransactions] = useState([]);
+    //
+ const getData= ()=>{   
+    fetch('https://localhost:7161/WeatherForecast/All-Transactions')
     .then(res=> res.json())
-    .then(json=>{
-        setTransactions({
-            transactions:json,
-        })
-    });
+    .then(data=>{
+        setTransactions(data)
+        console.log(data);
+    })};
+    useEffect(() => {
+            getData()
+          }, []);
+
     const handlePageChange = pageNumber => {
         setCurrentPage(pageNumber);
     };
-    const [currentPage, setCurrentPage] = useState(1);
-    let [transactionsPerPage,setTransactionPerPage] = useState(0);
+   
     const page = (transactionsPerPage) => {
         if (transactions.length < 10) {
             return transactionsPerPage = transactions.length;
         }
         else {
-            return transactionsPerPage = 10;
+            return transactionsPerPage;
         }
 
     }
@@ -133,7 +129,7 @@ function UserTransactions() {
                         id="Transaction-dd"
                         name="number"
                         value={transactionsPerPage}
-                        onChange={event => setTransactionPerPage(event.target.value)}
+                        onChange={(event) => setTransactionPerPage(event.target.value)}
                     />
                     <div>
                         <h4>
