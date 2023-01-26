@@ -1,16 +1,17 @@
 .manager-admin-pane {
-  position: absolute;
+  position: relative;
+  display: flex;
   background: #FFFFFF;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   height: 370px;
   width: 455px;
-  left: 345px;
-  top: 312px;
+
+
 }
 
 .manager-admin-pane .avatar {
-  position: absolute;
+  position: relative;
   width: 100px;
   height: 100px;
   left: 20px;
@@ -18,27 +19,13 @@
   background: url(avatar.jpg), #FFFFFF;
   border-radius: 50%;
 }
-
-.manager-admin-pane .name {
-  position: absolute;
-  width: 229px;
-  height: 61px;
-  left: 140px;
-  top: 50px;
-  font-family: 'Aribau Grotesk';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 31px;
-  color: #173752;
-}
-
 .manager-admin-pane .details {
   position: absolute;
   width: 400px;
   height: 200px;
   left: 20px;
   top: 120px;
+  font-family: 'Aribau Grotesk';
 }
   .hotel-info {
   position: absolute;
@@ -54,17 +41,147 @@
   line-height: 23px;
   color: #1A2E3D;
   }
+  additional-info-card {
+    position: absolute;
+    width: 531px;
+    height: 222px;
+    left: 865px;
+    top: 312px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    }
+    .additionalRecord {
+    position: absolute;
+    width: 445.62px;
+    height: 37px;
+    left: 924.35px;
+    top: 349px;
+    font-family: 'Aribau Grotesk';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    color: #1A2E3D;
+    }
+    .dateJoined {
+    position: absolute;
+    width: 175.99px;
+    height: 53px;
+    left: 909px;
+    top: 399px;
+    font-family: 'Aribau Grotesk';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-indent: 15px;
+    color: #1A2E3D;
+    }
+    .last-update {
+      position: absolute;
+      width: 175.99px;
+      height: 34px;
+      left: 1160.84px;
+      top: 406px;
+      font-family: 'Aribau Grotesk';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 18px;
+      display: flex;
+      align-items: center;
+      text-indent: 15px;
 
-.managerTable {
-  position: justify;
-  width: 1020px;
-  height: 1311px;
-  left: 0px;
-  top: 0px;
-  background: #F4F7FC;
-  overflow-x: scroll;
-  margin: 0 auto;
+color: #1A2E3D;
+
+    }
+    .managerId {
+    position: absolute;
+    width: 175.99px;
+    height: 53px;
+    left: 909px;
+    top: 472px;
+    font-family: 'Aribau Grotesk';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-indent: 15px;
+    color: #1A2E3D;
+    }
+    .totalHotels {
+    position: absolute;
+    width: 175.99px;
+    height: 53px;
+    left: 1160.84px;
+    top: 472px;
+    font-family: 'Aribau Grotesk';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    }
+    .total-amount-generated {
+      position: relative;
+      width: 531px;
+      height: 130px;
+      left: 865px;
+      top: 552px;
+      background: #FFFFFF;
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 25px;
 }
+.totalAmountGenerated {
+position: absolute;
+width: 460.46px;
+height: 97px;
+left: 905.8px;
+top: 564px;
+font-family: 'Aribau Grotesk';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 23px;
+color: #1A2E3D;
+}
+
+.amount {
+position: absolute;
+width: 460.46px;
+height: 97px;
+left: 905.8px;
+top: 600px;
+font-family: 'Aribau Grotesk';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 23px;
+
+color: #1A2E3D;
+}
+  .managerTable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1020px;
+    height: 1311px;
+    background: #F4F7FC;
+    overflow-x: scroll;
+    margin: 0 auto;
+  }
+  tr {
+    position: relative;
+    text-align: justify;
+  }
 table {
   font-family: 'Inter';
   font-style: normal;
@@ -75,9 +192,8 @@ table {
   border-collapse: collapse;
   width: 1020px;
   height: 1311px;
-  left: 0px;
-  right: 0px;
   border-radius: 6px;
+  justify-content: center;
 }
 .ManagerSearchBar {
   margin-bottom: 20px;
