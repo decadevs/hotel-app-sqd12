@@ -7,35 +7,38 @@ import { MdModeEdit } from "react-icons/md";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { FaAngleLeft } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
+import {AiOutlinePlusCircle} from "react-icons/ai";
 function Dashboard() {
   return (
-
-    <>
-    <>
-    <>
+    <div className="dashboard-container">
+    <div className="top-section">
       <ManagerCard />
+      <div className="top-left">
       <AdditionalInfo />
       <TotalAmountGenerated />
+      </div>
+    </div>
             <div className="manager-dashboard">
               <div className="manager-table-container">
-                <table>
+                <div className="table-head">
+
                 <div className="ManagerSearchBar">
-                    <span>
-                        <BiFilter className="ManagerFilterIcon" />
-                    </span>
+                        <BiFilter color="#2067A1" size={"30px"} />
                         <div className="ManagersearchInput">
                           <HiMagnifyingGlass className="ManagerSearchIcon" />
                           <input type="text" placeholder="Search" />
                         </div>
                     </div>
-                <button class="add-customer new-style">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM7 13H13V7H7V13ZM13 13C13 13.55 12.55 14 12 14C11.45 14 11 13.55 11 13V7C11 6.45 11.45 6 12 6C12.55 6 13 6.45 13 7V13Z" fill="#fff"/>
-                    </svg>
+                    <div >
+                <button class="add-customer new-style" >
+                    <AiOutlinePlusCircle />
                     Add customer
                 </button>
+                    </div>
+                </div>
+                <table>
               <tr>
-                <th className="ManagerCheckBox">
+                <th>
                   <input type="checkbox" />
                 </th>
                 <th>MANAGER NAME</th>
@@ -261,20 +264,17 @@ function Dashboard() {
                 </div>
             </div>
         </div>
-        </>
-        </>
-        </>
+        </div>
   );
     }
     function ManagerCard() {
       return (
+    <div className="card-body " >
         <div className="card manager-admin-pane" >
-    <div className="card-body" >
-      <div className="manager-info-container" style={{ display: 'flex', flexDirection: 'column'}}>
+      <div className="manager-info-containe" style={{ display: 'flex', flexDirection: 'column'}}>
           <div style={{ display: 'flex' }}>
           <img src={require('./avatar.jpg')} alt="Avatar" className="avatar" />
-          <div className="name">Angelo Akuhwa</div>
-          <div className="age-gender">28, Male</div>
+          <div><h3>Angelo Akuhwa</h3><span>28, Male</span></div>
           <div style={{ display: 'flex', flexDirection: 'column' }}>
           </div>
         </div>
@@ -295,11 +295,30 @@ function Dashboard() {
             <div className="card additional-info-card">
                 <div className="card-body">
                   <div className="additionalInfo">
-                      <div className="additionalRecord">Additional Records</div>
-                      <div className="dateJoined">Date Joined: 12/12/2020</div>
-                      <div className="last-update">Last Update: 12/12/2020</div>
-                      <div className="managerId">Manager ID: 123456789</div>
-                      <div className="totalHotels">Total Hotels: 2</div>
+                      <p className="additionalRecord">Additional Records</p>
+                      <div className="record-details">
+                      <div>
+                      <p>Date Joined</p>
+                      <p  style={{fontWeight:"700"}}>12/12/2020</p>
+                      </div>
+                      <div>
+                      <p>Last Update</p>
+                      <p  style={{fontWeight:"700"}}> 12/12/2020</p>
+
+                      </div>
+                      </div>
+                      <div  className="record-details">
+                      <div>
+                      <p >Manager ID</p>
+                      <p style={{fontWeight:"700"}}> 123456789</p>
+                      </div>
+                      <div>
+                      <p >Total Hotels</p>
+                      <p style={{fontWeight:"700"}}> 2</p>
+
+                      </div>
+
+                      </div>
                     </div>
                 </div>
               </div>
@@ -307,11 +326,11 @@ function Dashboard() {
     }
              function TotalAmountGenerated() {
               return (
-                    <div className="total-ammount-generated">
+                    <div className="total-amount-generated-card">
                         <div className="card-body">
-                          <div className="totalAmountGenerated">
-                              <div className="total-amount-generated">Total Amount Generated</div>
-                              <div className="amount">₦ 540,000</div>
+                          <div className="total-amount-generated">
+                              <div className="total-amount-generated" style={{marginBottom:"15px"}}>Total Amount Generated</div>
+                              <div className="amount" style={{fontWeight:"700"}}>₦ 540,000</div>
                             </div>
                         </div>
                       </div>
