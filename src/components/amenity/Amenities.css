@@ -109,3 +109,11 @@ tr:nth-child(even){
     padding-left: 1.6rem;
 }
 
+.modal-button {
+    width: 194.89px;
+    height: 47.78px;
+    color: white;
+    background: #173752;
+    border-radius: 10px;
+    margin: 15px;
+}
