@@ -1,5 +1,3 @@
-// import logo from './logo.svg';
-import './App.css';
 import Hotelview from './components/Hotelview';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 //import "./App.css";
@@ -45,6 +43,7 @@ function App() {
         <Route path="error-modal" element={<Error />} />
         <Route path="success-modal" element={<Success />} />
         <Route path="view-more" element={<ViewMore />} />
+        <Route path="Hotel-view" element={<Hotelview />} />
       </Routes>
       
       

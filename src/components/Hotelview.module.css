@@ -15,7 +15,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width:25%;
+    width:30%;
+}
+
+.sortSection form{
+    width: 80%;
+    height: 3vh;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+}
+
+.sortSection form input{
+    width: 100%;
+    height: inherit;
 }
 
 .hotelContainer{
