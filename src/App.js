@@ -17,6 +17,8 @@ import Delete from "./components/modals/DeleteModal";
 import Update from "./components/modals/UpdatedModal";
 import Error from "./components/modals/ErrorModal";
 import Success from "./components/modals/SuccessModal";
+import Booking from "./pages/customer/Booking";
+import ViewMore from "./components/viewMore/viewMore";
 import HotelListing from "./components/HotelListing/HotelListing";
 
 function App() {
@@ -31,12 +33,17 @@ function App() {
         <Route path="user-transaction" element={<UserTransactions />} />
         <Route path="customer-transactions" element={<Transactions />} />
         <Route path="pay-for-hotel" element={<PayForHotelForm />} />
+        <Route path="booking" element={<Booking />} />
+        <Route path="user-transaction" element={<UserTransactions />} />
+        <Route path="customer-transactions" element={<Transactions />} />
+        <Route path="pay-for-hotel" element={<PayForHotelForm />} />
         <Route path="addroom" element={<AddRoom />} />
         <Route path="create-modal" element={<Create />} />
         <Route path="delete-modal" element={<Delete />} />
         <Route path="update-modal" element={<Update />} />
         <Route path="error-modal" element={<Error />} />
         <Route path="success-modal" element={<Success />} />
+        <Route path="view-more" element={<ViewMore />} />
         <Route path="hotel-listing" element={<HotelListing />} />
       </Routes>
     </BrowserRouter>
