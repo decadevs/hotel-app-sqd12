@@ -118,12 +118,6 @@ function UserTransactions() {
                     <label htmlFor="Transaction-dd">
                         <b>Rows per page </b>
                     </label>
-                    {/* <select id="Transaction-dd" name="number">
-                        <option value="null"> </option>
-                        <option value="five">5</option>
-                        <option value="ten">10</option>
-                        <option value="twenty">20</option>
-                    </select> */}
                     <input
                         type="number"
                         id="Transaction-dd"
