@@ -4,15 +4,18 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ErrorBoundary from "./components/common/ErrorBoundary";
+import AuthContext from "./context/auth/authContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ErrorBoundary>
-      <Suspense fallback="loading">
-        <App />
-      </Suspense>
-    </ErrorBoundary>
+    <AuthContext>
+      <ErrorBoundary>
+        <Suspense fallback="loading">
+          <App />
+        </Suspense>
+      </ErrorBoundary>
+    </AuthContext>
   </React.StrictMode>
 );
 
