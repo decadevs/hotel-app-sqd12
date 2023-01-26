@@ -1,19 +1,38 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
+//import "./App.css";
 import Login from "./components/authentication/Login";
 import Register from "./components/authentication/Register";
 import ResetUpdatePassword from "../src/components/ResetUpdatePassword/ResetUpdatePassword";
-import ResetPassword from "./ResetPassword";
-import ChangePassword from "./ChangePassword";
-//import './App.css';
+import AddRoom from "../src/pages/manager/AddRoom";
 import Sidebar from "./components/navs/Sidebar";
 import CreateAmenity from "./components/amenity/CreateAmenity";
 import Amenities from "./components/amenity/Amenities";
+import UserTransactions from "./components/customerHome/usertransaction/UserTransactions";
+import ResetPassword from "./components/authentication/ResetPassword";
+import ChangePassword from "./components/authentication/ChangePassword";
+//import { PayForHotelForm } from "./components/PayForHotel/PayForHotelForm";
+//import Transactions from "./components/customerHome/Transactions/Transactions";
+import './components/PayForHotel/PayForHotelForm.css';
+import { PayForHotelForm } from './components/PayForHotel/PayForHotelForm';
+import LandingPage from "./components/landingPage/landingPageIndex/LandingPage";
+//import Transactions from "./components/customerHome/transaction/Transactions";
+import Create from "./components/modals/CreatedModal";
+import Delete from "./components/modals/DeleteModal";
+import Update from "./components/modals/UpdatedModal";
+import Error from "./components/modals/ErrorModal";
+import Success from "./components/modals/SuccessModal";
+import Booking from "./pages/customer/Booking";
+import ViewMore from "./components/viewMore/viewMore";
+import HotelListing from "./components/HotelListing/HotelListing";
+import HotelReview from "./components/HotelReview/HotelReview";
 
-function App() {
+function App()
+{
   return (
     <BrowserRouter>
+
       <Routes>
+        <Route path="hotel-review" element={<HotelReview />} />
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
         <Route path="reset-update-password" element={<ResetUpdatePassword />} />
@@ -21,7 +40,27 @@ function App() {
         <Route path="change-password" element={<ChangePassword />} />
         <Route path="create-amenity" element={<CreateAmenity />} />
         <Route path="amenities" element={<Amenities />} />
+        {/* <Route path="user-transaction" element={<UserTransactions />} /> */}
+        {/* <Route path="customer-transactions" element={<Transactions />} /> */}
+        <Route path="pay-for-hotel" element={<PayForHotelForm />} />
+        <Route path="booking" element={<Booking />} />
+        {/* <Route path="user-transaction" element={<UserTransactions />} /> */}
+        {/* <Route path="customer-transactions" element={<Transactions />} /> */}
+        {/* <Route path="pay-for-hotel" element={<PayForHotelForm />} /> */}
+        <Route path="user-transaction" element={< UserTransactions />} />
+        {/* <Route path="customer-transactions" element={<Transactions />} /> */}
+        <Route path="pay-for-hotel" element={<PayForHotelForm />} />
+        <Route path="addroom" element={<AddRoom />} />
+        <Route path="create-modal" element={<Create />} />
+        <Route path="delete-modal" element={<Delete />} />
+        <Route path="update-modal" element={<Update />} />
+        <Route path="error-modal" element={<Error />} />
+        <Route path="success-modal" element={<Success />} />
+        <Route path="view-more" element={<ViewMore />} />
+        <Route path="hotel-listing" element={<HotelListing />} />
       </Routes>
+
+
     </BrowserRouter>
   );
 }
