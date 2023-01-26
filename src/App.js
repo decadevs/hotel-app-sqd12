@@ -8,8 +8,8 @@ import Sidebar from "./components/navs/Sidebar";
 import UserTransactions from "./components/customerHome/usertransaction/UserTransactions";
 import ResetPassword from "./components/authentication/ResetPassword";
 import ChangePassword from "./components/authentication/ChangePassword";
-import { PayForHotelForm } from "./components/PayForHotel/PayForHotelForm";
-import Transactions from "./components/customerHome/Transactions/Transactions";
+//import { PayForHotelForm } from "./components/PayForHotel/PayForHotelForm";
+//import Transactions from "./components/customerHome/Transactions/Transactions";
 import './components/PayForHotel/PayForHotelForm.css';
 import { PayForHotelForm } from './components/PayForHotel/PayForHotelForm';
 import LandingPage from "./components/landingPage/landingPageIndex/LandingPage";
@@ -37,7 +37,7 @@ function App()
         <Route path="reset-password" element={<ResetPassword />} />
         <Route path="change-password" element={<ChangePassword />} />
         {/* <Route path="user-transaction" element={<UserTransactions />} /> */}
-        <Route path="customer-transactions" element={<Transactions />} />
+        {/* <Route path="customer-transactions" element={<Transactions />} /> */}
         <Route path="pay-for-hotel" element={<PayForHotelForm />} />
         <Route path="booking" element={<Booking />} />
         {/* <Route path="user-transaction" element={<UserTransactions />} /> */}
