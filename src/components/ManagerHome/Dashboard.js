@@ -8,10 +8,12 @@ import { RiDeleteBin5Fill } from "react-icons/ri";
 import { FaAngleLeft } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
 import {AiOutlinePlusCircle} from "react-icons/ai";
+import {IoMdPersonAdd} from "react-icons/io";
 function Dashboard() {
   return (
     <div className="dashboard-container">
     <div className="top-section">
+      {/* <TopButton /> */}
       <ManagerCard />
       <div className="top-left">
       <AdditionalInfo />
@@ -267,9 +269,21 @@ function Dashboard() {
         </div>
   );
     }
-    function ManagerCard() {
+    function TopButton() {
       return (
+        <div>
+        <button class="add-hotel new-style" >
+      <IoMdPersonAdd />
+      </button>
+      </div>
+      );
+    }
+    function ManagerCard() {
+      return ( 
     <div className="card-body " >
+      {/* <div id="top-line">
+       <script></script>
+       </div> */}
         <div className="card manager-admin-pane" >
       <div className="manager-info-containe" style={{ display: 'flex', flexDirection: 'column'}}>
           <div style={{ display: 'flex' }}>
