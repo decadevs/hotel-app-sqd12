@@ -3,13 +3,13 @@
 import "./ManagerTransactions.css";
 import Active from '../../../assets/Active.svg'
 import Inactive from '../../../assets/Inactive.svg';
-import Edit from '../../../assets/Edit.svg';
-import Delete from '../../../assets/Delete.svg';
+//import Edit from '../../../assets/Edit.svg';
+//import Delete from '../../../assets/Delete.svg';
 import Filter from '../../../assets/Filter.svg';
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import React, { useState, useEffect } from "react";
 import { FaEllipsisH, FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import { mockTransactions } from '../../../managerMockTransactions'
+import { mockTransactions } from './managerMockTransactions'
 
 
 function ManagerTransactions() {
