@@ -1,14 +1,14 @@
 import Sidebar from '../navs/Sidebar';
 import NavLink from '../navs/NavLink';
 import Navbar from '../navs/Navbar';
-import Transactions from '../customerHome/Transactions/Transactions';
+import UserTransactions from '../customerHome/usertransaction/UserTransactions';
 
 export default function Transaction() {
     return(
         <>
             <Navbar/>
             <NavLink>
-                <Transactions/>
+                <UserTransactions/>
             </NavLink> 
             <Sidebar roleValue={"Admin"}/>
         </>

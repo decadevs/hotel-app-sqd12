@@ -63,10 +63,9 @@
   
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
   #main {
+    padding-top: 6rem;
     margin-left: 250px;
     transition: margin-left .5s;
-    padding: 20px;
-    padding-top: 130px;
     background-color: #F6FCFF;
   }
   
@@ -75,6 +74,7 @@
     display: flex;
     background-color: white;
     position: fixed;
+    z-index: 2;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
    }
 

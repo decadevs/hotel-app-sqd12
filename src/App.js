@@ -18,14 +18,8 @@ import AddRoom from "../src/pages/manager/AddRoom";
 import UserTransactions from "./components/customerHome/usertransaction/UserTransactions";
 import ResetPassword from "./components/authentication/ResetPassword";
 import ChangePassword from "./components/authentication/ChangePassword";
-//import { PayForHotelForm } from "./components/PayForHotel/PayForHotelForm";
-//import Transactions from "./components/customerHome/Transactions/Transactions";
 import './components/PayForHotel/PayForHotelForm.css';
 import {PayForHotelForm} from './components/PayForHotel/PayForHotelForm';
-import Transactions from "./components/customerHome/Transactions/Transactions";
-import { PayForHotelForm } from './components/PayForHotel/PayForHotelForm';
-import LandingPage from "./components/landingPage/landingPageIndex/LandingPage";
-//import Transactions from "./components/customerHome/transaction/Transactions";
 import Create from "./components/modals/CreatedModal";
 import Delete from "./components/modals/DeleteModal";
 import Update from "./components/modals/UpdatedModal";
@@ -63,7 +57,7 @@ function App()
         <Route path="admin-manager" element={<AdminManager/>} />
         <Route path="admin-transaction" element={<AdminTransaction/>} />
         <Route path="user-transaction" element={< UserTransactions/>} />
-        <Route path="customer-transactions" element={<Transactions />}/> 
+        {/* <Route path="customer-transactions" element={<Transactions />}/>  */}
         <Route path="pay-for-hotel" element={<PayForHotelForm />} /> 
         {/* <Route path="user-transaction" element={<UserTransactions />} /> */}
         {/* <Route path="customer-transactions" element={<Transactions />} /> */}
