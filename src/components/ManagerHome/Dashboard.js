@@ -42,8 +42,8 @@ function Dashboard() {
                 </button>
                     </div>
                 </div>
-                <table>
-              <tr>
+        <table>
+              <tr class="table-head-first">
                 <th>
                   <input type="checkbox" />
                 </th>
@@ -273,21 +273,7 @@ function Dashboard() {
         </div>
   );
     }
-    function TopButton() {
-      return (
-        <div className="manager-container">
-      {" "}
-      <div className="list">
-        {" "}
-        <h2 className="manager-label">MANAGER</h2>{" "}
-        </div>
-        <div>
-        <button class="add-hotel new-style" >
-      </button>
-      </div>
-      </div>
-      );
-    }
+
     function ManagerCard() {
       return ( 
     <div className="card-body " >

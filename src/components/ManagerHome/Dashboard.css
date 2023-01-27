@@ -358,6 +358,10 @@ tr:hover {
   font-weight: 500;
   color: #2E3B52;
   border: 1px solid #BDBDBD;
-  padding: 15px 20px 8px;
+  padding: 15px 40px 8px;
   border-radius: 15px;
+}
+.table-head-first th {
+  position: relative;
+  text-align: left;
 }
