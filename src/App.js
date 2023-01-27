@@ -21,27 +21,21 @@ import ChangePassword from "./components/authentication/ChangePassword";
 //import { PayForHotelForm } from "./components/PayForHotel/PayForHotelForm";
 //import Transactions from "./components/customerHome/Transactions/Transactions";
 import './components/PayForHotel/PayForHotelForm.css';
-<<<<<<< HEAD
 import {PayForHotelForm} from './components/PayForHotel/PayForHotelForm';
 import Transactions from "./components/customerHome/Transactions/Transactions";
-=======
 import { PayForHotelForm } from './components/PayForHotel/PayForHotelForm';
 import LandingPage from "./components/landingPage/landingPageIndex/LandingPage";
 //import Transactions from "./components/customerHome/transaction/Transactions";
->>>>>>> 7ed7e2c7341c6002ca0c7d272ab7460f9f601c66
 import Create from "./components/modals/CreatedModal";
 import Delete from "./components/modals/DeleteModal";
 import Update from "./components/modals/UpdatedModal";
 import Error from "./components/modals/ErrorModal";
 import Success from "./components/modals/SuccessModal";
-<<<<<<< HEAD
 import LandingPage from "./components/landingPage/landingPageIndex/LandingPage";
-=======
 import Booking from "./pages/customer/Booking";
 import ViewMore from "./components/viewMore/viewMore";
 import HotelListing from "./components/HotelListing/HotelListing";
 import HotelReview from "./components/HotelReview/HotelReview";
->>>>>>> 7ed7e2c7341c6002ca0c7d272ab7460f9f601c66
 
 function App()
 {
@@ -49,17 +43,13 @@ function App()
     <BrowserRouter>
 
       <Routes>
-<<<<<<< HEAD
         <Route exact path="/" element={<LandingPage />} />
-=======
         <Route path="hotel-review" element={<HotelReview />} />
->>>>>>> 7ed7e2c7341c6002ca0c7d272ab7460f9f601c66
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
         <Route path="reset-update-password" element={<ResetUpdatePassword />} />
         <Route path="reset-password" element={<ResetPassword />} />
         <Route path="change-password" element={<ChangePassword />} />
-<<<<<<< HEAD
         <Route path="customer-dashboard" element={<CustomerDashboard />} />
         <Route path="manager-dashboard" element={<ManagerDashboard />} />
         <Route path="admin-dashboard" element={<AdminDashboard />} />
@@ -75,7 +65,6 @@ function App()
         <Route path="user-transaction" element={< UserTransactions/>} />
         <Route path="customer-transactions" element={<Transactions />}/> 
         <Route path="pay-for-hotel" element={<PayForHotelForm />} /> 
-=======
         {/* <Route path="user-transaction" element={<UserTransactions />} /> */}
         {/* <Route path="customer-transactions" element={<Transactions />} /> */}
         <Route path="pay-for-hotel" element={<PayForHotelForm />} />
@@ -86,7 +75,6 @@ function App()
         <Route path="user-transaction" element={< UserTransactions />} />
         {/* <Route path="customer-transactions" element={<Transactions />} /> */}
         <Route path="pay-for-hotel" element={<PayForHotelForm />} />
->>>>>>> 7ed7e2c7341c6002ca0c7d272ab7460f9f601c66
         <Route path="addroom" element={<AddRoom />} />
         <Route path="create-modal" element={<Create />} />
         <Route path="delete-modal" element={<Delete />} />
