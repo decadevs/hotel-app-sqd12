@@ -62,7 +62,7 @@ export default function Sidebar({roleValue}){
                 </div>
                 <div>
                     <Link to={"/" +plug} className="tab"><img src={Manager} alt="Your SVG"/> 
-                        <div>{roleValue === "Customer" || roleValue === "Admin" ? "Manager":"Bookings"}</div>
+                        <div>{roleValue === "Customer" || roleValue === "Admin" ? roleValue === "Customer"?"Manager":"Manager":"Bookings"}</div>
                     </Link>
                 </div>
                 <div>

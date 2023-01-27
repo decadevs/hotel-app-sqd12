@@ -4,13 +4,13 @@
     width: 250px; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
-    top: 85px; /* Stay at the top */
+    top: 90px; /* Stay at the top */
     left: 0;
     background-color:#2067A1; /* White*/
     overflow-x: hidden; /* Disable horizontal scroll */
     /*padding-top: 20px;  Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
   /* The navigation menu links */
@@ -66,8 +66,9 @@
     margin-left: 250px;
     transition: margin-left .5s;
     padding: 20px;
-    padding-top: 110px;
+    padding-top: 130px;
     background-color: #F6FCFF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
 
@@ -75,6 +76,7 @@
     display: flex;
     background-color: white;
     position: fixed;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
    }
 
 .menu{
@@ -114,10 +116,10 @@
     /* background-color: gray; */
     border-left: 2px solid black;
 }
-.profile{
+.profile, .dropdownImg{
     padding:0.4rem;
     margin: 0.2rem;
-    margin-right: 20px;
+    margin-right: 35px;
     font-size: 1.3em;
 }
 

@@ -19,7 +19,7 @@ export default function Navbar(){
                 <nav className='nav'>
                     <div className="menu">
                         {/*Use any element to open the sidenav*/}
-                        <span style={{"padding":"5px","cursor":"pointer","background":"#2067A1","border-radius":"5px"}} onClick={openNav}>&#9776;</span>
+                        <span style={{"padding":"5px","cursor":"pointer","background":"#2067A1","border-radius":"5px", "box-shadow": "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)"}} onClick={openNav}>&#9776;</span>
                     </div>
                     <div>
                         <input type="text"/>
@@ -38,7 +38,7 @@ export default function Navbar(){
                        <div className="dropdow-App">
                             <div className="menu-container">
                                 <div className='menu-trigger' onClick={() => {setOpen(!open)}}>   
-                                                 <img className='dropdownImg' src={Profile}/> 
+                                                 <img  className='dropdownImg' src={Profile} style={{"width":"50px","border-radius":"50%"}} /> 
                                      </div>
                                                 
                                         <div className={`dropdown-menu ${open? 'active' : 'inactive'}`} >  
