@@ -14,7 +14,7 @@ function Dashboard() {
   return (
     <div className="dashboard-container">
             <div className="manager-head">
-              <h1>Manager</h1>
+              <h1>Managers</h1>
               <span><HiOutlineUserAdd/></span>
             </div>
             <div className="top-section">
