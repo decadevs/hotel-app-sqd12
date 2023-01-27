@@ -48,10 +48,10 @@
   
   
   /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    /* color: #f1f1f1; */
+  /* .sidenav a:hover {
+    color: #f1f1f1;
   }
-  
+   */
   /* Position and style the close button (top right corner) */
   .sidenav .closebtn {
     position: absolute;
@@ -68,7 +68,6 @@
     padding: 20px;
     padding-top: 130px;
     background-color: #F6FCFF;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
 
