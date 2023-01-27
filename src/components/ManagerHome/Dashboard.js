@@ -1,3 +1,6 @@
+import Sidebar from '../navs/Sidebar';
+import NavLink from '../navs/NavLink';
+import Navbar from '../navs/Navbar';
 import React from "react";
 import "../ManagerHome/Dashboard.css";
 import { HiMagnifyingGlass } from "react-icons/hi2";
@@ -18,6 +21,7 @@ function Dashboard() {
               <span><HiOutlineUserAdd/></span>
             </div>
             <div className="top-section">
+            <Dashboard />
               <ManagerCard />
               <div className="top-left">
                 <AdditionalInfo />
@@ -273,7 +277,18 @@ function Dashboard() {
         </div>
   );
     }
-
+     function Dashboard() {
+      return(
+          <>
+              <Navbar/>
+              <NavLink>
+                  <div> Manager</div>
+                  <div>Home</div>
+              </NavLink> 
+              <Sidebar roleValue={"Manager"}/>
+          </>
+      )
+  }
     function ManagerCard() {
       return ( 
     <div className="card-body " >
