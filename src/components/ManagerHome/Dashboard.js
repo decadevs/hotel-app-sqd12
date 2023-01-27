@@ -8,18 +8,22 @@ import { RiDeleteBin5Fill } from "react-icons/ri";
 import { FaAngleLeft } from "react-icons/fa";
 import { FaAngleRight } from "react-icons/fa";
 import {AiOutlinePlusCircle} from "react-icons/ai";
-import {IoMdPersonAdd} from "react-icons/io";
+// import {IoPersonAddOutline} from "react-icons/io";
+import {HiOutlineUserAdd} from "react-icons/hi";
 function Dashboard() {
   return (
     <div className="dashboard-container">
-    <div className="top-section">
-      {/* <TopButton /> */}
-      <ManagerCard />
-      <div className="top-left">
-      <AdditionalInfo />
-      <TotalAmountGenerated />
-      </div>
-    </div>
+            <div className="manager-head">
+              <h1>Manager</h1>
+              <span><HiOutlineUserAdd/></span>
+            </div>
+            <div className="top-section">
+              <ManagerCard />
+              <div className="top-left">
+                <AdditionalInfo />
+                <TotalAmountGenerated />
+              </div>
+            </div>
             <div className="manager-dashboard">
               <div className="manager-table-container">
                 <div className="table-head">
@@ -271,19 +275,22 @@ function Dashboard() {
     }
     function TopButton() {
       return (
+        <div className="manager-container">
+      {" "}
+      <div className="list">
+        {" "}
+        <h2 className="manager-label">MANAGER</h2>{" "}
+        </div>
         <div>
         <button class="add-hotel new-style" >
-      <IoMdPersonAdd />
       </button>
+      </div>
       </div>
       );
     }
     function ManagerCard() {
       return ( 
     <div className="card-body " >
-      {/* <div id="top-line">
-       <script></script>
-       </div> */}
         <div className="card manager-admin-pane" >
       <div className="manager-info-containe" style={{ display: 'flex', flexDirection: 'column'}}>
           <div style={{ display: 'flex' }}>

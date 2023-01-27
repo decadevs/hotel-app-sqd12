@@ -22,13 +22,13 @@
   position: relative;
   height: 100%;
   /* display: flex; */
-  padding: 50px 30px;
+  padding: 50px 50px;
   background: #FFFFFF;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   font-size: 18px;
   /* height: 370px; */
-  /* width: 455px; */
+  width: 455px;
 
 
 }
@@ -63,7 +63,7 @@
 }
 
 .manager-admin-pane .details div{
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
   .hotel-info {
   position: absolute;
@@ -202,11 +202,15 @@ line-height: 23px;
 color: #1A2E3D;
 }
 
+.manager-container {
+  padding: 5%0%5%0%;
+}
 .top-section{
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 30px;
 }
 .top-right{
   padding: 70px 50px;
@@ -251,7 +255,6 @@ color: #1A2E3D;
   tr {
     position: relative;
     text-align: justify;
-    
   }
 table {
   /* font-family: 'Inter'; */
@@ -309,11 +312,15 @@ table {
   top: 25%;
   left: 7px;
 }
-td,
+td {
+  padding: 18px 8px;
+  /* text-align: center; */
+}
 th {
   text-align: center;
   padding: 18px 8px;
   width: 20px;
+  border-spacing: 5px;
 }
 .ManagerCrud {
   display: flex;
@@ -328,10 +335,29 @@ Manager-pagination h4 {
 }
 .ManagerCheckBox {
   width: 20px;
+  color: #606F89;
 }
 tr:nth-child(even) {
   background-color: #f4f7fc;
 }
 tr:hover {
   background-color: #4b515b26;
+}
+
+.manager-head{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  border-bottom: 2px solid #BDBDBD;
+}
+
+.manager-head span{
+  font-size: 40px;
+  font-weight: 500;
+  color: #2E3B52;
+  border: 1px solid #BDBDBD;
+  padding: 15px 20px 8px;
+  border-radius: 15px;
 }
