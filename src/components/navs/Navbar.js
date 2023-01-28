@@ -37,24 +37,22 @@ export default function Navbar(){
 
                        <div className="dropdow-App">
                             <div className="menu-container">
-                                <div className='menu-trigger' onClick={() => {setOpen(!open)}}>   
-                                                 <img  className='dropdownImg' src={Profile} style={{"width":"50px","border-radius":"50%"}} /> 
+                                <div className='menu-trigger' onClick={() => {setOpen(!open)}}>
+                                                 <img  className='dropdownImg' src={Profile} style={{"width":"50px","border-radius":"50%"}} />
                                      </div>
-                                                
-                                        <div className={`dropdown-menu ${open? 'active' : 'inactive'}`} >  
+                                        <div className={`dropdown-menu ${open? 'active' : 'inactive'}`} >
                                              <h3 className='dropdown-h3'>Profile<br/><span className='dropdown-span'>Website Designer</span>
-                                        </h3> 
-                                         <ul className='dropdown-ul'>  
+                                        </h3>
+                                         <ul className='dropdown-ul'>
                                                <DropdownItem img = {""} text = {"Picture"} />                    <DropdownItem img = {""} text = {"Profile"} />                    <DropdownItem img = {""} text = {"Settings"} /> 
-                                               <DropdownItem img = {""} text = {"Sign out"} />  
-                                        </ul>           
-                                </div>        
-                                </div>   
+                                               <DropdownItem img = {""} text = {"Sign out"} />
+                                        </ul>
+                                </div>
+                                </div>
                         </div>
 
-
                         </div>
-                    </div>              
+                    </div>
                 </nav>
             </header>
         </>
@@ -65,7 +63,7 @@ function DropdownItem(props) {
     return(
         <li className='dropdownItem'>
             <img src={props.img}></img>
-              <a> {props.text} </a>        
-        </li> 
+              <a> {props.text} </a>
+        </li>
            )
 }

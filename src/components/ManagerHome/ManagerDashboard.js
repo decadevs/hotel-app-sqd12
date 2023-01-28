@@ -2,7 +2,7 @@ import Sidebar from '../navs/Sidebar';
 import NavLink from '../navs/NavLink';
 import Navbar from '../navs/Navbar';
 import React from "react";
-import "../ManagerHome/Dashboard.css";
+import "../ManagerHome/ManagerDashboard.css";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { BiFilter } from "react-icons/bi";
 import { FaEllipsisH } from "react-icons/fa";
@@ -13,7 +13,7 @@ import { FaAngleRight } from "react-icons/fa";
 import {AiOutlinePlusCircle} from "react-icons/ai";
 // import {IoPersonAddOutline} from "react-icons/io";
 import {HiOutlineUserAdd} from "react-icons/hi";
-function Dashboard() {
+function ManagerDashboard() {
   return (
     <div className="dashboard-container">
             <div className="manager-head">
@@ -21,7 +21,7 @@ function Dashboard() {
               <span><HiOutlineUserAdd/></span>
             </div>
             <div className="top-section">
-            <Dashboard />
+            {/* <Dashboard /> */}
               <ManagerCard />
               <div className="top-left">
                 <AdditionalInfo />
@@ -277,14 +277,13 @@ function Dashboard() {
         </div>
   );
     }
-     function Dashboard() {
+     export function Dashboard() {
       return(
           <>
               <Navbar/>
               <NavLink>
-                  <div> Manager</div>
-                  <div>Home</div>
-              </NavLink> 
+                  <ManagerDashboard/>
+              </NavLink>
               <Sidebar roleValue={"Manager"}/>
           </>
       )
@@ -358,4 +357,4 @@ function Dashboard() {
                       </div>
               );
             }
-        export default Dashboard;
+        export default ManagerDashboard;

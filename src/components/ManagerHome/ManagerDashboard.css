@@ -4,8 +4,12 @@
   font-family: 'Space Grotesk', sans-serif;
 }
 .dashboard-container{
-  font-family: 'Space Grotesk', sans-serif;
+  /* font-family: 'Space Grotesk', sans-serif;
   padding: 50px 30px;
+  position: relative;
+    width: 1440px;
+    height: 2209px; */
+    padding: 50px 30px;
 }
 .dashboard-container input{
   width: max-content;
@@ -29,8 +33,6 @@
   font-size: 18px;
   /* height: 370px; */
   width: 455px;
-
-
 }
 .manager-dashoard {
   position: relative;

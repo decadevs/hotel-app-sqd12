@@ -11,6 +11,5 @@ export default function Bookings() {
             </NavLink> 
             <Sidebar roleValue={"Manager"}/>
         </>
-        
     )
 }

@@ -12,6 +12,6 @@ export default function Dashboard() {
             </NavLink> 
             <Sidebar roleValue={"Customer"}/>
         </>
-        
+
     )
 }
