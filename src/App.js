@@ -15,6 +15,9 @@ import Login from "./components/authentication/Login";
 import Register from "./components/authentication/Register";
 import ResetUpdatePassword from "../src/components/ResetUpdatePassword/ResetUpdatePassword";
 import AddRoom from "../src/pages/manager/AddRoom";
+import Sidebar from "./components/navs/Sidebar";
+import CreateAmenity from "./components/amenity/CreateAmenity";
+import Amenities from "./components/amenity/Amenities";
 import UserTransactions from "./components/customerHome/usertransaction/UserTransactions";
 import ResetPassword from "./components/authentication/ResetPassword";
 import ChangePassword from "./components/authentication/ChangePassword";
@@ -37,7 +40,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route exact path="/" element={<LandingPage />} />
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
         <Route path="reset-update-password" element={<ResetUpdatePassword />} />
@@ -70,6 +73,8 @@ function App() {
         <Route path="admin-transaction" element={<AdminTransaction />} />
         <Route path="admin-manager" element={<AdminManager />} />
         <Route path="admin-hotel" element={<AdminHotel />} />
+        <Route path="manager-transactions" element={<ManagerTransactions />} />
+        <Route path="amenities" element={<Amenities />} />
       </Routes>
     </BrowserRouter>
   );
