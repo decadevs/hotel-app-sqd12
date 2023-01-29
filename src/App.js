@@ -22,6 +22,8 @@ import ViewMore from "./components/viewMore/viewMore";
 import HotelListing from "./components/HotelListing/HotelListing";
 import ManagerDashboard from "./components/ManagerHome/ManagerDashboard";
 import {Dashboard} from "./components/ManagerHome/ManagerDashboard";
+import HotelReview from "./components/HotelReview/HotelReview";
+import ManagerTransactions from "./components/ManagerHome/managertransactions/ManagerTransactions";
 
 
 function App() {
@@ -50,7 +52,7 @@ function App() {
         <Route path="hotel-listing" element={<HotelListing />} />
         <Route path="managerdashboard" element={<ManagerDashboard />} />
         <Route path="manager-dashboard" element={<Dashboard />} />
-
+        <Route path="manager-transactions" element={<ManagerTransactions />} />
       </Routes>
     </BrowserRouter>
   );
