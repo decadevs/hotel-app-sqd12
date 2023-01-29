@@ -4,6 +4,7 @@ import Login from "./components/authentication/Login";
 import Register from "./components/authentication/Register";
 import ResetUpdatePassword from "../src/components/ResetUpdatePassword/ResetUpdatePassword";
 import AddRoom from "../src/pages/manager/AddRoom";
+import Navbar from "./components/navs/Navbar";
 import Sidebar from "./components/navs/Sidebar";
 import UserTransactions from "./components/customerHome/usertransaction/UserTransactions";
 import ResetPassword from "./components/authentication/ResetPassword";
@@ -55,7 +56,7 @@ function App() {
         <Route path="manager-dashboard" element={<Dashboard />} />
         <Route path="manager-transactions" element={<ManagerTransactions />} />
         <Route path ="/profile" element={<ProfileLayout/>}/>
-
+        
       </Routes>
     </BrowserRouter>
   );
