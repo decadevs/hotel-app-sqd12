@@ -32,6 +32,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route exact path="/" element={<LandingPage />} />
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
         <Route path="reset-update-password" element={<ResetUpdatePassword />} />
@@ -55,6 +56,7 @@ function App() {
         <Route path="managerdashboard" element={<ManagerDashboard />} />
         <Route path="manager-dashboard" element={<Dashboard />} />
         <Route path="manager-transactions" element={<ManagerTransactions />} />
+        <Route path="amenities" element={<Amenities />} />
       </Routes>
     </BrowserRouter>
   );
