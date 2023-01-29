@@ -23,7 +23,7 @@ import Booking from "./pages/customer/Booking";
 import ViewMore from "./components/viewMore/viewMore";
 import HotelListing from "./components/HotelListing/HotelListing";
 import HotelReview from "./components/HotelReview/HotelReview";
-import {ProfileLayout} from './layouts/userProfileLayout/userProfileLayout'
+import {ProfileLayout} from './layouts/userProfileLayout/ProfileLayout'
 
 function App()
 {

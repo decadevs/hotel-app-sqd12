@@ -8,7 +8,8 @@ import logoutIcon from '../../assets/dashboard-logout- 24 4.svg'
 import "./ProfileLayout.css"
 import penVector from '../../assets/penVector.svg'
 import imageEllipse from '../../assets/imageEllipse 5.svg'
-
+import Navbar from '../../components/navs/Navbar'
+import Sidebar from '../../components/navs/Sidebar'
 
 export const ProfileLayout = () => {
     const [isActive, setIsActive] = useState(false);
@@ -21,7 +22,8 @@ export const ProfileLayout = () => {
   return (
     <div className='pl_container'>
         <div className="sideBar_wrapper">
-
+        <Navbar/>
+        <Sidebar/>
             <div className='pl_sideBar' >
                 <div className='pl_iconGroup'>
                 <Link to="/ dashboard" >
