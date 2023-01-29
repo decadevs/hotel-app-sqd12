@@ -8,12 +8,10 @@ import Sidebar from "./components/navs/Sidebar";
 import UserTransactions from "./components/customerHome/usertransaction/UserTransactions";
 import ResetPassword from "./components/authentication/ResetPassword";
 import ChangePassword from "./components/authentication/ChangePassword";
-//import { PayForHotelForm } from "./components/PayForHotel/PayForHotelForm";
-//import Transactions from "./components/customerHome/Transactions/Transactions";
-import './components/PayForHotel/PayForHotelForm.css';
-import { PayForHotelForm } from './components/PayForHotel/PayForHotelForm';
+import "./components/PayForHotel/PayForHotelForm.css";
+import { PayForHotelForm } from "./components/PayForHotel/PayForHotelForm";
 import LandingPage from "./components/landingPage/landingPageIndex/LandingPage";
-//import Transactions from "./components/customerHome/transaction/Transactions";
+import Transactions from "./components/transaction/Transactions";
 import Create from "./components/modals/CreatedModal";
 import Delete from "./components/modals/DeleteModal";
 import Update from "./components/modals/UpdatedModal";
@@ -22,30 +20,28 @@ import Success from "./components/modals/SuccessModal";
 import Booking from "./pages/customer/Booking";
 import ViewMore from "./components/viewMore/viewMore";
 import HotelListing from "./components/HotelListing/HotelListing";
+import ManagerDashboard from "./components/ManagerHome/ManagerDashboard";
+import {Dashboard} from "./components/ManagerHome/ManagerDashboard";
 import HotelReview from "./components/HotelReview/HotelReview";
+import ManagerTransactions from "./components/ManagerHome/managertransactions/ManagerTransactions";
+
 import {ProfileLayout} from './layouts/userProfileLayout/ProfileLayout'
 
-function App()
-{
+function App() {
   return (
     <BrowserRouter>
-
       <Routes>
-        <Route path="hotel-review" element={<HotelReview />} />
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
         <Route path="reset-update-password" element={<ResetUpdatePassword />} />
         <Route path="reset-password" element={<ResetPassword />} />
         <Route path="change-password" element={<ChangePassword />} />
-        {/* <Route path="user-transaction" element={<UserTransactions />} /> */}
-        {/* <Route path="customer-transactions" element={<Transactions />} /> */}
+        <Route path="user-transaction" element={<UserTransactions />} />
+        <Route path="customer-transactions" element={<Transactions />} />
         <Route path="pay-for-hotel" element={<PayForHotelForm />} />
         <Route path="booking" element={<Booking />} />
-        {/* <Route path="user-transaction" element={<UserTransactions />} /> */}
-        {/* <Route path="customer-transactions" element={<Transactions />} /> */}
-        {/* <Route path="pay-for-hotel" element={<PayForHotelForm />} /> */}
-        <Route path="user-transaction" element={< UserTransactions />} />
-        {/* <Route path="customer-transactions" element={<Transactions />} /> */}
+        <Route path="user-transaction" element={<UserTransactions />} />
+        <Route path="customer-transactions" element={<Transactions />} />
         <Route path="pay-for-hotel" element={<PayForHotelForm />} />
         <Route path="addroom" element={<AddRoom />} />
         <Route path="create-modal" element={<Create />} />
@@ -55,11 +51,12 @@ function App()
         <Route path="success-modal" element={<Success />} />
         <Route path="view-more" element={<ViewMore />} />
         <Route path="hotel-listing" element={<HotelListing />} />
+        <Route path="managerdashboard" element={<ManagerDashboard />} />
+        <Route path="manager-dashboard" element={<Dashboard />} />
+        <Route path="manager-transactions" element={<ManagerTransactions />} />
         <Route path ="/profile" element={<ProfileLayout/>}/>
 
       </Routes>
-
-
     </BrowserRouter>
   );
 }
