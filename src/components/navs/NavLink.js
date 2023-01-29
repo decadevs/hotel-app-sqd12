@@ -1,8 +1,8 @@
 import React from 'react';
 
 
-export default function NavLink(props){  
-    
+export default function NavLink(props){
+
     return(
         <>
              <div id="main">
