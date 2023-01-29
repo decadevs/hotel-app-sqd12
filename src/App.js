@@ -33,7 +33,7 @@ import Success from "./components/modals/SuccessModal";
 import Booking from "./pages/customer/Booking";
 import ViewMore from "./components/viewMore/viewMore";
 import HotelListing from "./components/HotelListing/HotelListing";
-// import HotelReview from "./components/HotelReview/HotelReview";
+import HotelReview from "./components/HotelReview/HotelReview";
 
 
 function App() {
@@ -75,6 +75,7 @@ function App() {
         <Route path="admin-hotel" element={<AdminHotel />} />
         <Route path="manager-transactions" element={<ManagerTransactions />} />
         <Route path="amenities" element={<Amenities />} />
+        <Route path="hotel-review" element={<HotelReview />} />
       </Routes>
     </BrowserRouter>
   );
