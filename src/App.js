@@ -30,6 +30,7 @@ import Booking from "./pages/customer/Booking";
 import ViewMore from "./components/viewMore/viewMore";
 import HotelListing from "./components/HotelListing/HotelListing";
 import HotelReview from "./components/HotelReview/HotelReview";
+import ManagerTransactions from "./components/ManagerHome/managertransactions/ManagerTransactions";
 
 function App()
 {
@@ -77,6 +78,7 @@ function App()
         <Route path="success-modal" element={<Success />} />
         <Route path="view-more" element={<ViewMore />} />
         <Route path="hotel-listing" element={<HotelListing />} />
+        <Route path="manager-transactions" element={<ManagerTransactions />} />
       </Routes>
 
 
