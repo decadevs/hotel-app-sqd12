@@ -75,7 +75,7 @@ function App() {
         <Route path="customer-hotel" element={<CustomerHotel />} />
         <Route path="admin-transaction" element={<AdminTransaction />} />
         <Route path="admin-manager" element={<AdminManager />} />
-        <Route path="admin-hotel" element={<AdminHotel />} />
+        <Route path="admin-hotels" element={<AdminHotel />} />
         <Route path="manager-transactions" element={<ManagerTransactions />} />
         <Route path ="/profile" element={<ProfileLayout/>}/>
         <Route path="amenities" element={<Amenities />} />
