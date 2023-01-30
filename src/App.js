@@ -35,9 +35,9 @@ import Booking from "./pages/customer/Booking";
 import ViewMore from "./components/viewMore/viewMore";
 import HotelListing from "./components/HotelListing/HotelListing";
 import HotelReview from "./components/HotelReview/HotelReview";
-import ManagerTransactions from "./components/ManagerHome/managertransactions/ManagerTransactions";
 
 import {ProfileLayout} from './layouts/userProfileLayout/ProfileLayout'
+
 
 function App() {
   return (
@@ -78,9 +78,10 @@ function App() {
         <Route path="admin-hotel" element={<AdminHotel />} />
         <Route path="manager-transactions" element={<ManagerTransactions />} />
         <Route path ="/profile" element={<ProfileLayout/>}/>
-        
         <Route path="amenities" element={<Amenities />} />
         <Route path="hotel-review" element={<HotelReview />} />
+        <Route path="navbar" element={<Navbar />} />
+        <Route path="sidebar" element={<Sidebar />} />
       </Routes>
     </BrowserRouter>
   );
