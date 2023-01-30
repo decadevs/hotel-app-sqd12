@@ -5,10 +5,11 @@ import Hotel from '../../../src/assets/Hotel.svg';
 import Manager from '../../../src/assets/Manager.svg';
 import Transaction from '../../../src/assets/Transaction.svg';
 import Logout from '../../../src/assets/Logout.svg';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 
 
 export default function Sidebar({roleValue}){
+
     function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("main").style.marginLeft= "0";
@@ -49,34 +50,34 @@ export default function Sidebar({roleValue}){
             <div id="mySidenav" className="sidenav">
                 <div>
                     {/* <Link to="" className="closebtn" onClick={closeNav}>&times;</Link> */}
-                     <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
+                     <a href="javascript:void(0)" id="" className="closebtn" onClick={closeNav}>&times;</a>
                 </div>
 
-                <div>
-                    <Link to={"/" + dashboard} className="tab" ><img src={Dashboard} alt="Your SVG"/>
-                        <div>Dashboard</div>
-                    </Link>
+                <div  id="dashboard">
+                    <NavLink to={"/" + dashboard} className="tab" ><img src={Dashboard} alt="Your SVG"  />
+                        <div >Dashboard</div>
+                    </NavLink>
                 </div>
-                <div>
-                    <Link to={"/" + hotel} className="tab"><img src={Hotel} alt="Your SVG"/> 
-                      <div>Hotels</div>
-                    </Link>
+               <div  id="HotelTab">
+                    <NavLink to={"/" + hotel}  className="tab"><img src={Hotel} alt="Your SVG" /> 
+                   <div >Hotels</div> 
+                    </NavLink>
                 </div>
-                <div>
-                    <Link to={"/" +plug} className="tab"><img src={Manager} alt="Your SVG"/> 
-                        <div>{roleValue === "Customer" || roleValue === "Admin" ? roleValue === "Customer"?"Manager":"Manager":"Bookings"}</div>
-                    </Link>
+                <div id="plugTab">
+                    <NavLink to={"/" +plug}  className="tab"><img src={Manager} alt="Your SVG" /> 
+                        <div >{roleValue === "Customer" || roleValue === "Admin" ? roleValue === "Customer"?"Manager":"Manager":"Bookings"}</div>
+                    </NavLink>
                 </div>
-                <div>
-                    <Link to={"/" + transaction} className="tab"><img src={Transaction} alt="Your SVG"/>
-                        <div>Transactions</div>
-                    </Link>
+                <div id="TransactionTab" >
+                    <NavLink to={"/" + transaction}  className="tab"><img src={Transaction} alt="Your SVG"/>
+                        <div >Transactions</div>
+                    </NavLink>
                 </div>
                 <div className="logout"> 
                     <div>
-                        <Link to="/logout">Logout <img src={Logout} alt="Your SVG"/> </Link>
-                    </div>                    
-                </div>               
+                        <Link to="/login">Logout <img src={Logout} alt="Your SVG"/> </Link>
+                    </div>                     *
+                 </div>                
             </div>         
         </>
     );

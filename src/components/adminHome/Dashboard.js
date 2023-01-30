@@ -1,14 +1,14 @@
 import Sidebar from '../navs/Sidebar';
 import NavLink from '../navs/NavLink';
 import Navbar from '../navs/Navbar';
+import AdminDashboard from '../../pages/admin/Dashboard'
 
 export default function Dashboard() {
     return(
         <>
             <Navbar/>
             <NavLink>
-                <div> Admin</div>
-                <div>Home</div>
+                <AdminDashboard/>
             </NavLink> 
             <Sidebar roleValue={"Admin"}/>
         </>
