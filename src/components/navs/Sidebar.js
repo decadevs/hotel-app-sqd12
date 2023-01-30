@@ -48,8 +48,14 @@ export default function Sidebar({roleValue}){
         <> 
             <div id="mySidenav" className="sidenav">
                 <div>
+<<<<<<< HEAD
                     <Link to="" className="closebtn" onClick={closeNav}>&times;</Link>
+=======
+                    {/* <Link to="" className="closebtn" onClick={closeNav}>&times;</Link> */}
+                     <a href="javascript:void(0)" className="closebtn" onClick={closeNav}>&times;</a>
+>>>>>>> 0c2e26ad9371b9b55d1601717fc8c77c634c84d4
                 </div>
+
                 <div>
                     <Link to={"/" + dashboard} className="tab" ><img src={Dashboard} alt="Your SVG"/>
                         <div>Dashboard</div>

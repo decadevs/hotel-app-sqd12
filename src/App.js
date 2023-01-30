@@ -15,6 +15,11 @@ import Login from "./components/authentication/Login";
 import Register from "./components/authentication/Register";
 import ResetUpdatePassword from "../src/components/ResetUpdatePassword/ResetUpdatePassword";
 import AddRoom from "../src/pages/manager/AddRoom";
+<<<<<<< HEAD
+=======
+import Navbar from "./components/navs/Navbar";
+import Sidebar from "./components/navs/Sidebar";
+>>>>>>> 0c2e26ad9371b9b55d1601717fc8c77c634c84d4
 import CreateAmenity from "./components/amenity/CreateAmenity";
 import Amenities from "./components/amenity/Amenities";
 import UserTransactions from "./components/customerHome/usertransaction/UserTransactions";
@@ -33,6 +38,12 @@ import Booking from "./pages/customer/Booking";
 import ViewMore from "./components/viewMore/viewMore";
 import HotelListing from "./components/HotelListing/HotelListing";
 import HotelReview from "./components/HotelReview/HotelReview";
+<<<<<<< HEAD
+=======
+
+import {ProfileLayout} from './layouts/userProfileLayout/ProfileLayout'
+
+>>>>>>> 0c2e26ad9371b9b55d1601717fc8c77c634c84d4
 
 function App() {
   return (
@@ -72,8 +83,14 @@ function App() {
         <Route path="admin-manager" element={<AdminManager />} />
         <Route path="admin-hotel" element={<AdminHotel />} />
         <Route path="manager-transactions" element={<ManagerTransactions />} />
+        <Route path ="/profile" element={<ProfileLayout/>}/>
         <Route path="amenities" element={<Amenities />} />
         <Route path="hotel-review" element={<HotelReview />} />
+<<<<<<< HEAD
+=======
+        <Route path="navbar" element={<Navbar />} />
+        <Route path="sidebar" element={<Sidebar />} />
+>>>>>>> 0c2e26ad9371b9b55d1601717fc8c77c634c84d4
       </Routes>
     </BrowserRouter>
   );
