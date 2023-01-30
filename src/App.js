@@ -23,11 +23,9 @@ import UserTransactions from "./components/customerHome/usertransaction/UserTran
 import ResetPassword from "./components/authentication/ResetPassword";
 import ChangePassword from "./components/authentication/ChangePassword";
 import LandingPage from"./components/landingPage/landingPageIndex/LandingPage";
-import CustomerDashboard from "./components/customerHome/CustomerDashboard/CustomerDashboard";
 // import Transactions from "../components/customerHome/Transactions/Transactions";
 import "./components/PayForHotel/PayForHotelForm.css";
 import { PayForHotelForm } from "./components/PayForHotel/PayForHotelForm";
-import LandingPage from "./components/landingPage/landingPageIndex/LandingPage";
 import Transactions from "./components/transaction/Transactions";
 import Create from "./components/modals/CreatedModal";
 import Delete from "./components/modals/DeleteModal";
@@ -53,7 +51,6 @@ function App() {
         <Route path="reset-password" element={<ResetPassword />} />
         <Route path="change-password" element={<ChangePassword />} />
         {/* <Route path="customer-transactions" element={<Transactions />}/> */}
-        <Route path="Customer-Dashboard" element={<CustomerDashboard/>} />
         <Route path="user-transaction" element={<UserTransactions />} />
         <Route path="customer-transactions" element={<Transactions />} />
         <Route path="pay-for-hotel" element={<PayForHotelForm />} />
