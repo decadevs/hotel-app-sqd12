@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Login from "./components/authentication/Login";
+import Register from "./components/authentication/Register";
+import ResetUpdatePassword from "../src/components/ResetUpdatePassword/ResetUpdatePassword";
+import ResetPassword from "./components/authentication/ResetPassword";
+import ChangePassword from "./components/authentication/ChangePassword";
+import LandingPage from"./components/landingPage/landingPageIndex/LandingPage";
+import CustomerDashboard from "./components/customerHome/CustomerDashboard/CustomerDashboard";
+// import Transactions from "../components/customerHome/Transactions/Transactions";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="register" element={<Register />} />
+        <Route path="login" element={<Login />} />
+        <Route path="reset-update-password" element={<ResetUpdatePassword />} />
+        <Route path="reset-password" element={<ResetPassword />} />
+        <Route path="change-password" element={<ChangePassword />} />
+        {/* <Route path="customer-transactions" element={<Transactions />}/> */}
+        <Route path="Customer-Dashboard" element={<CustomerDashboard/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
