@@ -16,7 +16,9 @@ function UserTransactions() {
     const [currentPage, setCurrentPage] = useState(1);
     let [transactionsPerPage,setTransactionPerPage] = useState(10);
     const [transactions, setTransactions] = useState([]);
-    //
+    const [Username, setUsername] = useState();
+    //const[password,setPassword] = useState();
+    console.log(Username);
  const getData= ()=>{   
     fetch('https://localhost:7161/WeatherForecast/All-Transactions')
     .then(res=> res.json())
@@ -81,12 +83,13 @@ function UserTransactions() {
                     <th className="UserTranCheckBox">
                         <input type="checkbox" />
                     </th>
-                    <th>NAME</th>
-                    <th>DESCRIPTION</th>
-                    <th>RATE</th>
-                    <th>BALANCE</th>
-                    <th>DEPOSIT</th>
-                    <th>STATUS</th>
+                    <th>FULLNAME</th>
+                    <th>GENDER</th>
+                    <th>AGE</th>
+                    <th>ADDRESS</th>
+                    <th>STATE</th>
+                    <th>ISACTIVE</th>
+                    <th>AVATAR</th>
                     <th>
                         <FaEllipsisH />
                     </th>
@@ -96,12 +99,13 @@ function UserTransactions() {
                         <th className="UserTranCheckBox">
                             <input type="checkbox" />
                         </th>
-                        <th>{transaction.name}</th>
-                        <th>{transaction.description}</th>
-                        <th>{transaction.rate}</th>
-                        <th>{transaction.balance}</th>
-                        <th>{transaction.deposit}</th>
-                        <th>{transaction.status ? <img alt="Your SVG" src={Active} /> : <img alt="Your SVG" src={Inactive} />}</th>
+                        <th>{transaction.firstName +"," + transaction.lastName}</th>
+                        <th>{transaction.gender}</th>
+                        <th>{transaction.age}</th>
+                        <th>{transaction.address}</th>
+                        <th>{transaction.state}</th>
+                        <th>{transaction.isactive=== "Yes" ? <img alt="Your SVG" src={Active} /> : <img alt="Your SVG" src={Inactive} />}</th>
+                        <img alt="Your Avatar" src={transaction.avatar}/>
                         <th className="Action">
                             <img alt="Your SVG" src={Edit} onClick={() => handleEdit(transaction.id)} />
                             <img alt="Your SVG" src={Delete} onClick={() => handleDelete(transaction.id)} />...
@@ -126,6 +130,7 @@ function UserTransactions() {
                         onChange={(event) => setTransactionPerPage(event.target.value)}
                     />
                     <div>
+                        
                         <h4>
                             {indexOfFirstTransaction + 1}-{indexOfLastTransaction} of {transactions.length}
                         </h4>
@@ -137,6 +142,9 @@ function UserTransactions() {
                     </div>
                 </div>
             </div>
+            <input type="text" name ="Username" value={Username}
+              onChange={(event)=> setUsername(event.target.value)}
+            />
         </div>
     );
 }
