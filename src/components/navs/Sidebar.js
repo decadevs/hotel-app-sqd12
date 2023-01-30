@@ -48,7 +48,7 @@ export default function Sidebar({roleValue}){
         <> 
             <div id="mySidenav" className="sidenav">
                 <div>
-                    <Link href="" className="closebtn" onClick={closeNav}>&times;</Link>
+                    <Link to="" className="closebtn" onClick={closeNav}>&times;</Link>
                 </div>
                 <div>
                     <Link to={"/" + dashboard} className="tab" ><img src={Dashboard} alt="Your SVG"/>
@@ -72,7 +72,7 @@ export default function Sidebar({roleValue}){
                 </div>
                 <div className="logout"> 
                     <div>
-                        <Link to="/logout">Logout <img src={Logout} alt="Your SVG"/> </Link>
+                        <Link to="/login">Logout <img src={Logout} alt="Your SVG"/> </Link>
                     </div>                    
                 </div>               
             </div>         
