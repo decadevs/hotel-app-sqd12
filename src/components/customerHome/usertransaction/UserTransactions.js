@@ -13,21 +13,24 @@ import { FaEllipsisH, FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 
 function UserTransactions() {
+    const[pages,setPages] = useState(1);
+    const url=`https://localhost:44384/api/Transaction/GetAllUsersTransaction?pageNumber=${pages}&pageSize=10`
     const [currentPage, setCurrentPage] = useState(1);
     let [transactionsPerPage,setTransactionPerPage] = useState(10);
     const [transactions, setTransactions] = useState([]);
-    const [Username, setUsername] = useState();
-    //const[password,setPassword] = useState();
-    console.log(Username);
- const getData= ()=>{   
-    fetch('https://localhost:7161/WeatherForecast/All-Transactions')
+    
+    const[query, setQuery] = useState("");
+    
+ const getData= (url)=>{   
+    fetch(url)
     .then(res=> res.json())
     .then(data=>{
-        setTransactions(data)
-        console.log(data);
+        
+        setTransactions(data.data)
+        console.log(data.data);
     })};
     useEffect(() => {
-            getData()
+            getData(url)
           }, []);
 
     const handlePageChange = pageNumber => {
@@ -65,7 +68,7 @@ function UserTransactions() {
     function handleDelete(id) {
         setTransactions(transactions.filter((transaction) => transaction.id !== id));
     }
-    const activeUsers = transactions.filter(x=> x.status ===true).length;
+    const activeUsers = transactions.filter(x=> x.isactive ==="Yes").length;
 
     return (
 
@@ -75,7 +78,10 @@ function UserTransactions() {
                 <img src={Filter} alt='Your SVG'/>
                 <div className="UserTransactionsearchInput">
                     <HiMagnifyingGlass className="UserTransactionSearchIcon" />
-                    <input type="text" placeholder="Search" />
+                    <input type="text" placeholder="Search" 
+                        className="search"
+                        onChange={(event)=> setQuery(event.target.value)}
+                    />
                 </div>
             </div>
             <table>
@@ -89,12 +95,14 @@ function UserTransactions() {
                     <th>ADDRESS</th>
                     <th>STATE</th>
                     <th>ISACTIVE</th>
-                    <th>AVATAR</th>
+                    
                     <th>
                         <FaEllipsisH />
                     </th>
                 </tr>
-                {currentTransactions.map((transaction) => (
+                {currentTransactions.filter((transaction)=>
+                transaction.firstName.toLowerCase().includes(query) || transaction.lastName.toLowerCase().includes(query))
+                .map((transaction) => (
                     <tr key={transaction.id}>
                         <th className="UserTranCheckBox">
                             <input type="checkbox" />
@@ -105,7 +113,7 @@ function UserTransactions() {
                         <th>{transaction.address}</th>
                         <th>{transaction.state}</th>
                         <th>{transaction.isactive=== "Yes" ? <img alt="Your SVG" src={Active} /> : <img alt="Your SVG" src={Inactive} />}</th>
-                        <img alt="Your Avatar" src={transaction.avatar}/>
+                        
                         <th className="Action">
                             <img alt="Your SVG" src={Edit} onClick={() => handleEdit(transaction.id)} />
                             <img alt="Your SVG" src={Delete} onClick={() => handleDelete(transaction.id)} />...
@@ -137,14 +145,12 @@ function UserTransactions() {
                         <div>        {currentPage !== 1 && (
                             <FaAngleLeft onClick={() => handlePageChange(currentPage - 1)} />)}
                             {currentPage !== totalPages && (
-                                <FaAngleRight onClick={() => handlePageChange(currentPage + 1)} />)}
+                                <FaAngleRight onClick={() => handlePageChange((currentPage=== transactions.length) ? setPages(pages+1) : currentPage + 1)} />)}
                         </div>
                     </div>
                 </div>
             </div>
-            <input type="text" name ="Username" value={Username}
-              onChange={(event)=> setUsername(event.target.value)}
-            />
+            
         </div>
     );
 }
