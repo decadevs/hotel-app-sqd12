@@ -11,10 +11,9 @@ import React, { useState, useEffect} from "react";
 // import axios from 'axios';
 import { FaEllipsisH, FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
-
+const url='https://localhost:44384/api/Transaction/GetAllUsersTransaction?pageNumber=1&pageSize=10'
 function UserTransactions() {
-    const[pages,setPages] = useState(1);
-    const url=`https://localhost:44384/api/Transaction/GetAllUsersTransaction?pageNumber=${pages}&pageSize=10`
+
     const [currentPage, setCurrentPage] = useState(1);
     let [transactionsPerPage,setTransactionPerPage] = useState(10);
     const [transactions, setTransactions] = useState([]);
@@ -145,7 +144,7 @@ function UserTransactions() {
                         <div>        {currentPage !== 1 && (
                             <FaAngleLeft onClick={() => handlePageChange(currentPage - 1)} />)}
                             {currentPage !== totalPages && (
-                                <FaAngleRight onClick={() => handlePageChange((currentPage=== transactions.length) ? setPages(pages+1) : currentPage + 1)} />)}
+                                <FaAngleRight onClick={() => handlePageChange(currentPage + 1)} />)}
                         </div>
                     </div>
                 </div>
