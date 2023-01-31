@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import resetlogo from "../../assets/resetlogo.png"
 import "./ResetUpdatePassword.css"
-const formDetails = {
-  password: "",
-  password2: ""
-};
+
 const UpdatePassword = () => {
-  const [password, setPassword] = useState(formDetails);
+
 
   const handleChange = (e) => {
     console.log(e.target.value)
