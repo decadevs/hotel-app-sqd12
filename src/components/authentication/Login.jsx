@@ -12,20 +12,22 @@ const initialData = {
 
 function Login() {
   const [data, setData] = useState(initialData);
-  const [errMsg, setErrMsg] = useState(initialData);
+  const [errMsg, setErrMsg] = useState("");
   const { login } = useContext(AuthContext);
   const handleLogin = async () => {
     const { username, password } = data;
     if (username.trim() === "" || password.trim() === "") {
       setErrMsg("Please put your username and password");
+      return;
     }
+    setErrMsg("");
     const res = await login(data);
-    console.log(res);
   };
   return (
     <div className="login">
       <div class="form">
         <div class="title">Login</div>
+
         <div class="input-container ic2">
           <input
             onChange={(e) =>
@@ -56,6 +58,11 @@ function Login() {
             Password
           </label>
         </div>
+        {errMsg !== "" ? (
+          <p style={{ color: "red", fontSize: "10px" }}>*** {errMsg} ***</p>
+        ) : (
+          <p></p>
+        )}
         <button onClick={handleLogin} type="text" class="submit">
           Login
         </button>

@@ -8,9 +8,13 @@ const AuthContextProvider = (props) => {
     var res = await apiPost("Authentication/Register", data, {}, false);
     return res;
   };
-  const login = async (data) => {
-    var res = await apiPost("Authentication/Login", data, {}, false);
-    return res;
+  const login = async (value) => {
+    const { data } = await apiPost("Authentication/Login", value, {}, false);
+    console.log(data);
+    if (data.succeeded) {
+      localStorage.setItem("token", data.data);
+    }
+    return data;
   };
 
   return (
