@@ -10,7 +10,6 @@ const AuthContextProvider = (props) => {
   };
   const login = async (value) => {
     const { data } = await apiPost("Authentication/Login", value, {}, false);
-    //console.log(data);
     if (data.succeeded) {
       localStorage.setItem("token", data.data);
     }
@@ -50,4 +49,3 @@ const AuthContextProvider = (props) => {
 };
 
 export default AuthContextProvider;
-//newfile
