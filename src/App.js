@@ -20,6 +20,7 @@ import Sidebar from "./components/navs/Sidebar";
 import CreateAmenity from "./components/amenity/CreateAmenity";
 import Amenities from "./components/amenity/Amenities";
 import UserTransactions from "./components/customerHome/usertransaction/UserTransactions";
+import ForgetPassword from "./components/authentication/ForgetPassword";
 import ResetPassword from "./components/authentication/ResetPassword";
 import ChangePassword from "./components/authentication/ChangePassword";
 import LandingPage from "./components/landingPage/landingPageIndex/LandingPage";
@@ -47,6 +48,7 @@ function App() {
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
         <Route path="reset-update-password" element={<ResetUpdatePassword />} />
+        <Route path="forget-password" element={<ForgetPassword />} />
         <Route path="reset-password" element={<ResetPassword />} />
         <Route path="change-password" element={<ChangePassword />} />
         {/* <Route path="customer-transactions" element={<Transactions />}/> */}
