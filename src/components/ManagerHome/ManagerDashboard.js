@@ -277,7 +277,7 @@ function ManagerDashboard() {
         </div>
   );
     }
-     export function Dashboard() {
+     export function AdminManager() {
       return(
           <>
               <Navbar/>
