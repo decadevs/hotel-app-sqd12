@@ -73,9 +73,7 @@ function Booking() {
                     <th>NO OF PERSONS</th>
                     {/* <th>DEPOSIT</th>
                     <th>STATUS</th> */}
-                    <th>
-                        <FaEllipsisH />
-                    </th>
+                   {/* Q */}
                 </tr>
                 {currentTransactions.map((transaction) => (
                     <tr key={transaction.id}>

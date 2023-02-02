@@ -1,10 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CustomerDashboard from "./components/customerHome/Dashboard";
-<<<<<<< HEAD
 import Dashboard from "./components/ManagerHome/Dashboard";
-=======
-import { Dashboard } from "./components/ManagerHome/ManagerDashboard";
->>>>>>> 5574e4cdcf8bb57549f7eb1df36cab49ba916555
+// import { Dashboard } from "./components/ManagerHome/ManagerDashboard";
 import AdminDashboard from "./components/adminHome/Dashboard";
 import CustomerHotel from "./components/customerHome/Hotels";
 import CustomerManager from "./components/customerHome/Manager";
@@ -83,12 +80,9 @@ function App() {
         <Route path="admin-transaction" element={<AdminTransaction />} />
         <Route path="admin-manager" element={<AdminManager />} />
         <Route path="admin-hotels" element={<AdminHotel />} />
-<<<<<<< HEAD
         <Route path ="/profile" element={<ProfileLayout/>}/>
-=======
         <Route path="manager-transactions" element={<ManagerTransactions />} />
         <Route path="/profile" element={<ProfileLayout />} />
->>>>>>> 5574e4cdcf8bb57549f7eb1df36cab49ba916555
         <Route path="amenities" element={<Amenities />} />
         <Route path="hotel-review" element={<HotelReview />} />
         <Route path="navbar" element={<Navbar />} />
