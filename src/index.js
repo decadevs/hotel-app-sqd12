@@ -7,17 +7,6 @@ import AuthContext from "./context/auth/authContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-<<<<<<< HEAD
-  //  <React.StrictMode>
-    <ErrorBoundary>
-      <Suspense fallback= "loading"/>
-      <Suspense fallback="loading">
-        <App />
-      </Suspense>
-    </ErrorBoundary>
-  //  </React.StrictMode>
-);
-=======
   <React.StrictMode>
     <AuthContext>
       <ErrorBoundary>
@@ -28,4 +17,3 @@ root.render(
     </AuthContext>
   </React.StrictMode>
 );
->>>>>>> 5574e4cdcf8bb57549f7eb1df36cab49ba916555
