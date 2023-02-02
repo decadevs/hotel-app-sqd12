@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CustomerDashboard from "./components/customerHome/Dashboard";
-import { Dashboard } from "./components/ManagerHome/ManagerDashboard";
+import Dashboard from "./components/ManagerHome/Dashboard";
+// import { Dashboard } from "./components/ManagerHome/ManagerDashboard";
 import AdminDashboard from "./components/adminHome/Dashboard";
 import CustomerHotel from "./components/customerHome/Hotels";
 import CustomerManager from "./components/customerHome/Manager";
@@ -9,7 +10,7 @@ import ManagerHotel from "./components/ManagerHome/Hotels";
 import ManagerBookings from "./components/ManagerHome/Bookings";
 import ManagerTransactions from "./components/ManagerHome/Transactions";
 import AdminHotel from "./components/adminHome/Hotels";
-import AdminManager from "./components/adminHome/Manager";
+import {AdminManager} from "./components/ManagerHome/ManagerDashboard";
 import AdminTransaction from "./components/adminHome/Transactions";
 import Login from "./components/authentication/Login";
 import Register from "./components/authentication/Register";
@@ -79,6 +80,7 @@ function App() {
         <Route path="admin-transaction" element={<AdminTransaction />} />
         <Route path="admin-manager" element={<AdminManager />} />
         <Route path="admin-hotels" element={<AdminHotel />} />
+        <Route path ="/profile" element={<ProfileLayout/>}/>
         <Route path="manager-transactions" element={<ManagerTransactions />} />
         <Route path="/profile" element={<ProfileLayout />} />
         <Route path="amenities" element={<Amenities />} />
