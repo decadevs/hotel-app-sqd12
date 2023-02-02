@@ -1,5 +1,5 @@
 import "./Amenities.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BiFilter } from "react-icons/bi";
 import { AiOutlinePlus } from "react-icons/ai";
 import { FaSearch } from "react-icons/fa";
@@ -10,11 +10,62 @@ import {
 } from "react-icons/md";
 import Modal from "@mui/material/Modal";
 import { red } from "@mui/material/colors";
+import Axios from "../../api/Axios";
 
 export default function () {
   const [open, setOpen] = React.useState(false);
+  const [tableData, setTableData] = useState([]);
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState(0);
+  const [discount, setDiscount] = useState(0);
+  const [id, setId] = useState("");
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+
+  const handlePriceChange = (event) => {
+    setPrice(event.target.value);
+  };
+
+  const handleDiscountChange = (event) => {
+    setDiscount(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    Axios.post("/api/Amenity/CreateAmenity", {
+      name: name,
+      price: price,
+      discount: discount,
+      hotelId: id
+    })
+      .then((res) => {
+        console.log(res);
+        setPrice(0);
+        setDiscount(0);
+        setName("");
+      })
+      .catch((err) => console.log(err));
+
+    // event.reset();
+  };
+
+  useEffect(() => {
+    const getData = async () => {
+      await Axios.get("/api/Amenity/GetAmenities")
+        .then((res) => {
+          setTableData(res?.data?.data);
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    getData();
+  }, [setTableData]);
 
   return (
     <div className="container">
@@ -38,18 +89,40 @@ export default function () {
         </button>
       </div>
       <table className="amenities-table">
-        <tr>
-          <th className="first-column">
-            <input className="table-checkbox" type="checkbox" />
-          </th>
-          <th>Name</th>
-          <th>Price</th>
-          <th>Discount</th>
-          <th>
-            <MdMoreHoriz className="table-icons table-icons-hover" />
-          </th>
-        </tr>
-        <tr>
+        <thead>
+          <tr>
+            <th className="first-column">
+              <input className="table-checkbox" type="checkbox" />
+            </th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Discount</th>
+            <th>
+              <MdMoreHoriz className="table-icons table-icons-hover" />
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {tableData?.map((data) => {
+            return (
+              <tr key={data?.name} onClick={() => setId(data?.name)}>
+                <td className="first-column">
+                  <input type="checkbox" />
+                </td>
+                <td>{data?.name}</td>
+                <td>{data?.price}</td>
+                <td>{data?.discount}</td>
+                <td className="table-icons">
+                  <MdOutlineModeEditOutline className="table-icons-hover" />
+                  <MdOutlineDeleteForever className="table-icons-hover" />
+                  <MdMoreHoriz className="table-icons-hover" />
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+
+        {/* <tr>
           <td className="first-column">
             <input type="checkbox" />
           </td>
@@ -61,7 +134,7 @@ export default function () {
             <MdOutlineDeleteForever className="table-icons-hover" />
             <MdMoreHoriz className="table-icons-hover" />
           </td>
-        </tr>
+        </tr> */}
       </table>
 
       <Modal
@@ -83,12 +156,19 @@ export default function () {
       >
         <div className="formBody">
           <h1 className="formName">Add Amenity</h1>
-          <form>
+          <form
+            onSubmit={(e) => {
+              handleSubmit(e);
+              handleClose();
+            }}
+          >
             <div>
               <input
                 type="text"
                 placeholder="Name"
                 className="amenityInput"
+                value={name}
+                onChange={handleNameChange}
               ></input>
             </div>
             <div>
@@ -96,6 +176,8 @@ export default function () {
                 type="number"
                 placeholder="Price"
                 className="amenityInput"
+                value={price}
+                onChange={handlePriceChange}
               ></input>
             </div>
             <div>
@@ -103,6 +185,8 @@ export default function () {
                 type="number"
                 placeholder="Discount"
                 className="amenityInput"
+                value={discount}
+                onChange={handleDiscountChange}
               ></input>
             </div>
             <button className="modal-button" type="submit">

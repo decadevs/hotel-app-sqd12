@@ -1,0 +1,217 @@
+{
+  "data": [
+    {
+      "name": "Buckinghamshire",
+      "price": 28001.57,
+      "discount": 11421.13,
+      "createdAt": "2023-01-18T20:49:55.0438175",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "Arkansas",
+      "price": 48542.62,
+      "discount": 7750.24,
+      "createdAt": "2023-01-18T20:49:55.043812",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "Enhanced",
+      "price": 2705.02,
+      "discount": 8618.57,
+      "createdAt": "2023-01-18T20:49:55.0437857",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "Ergonomic",
+      "price": 70364.34,
+      "discount": 6109.15,
+      "createdAt": "2023-01-18T20:49:55.0438108",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "Granite",
+      "price": 45819.82,
+      "discount": 4190.29,
+      "createdAt": "2023-01-18T20:49:55.0438201",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "fresh-thinking",
+      "price": 43379.07,
+      "discount": 16994.13,
+      "createdAt": "2023-01-18T20:49:55.0437956",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "Forges",
+      "price": 23456.81,
+      "discount": 4878.23,
+      "createdAt": "2023-01-18T20:49:55.0438033",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "next-generation",
+      "price": 5382.73,
+      "discount": 8943.50,
+      "createdAt": "2023-01-18T20:49:55.0438164",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "Frozen",
+      "price": 76348.89,
+      "discount": 7093.14,
+      "createdAt": "2023-01-18T20:49:55.043808",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "Home Loan Account",
+      "price": 97670.87,
+      "discount": 11231.69,
+      "createdAt": "2023-01-18T20:49:55.0437882",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "Lead",
+      "price": 75181.97,
+      "discount": 18680.56,
+      "createdAt": "2023-01-18T20:49:55.0438045",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "Suriname",
+      "price": 36714.88,
+      "discount": 11495.63,
+      "createdAt": "2023-01-18T20:49:55.0438008",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "system",
+      "price": 48706.83,
+      "discount": 4720.29,
+      "createdAt": "2023-01-18T20:49:55.043798",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "program",
+      "price": 76231.53,
+      "discount": 9700.70,
+      "createdAt": "2023-01-18T20:49:55.0438068",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "Shores",
+      "price": 4412.63,
+      "discount": 14904.79,
+      "createdAt": "2023-01-18T20:49:55.0438095",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "Compatible",
+      "price": 81569.73,
+      "discount": 5885.12,
+      "createdAt": "2023-01-18T20:49:55.0438131",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "Forest",
+      "price": 97021.76,
+      "discount": 17305.42,
+      "createdAt": "2023-01-18T20:49:55.0437897",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "aggregate",
+      "price": 98499.39,
+      "discount": 12313.96,
+      "createdAt": "2023-01-18T20:49:55.0437944",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "Handcrafted Soft Fish",
+      "price": 17157.21,
+      "discount": 8311.56,
+      "createdAt": "2023-01-18T20:49:55.0438143",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "empower",
+      "price": 85221.98,
+      "discount": 11794.14,
+      "createdAt": "2023-01-18T20:49:55.0437844",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "withdrawal",
+      "price": 14962.97,
+      "discount": 14618.82,
+      "createdAt": "2023-01-18T20:49:55.0438056",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "applications",
+      "price": 63753.10,
+      "discount": 19374.34,
+      "createdAt": "2023-01-18T20:49:55.0438153",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "Investment Account",
+      "price": 80018.55,
+      "discount": 18395.78,
+      "createdAt": "2023-01-18T20:49:55.043819",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "Multi-layered",
+      "price": 82306.13,
+      "discount": 9479.58,
+      "createdAt": "2023-01-18T20:49:55.0437932",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "motivating",
+      "price": 84301.97,
+      "discount": 4029.91,
+      "createdAt": "2023-01-18T20:49:55.0437868",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "International",
+      "price": 55058.08,
+      "discount": 9910.70,
+      "createdAt": "2023-01-18T20:49:55.0437996",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "transmitter",
+      "price": 34778.76,
+      "discount": 4043.77,
+      "createdAt": "2023-01-18T20:49:55.0437968",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "copying",
+      "price": 63370.66,
+      "discount": 13256.95,
+      "createdAt": "2023-01-18T20:49:55.0438019",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "concept",
+      "price": 25845.00,
+      "discount": 7935.30,
+      "createdAt": "2023-01-18T20:49:55.043792",
+      "updatedAt": "0001-01-01T00:00:00"
+    },
+    {
+      "name": "Executive",
+      "price": 53230.32,
+      "discount": 19710.28,
+      "createdAt": "2023-01-18T20:49:55.0437909",
+      "updatedAt": "0001-01-01T00:00:00"
+    }
+  ],
+  "succeeded": ["true"],
+  "message": ["Successful"],
+  "statusCode": [200]
+}
