@@ -44,12 +44,9 @@ export default function Section({children}) {
 //     const [storedId, setStoredId] = useState(localStorage.getItem('Id'))
     
    
-
-
-
 //     useEffect( ()=>{
 //         async function fetchData(){
-//             localStorage.setItem('Id', "b4ae46af-744f-4cb0-80c5-9951958eb111");
+//             localStorage.setItem('Id', "333ef607-d562-4ab3-8c29-98b8c0f4b23f");
 //             setStoredId(localStorage.getItem(""));
 //             const Id = storedId;
 //             const response = await fetch(`https://localhost:7255/api/Customers/Manager/${Id}`);

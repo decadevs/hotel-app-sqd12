@@ -1,15 +1,15 @@
 import React from 'react';
-import Section, { Manager } from './navContext';
+import  { Manager } from './navContext';
 
 
 
 export default function NavLink(props){
 
     return(                         
-            <Section>
+            <Manager>
                 <div id="main">
                     {props.children}
                 </div>
-            </Section>          
+            </Manager>          
     );
 }

@@ -1,8 +1,8 @@
 import Sidebar from '../navs/Sidebar';
 import NavLink from '../navs/NavLink';
 import Navbar from '../navs/Navbar';
-import CustomerDashboard from '../customerHome/CustomerDashboard/CustomerDashboard';
-import Section from '../navs/navContext';
+import DashboardHome from './DashboardHome';
+import Section, { Manager } from '../navs/navContext';
 import { useEffect, useState } from 'react';
 
 export default function Dashboard() {
@@ -10,13 +10,17 @@ export default function Dashboard() {
        
        
     return(
+        <>
         <Section>
             <Navbar/>
             <NavLink>
-               <CustomerDashboard/>
+               <DashboardHome/>
             </NavLink> 
             <Sidebar roleValue={"Manager"}/>
         </Section>
-        
+            
+        </>
+           
+         
     )
 }
