@@ -1,47 +1,29 @@
 
 
-import "./UserTransaction.css";
+import "./Booking.css";
 import Active from '../../../assets/Active.svg'
 import Inactive from '../../../assets/Inactive.svg';
 import Edit from '../../../assets/Edit.svg';
 import Delete from '../../../assets/Delete.svg';
 import Filter from '../../../assets/Filter.svg';
 import { HiMagnifyingGlass } from "react-icons/hi2";
-import React, { useState, useEffect} from "react";
-// import axios from 'axios';
+import React, { useState } from "react";
 import { FaEllipsisH, FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
-const url='https://localhost:44384/api/Transaction/GetAllUsersTransaction?pageNumber=1&pageSize=10'
-function UserTransactions() {
 
-    const [currentPage, setCurrentPage] = useState(1);
-    let [transactionsPerPage,setTransactionPerPage] = useState(10);
-    const [transactions, setTransactions] = useState([]);
-    
-    const[query, setQuery] = useState("");
-    
- const getData= (url)=>{   
-    fetch(url)
-    .then(res=> res.json())
-    .then(data=>{
-        
-        setTransactions(data.data)
-        console.log(data.data);
-    })};
-    useEffect(() => {
-            getData(url)
-          }, []);
-
+function Booking() {
+    const [transactions, setTransactions] = useState([ ]);
     const handlePageChange = pageNumber => {
         setCurrentPage(pageNumber);
     };
-   
+    const [currentPage, setCurrentPage] = useState(1);
+    let [transactionsPerPage,setTransactionPerPage] = useState(0);
     const page = (transactionsPerPage) => {
         if (transactions.length < 10) {
             return transactionsPerPage = transactions.length;
         }
         else {
-            return transactionsPerPage;
+            return transactionsPerPage = 10;
         }
 
     }
@@ -55,32 +37,29 @@ function UserTransactions() {
 
     // Change page
     //const paginate = (pageNumber) => setCurrentPage(pageNumber);
-    const handleEdit = (id) => {
-        const updatedTransactions = transactions.map((transaction) => {
-            if (transaction.id === id) {
-                return transaction;
+    const handleEdit = (editedTransaction) => {
+        const updatedTransactions = transactions.map(transaction => {
+            if (transaction.id === editedTransaction) {
+                return editedTransaction;
             }
             return transaction;
         });
         setTransactions(updatedTransactions);
     }
-    function handleDelete(id) {
-        setTransactions(transactions.filter((transaction) => transaction.id !== id));
+    function handleDelete(transactionid) {
+        setTransactions(transactions.filter(transaction => transaction.id !== transactionid));
     }
-    const activeUsers = transactions.filter(x=> x.isactive ==="Yes").length;
+    const activeUsers = transactions.filter(x=> x.status ===true).length;
 
     return (
 
         <div className="UsertranTable">
-            <h2>Transactions</h2>
+            <h2>Bookings</h2>
             <div className="UserTransactionSearchBar">
                 <img src={Filter} alt='Your SVG'/>
                 <div className="UserTransactionsearchInput">
                     <HiMagnifyingGlass className="UserTransactionSearchIcon" />
-                    <input type="text" placeholder="Search" 
-                        className="search"
-                        onChange={(event)=> setQuery(event.target.value)}
-                    />
+                    <input type="text" placeholder="Search" />
                 </div>
             </div>
             <table>
@@ -88,31 +67,25 @@ function UserTransactions() {
                     <th className="UserTranCheckBox">
                         <input type="checkbox" />
                     </th>
-                    <th>FULLNAME</th>
-                    <th>GENDER</th>
-                    <th>AGE</th>
-                    <th>ADDRESS</th>
-                    <th>STATE</th>
-                    <th>ISACTIVE</th>
-                    
-                    <th>
-                        <FaEllipsisH />
-                    </th>
+                    <th>BOOKING REFERENCE</th>
+                    <th>SERVICE NAME</th>
+                    <th>PAYMENT STATUS</th>
+                    <th>NO OF PERSONS</th>
+                    {/* <th>DEPOSIT</th>
+                    <th>STATUS</th> */}
+                   {/* Q */}
                 </tr>
-                {currentTransactions.filter((transaction)=>
-                transaction.firstName.toLowerCase().includes(query) || transaction.lastName.toLowerCase().includes(query))
-                .map((transaction) => (
+                {currentTransactions.map((transaction) => (
                     <tr key={transaction.id}>
                         <th className="UserTranCheckBox">
                             <input type="checkbox" />
                         </th>
-                        <th>{transaction.firstName +"," + transaction.lastName}</th>
-                        <th>{transaction.gender}</th>
-                        <th>{transaction.age}</th>
-                        <th>{transaction.address}</th>
-                        <th>{transaction.state}</th>
-                        <th>{transaction.isactive=== "Yes" ? <img alt="Your SVG" src={Active} /> : <img alt="Your SVG" src={Inactive} />}</th>
-                        
+                        <th>{transaction.name}</th>
+                        <th>{transaction.description}</th>
+                        <th>{transaction.rate}</th>
+                        <th>{transaction.balance}</th>
+                        <th>{transaction.deposit}</th>
+                        <th>{transaction.status ? <img alt="Your SVG" src={Active} /> : <img alt="Your SVG" src={Inactive} />}</th>
                         <th className="Action">
                             <img alt="Your SVG" src={Edit} onClick={() => handleEdit(transaction.id)} />
                             <img alt="Your SVG" src={Delete} onClick={() => handleDelete(transaction.id)} />...
@@ -129,15 +102,20 @@ function UserTransactions() {
                     <label htmlFor="Transaction-dd">
                         <b>Rows per page </b>
                     </label>
+                    {/* <select id="Transaction-dd" name="number">
+                        <option value="null"> </option>
+                        <option value="five">5</option>
+                        <option value="ten">10</option>
+                        <option value="twenty">20</option>
+                    </select> */}
                     <input
                         type="number"
                         id="Transaction-dd"
                         name="number"
                         value={transactionsPerPage}
-                        onChange={(event) => setTransactionPerPage(event.target.value)}
+                        onChange={event => setTransactionPerPage(event.target.value)}
                     />
                     <div>
-                        
                         <h4>
                             {indexOfFirstTransaction + 1}-{indexOfLastTransaction} of {transactions.length}
                         </h4>
@@ -149,9 +127,8 @@ function UserTransactions() {
                     </div>
                 </div>
             </div>
-            
         </div>
     );
 }
-export default UserTransactions;
+export default Booking;
 

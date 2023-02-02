@@ -1,13 +1,14 @@
 import Sidebar from '../navs/Sidebar';
 import NavLink from '../navs/NavLink';
 import Navbar from '../navs/Navbar';
+import Booking from './booking/Booking';
 
-export default function Bookings() {
+export default function ManagerBookings() {
     return(
         <>
             <Navbar/>
             <NavLink>
-                <div>Bookings</div>
+                <Booking/>
             </NavLink> 
             <Sidebar roleValue={"Manager"}/>
         </>
