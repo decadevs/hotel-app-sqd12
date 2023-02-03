@@ -1,22 +1,19 @@
 import Sidebar from '../navs/Sidebar';
 import NavLink from '../navs/NavLink';
-import Navbar from '../navs/Navbar';
+import NavbarCustomer from '../navs/Navbar';
 import CustomerDashboard from './CustomerDashboard/CustomerDashboard';
-import { useEffect, useState } from 'react';
-
-
+import HmsIntegration from '../navs/NavContext';
 
 export default function Dashboard() {
-    const [customer, setCutomerer] = useState({});
-           
+            
     return(
-        <>
-             <Navbar/>            
+        <HmsIntegration>
+             <NavbarCustomer/>            
                 <NavLink>
                     <CustomerDashboard/>
                 </NavLink>          
              <Sidebar roleValue={"Customer"}/>
-        </>
+        </HmsIntegration>
         
     )
 }

@@ -120,6 +120,7 @@
     font-size: 1.3rem;
     align-self: center;
     border-left: 2px solid black;
+    width: 17rem;
 }
 .profile, .dropdownImg{
     padding:0.3rem;
