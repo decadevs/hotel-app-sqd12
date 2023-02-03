@@ -3,23 +3,46 @@ import viewMoreLogo from "../../assets/viewMoreLogo.jpeg"
 import RoomLogo from "../../assets/RoomLogo.jpeg"
 import locationIcon from '../../assets/locationIcon.svg'
 import Bell from '../../assets/Bell.svg'
+import React, {useState, useEffect} from 'react'
+import {Link} from 'react-router-dom'
+
 
 
 const ViewMore = () => {
+
+const [hotel, setHotel] = useState([])
+
+useEffect(() =>{
+    const fetchData = async () => {
+
+        console.log("hii")
+        const result = await fetch('https://localhost:7255/api/Hotel/023446ef-04e8-42cf-882f-adf41e8182fe')
+        const jsonResult = await result.json()
+
+        setHotel(jsonResult.data)
+
+        console.log(jsonResult);
+    }
+
+    fetchData()
+    
+
+}, [])
+
     return (
         <section className="main-section-container">
             <div className="landing-section">
                 <div className="left-landing-section">
                     <div className="header-div">
                         <div className="head-div">
-                        <h2>Middleton Hotel</h2>
+                        <h2>{hotel.name}</h2>
                         <div id="rating-div">
                             <p id="rating-p">8.5 <span>^</span></p>
                         </div>
                         </div>
                         <div className="address-div">
                             <img className="icon small-icon" src={locationIcon} />
-                            <p>6, Rowtown, Ikeja, Georgia</p>
+                            <p>{hotel.address}</p>
                         </div>
                     </div>
 
@@ -31,13 +54,19 @@ const ViewMore = () => {
                                 <span className="icon left-icon">L</span>
                                 <div className="slider-content">
                                     <div className="main-img-slider-div">
+                                        <Link to='/hotel-review'>
                                         <img src={ RoomLogo } alt='Room'/>
+                                        </Link>
                                     </div>
                                     <div className="main-img-slider-div">
+                                    <Link to='/hotel-review'>
                                         <img src={ RoomLogo } alt='Room'/>
+                                        </Link>
                                     </div>
                                     <div className="main-img-slider-div">
+                                    <Link to='/hotel-review'>
                                         <img src={ RoomLogo } alt='Room'/>
+                                        </Link>
                                     </div>
                                 </div>
                                 <span className="icon right-icon">R</span>
@@ -45,11 +74,7 @@ const ViewMore = () => {
                             </div>
                         </div>
                         <p id="description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua.
-                            Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit, sed do eiusmod tempor
-                            incididunt ut labore et dolore magna aliqua.
+                            {hotel.description}
                         </p> 
 
                         <div className="bottom-div">
@@ -84,7 +109,11 @@ const ViewMore = () => {
                         </div>
                     </div>
 
-                    <button className="delete-request-btn">Request to Delete</button>
+                    <Link to='/customer-dashboard'>
+                    <button className="delete-request-btn">Back</button>
+                    </Link>
+                   
+                 
                 </div>
             </div>
         </section>
