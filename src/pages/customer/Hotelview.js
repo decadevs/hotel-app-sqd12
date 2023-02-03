@@ -12,6 +12,7 @@ import axios from 'axios'
 
 const Hotelview = () => {
     const [hotel, setHotel] = useState([])
+    const [description, setDescription] = useState([])
     const [filtered, setFiltered] = useState([])
     const [input, setInput] = useState('')
 
@@ -23,10 +24,11 @@ const Hotelview = () => {
     }
 
     useEffect(()=>{
-        axios.get("https://localhost:7255/api/Amenity/GetAmenities")
+        axios.get("https://localhost:7255/api/Hotel")
         .then(function (response) {
             setHotel([...response.data.data])
             setInput(response.data.message)
+            setDescription(response.data.description)
         })
 
    
@@ -44,7 +46,7 @@ const Hotelview = () => {
             <h3>Listings</h3>
             <div className={HotelStyle.sortSection}>
                 <h4>Sort by</h4>
-                <form>
+                <form> 
                     <input type="text"  onChange={(e) =>handleSearch(e)} /> 
                     <MdKeyboardArrowDown />
                 </form>
@@ -99,6 +101,7 @@ const Hotelview = () => {
                      <div>
                          <h4>{elem.name}</h4>
                          <p>{elem.price}</p>
+                         <p>{elem.description}</p>
                      </div>
      
                      <p className={HotelStyle.hotelp2}> 
