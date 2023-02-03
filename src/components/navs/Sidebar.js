@@ -8,6 +8,8 @@ import Logout from '../../../src/assets/Logout.svg';
 import {Link, NavLink} from 'react-router-dom';
 
 
+
+
 export default function Sidebar({roleValue}){
 
     function closeNav() {
@@ -45,6 +47,7 @@ export default function Sidebar({roleValue}){
     }
 
     
+
     return(
         <> 
             <div id="mySidenav" className="sidenav">
@@ -59,12 +62,12 @@ export default function Sidebar({roleValue}){
                     </NavLink>
                 </div>
                <div  id="HotelTab">
-                    <NavLink to={"/" + hotel}  className="tab"><img src={Hotel} alt="Your SVG" /> 
+                    <NavLink to={"/" + hotel}  className="tab" ><img src={Hotel} alt="Your SVG" /> 
                    <div >Hotels</div> 
                     </NavLink>
                 </div>
                 <div id="plugTab">
-                    <NavLink to={"/" +plug}  className="tab"><img src={Manager} alt="Your SVG" /> 
+                    <NavLink to={"/" +plug}  className="tab" ><img src={Manager} alt="Your SVG" /> 
                         <div >{roleValue === "Customer" || roleValue === "Admin" ? roleValue === "Customer"?"Manager":"Manager":"Bookings"}</div>
                     </NavLink>
                 </div>
@@ -76,7 +79,7 @@ export default function Sidebar({roleValue}){
                 <div className="logout"> 
                     <div>
                         <Link to="/login">Logout <img src={Logout} alt="Your SVG"/> </Link>
-                    </div>                     *
+                    </div>                 
                  </div>                
             </div>         
         </>

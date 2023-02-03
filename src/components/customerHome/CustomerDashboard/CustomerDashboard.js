@@ -14,6 +14,9 @@ import calender from '../../customerHome/CustomerDashboardImages/calender.png';
 import './CustomerDashboardCss.css';
 import moment from 'moment'
 //import { Line } from 'react-chartjs-2';
+import { useContext } from 'react';
+import { DashboardContext } from '../../navs/navContext';
+
 
 
 const CustomerDashboard = () => {
@@ -21,13 +24,21 @@ const CustomerDashboard = () => {
     const [customer, setCutomerer] = useState(0);
     const [hotels, setHotels] = useState(0);
     const [transactions, setTransactions] = useState(0);
+    const level = useContext(DashboardContext);
+    
   
-    useEffect(() => {
-      // Fetch data from API here
-      // setCutomerer(response.customer);
-      // setHotels(response.hotels);
-      // setTransactions(response.transactions);
-    }, []);
+   // useEffect(async () => {       
+        //Fetch data from API here
+      //    const response = await fetch(`https://localhost:7255/api/Customers/${Id}`);
+      //     await response.json();
+            // console.log('i fire once');
+            
+          
+          //   setCutomerer(response.customer);
+          //   setHotels(response.hotels);
+          //   setTransactions(response.transactions);
+    
+      //}, []);
 
     //use state for image slider
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -76,16 +87,16 @@ const CustomerDashboard = () => {
     <div className='customer-dashboard-container'>
         <div className='rect-container'>
             <div className='rectangle' id='rect-1'>
-                <h2>Customer</h2>
-                <p className='data'>{truncate(customer, { length: 7, separator: '...' })}</p>
+                <h2>Gender</h2>
+                <p className='data'>{level.gender}</p>
             </div>
             <div className='rectangle' id='rect-2'>
-                <h2>Hotels</h2>
-                <p className='data'>{truncate(hotels, { length: 7, separator: '...' })}</p>
+                <h2>Username</h2>
+                <p className='data'>{level.userName}</p>
             </div>
             <div className='rectangle' id='rect-3'>
-                <h2>Transactions</h2>
-                <p className='data'>{truncate(`${transactions.amount} &#8358;`, { length: 7, separator: '...' })}</p>
+                <h2>Email</h2>
+                <p className='data'>{level.email}</p>
             </div>
         </div>
         <div className="hotel-slider-container">
@@ -98,8 +109,7 @@ const CustomerDashboard = () => {
                         <img src={hotelImages.image} alt={hotelImages.name} />
                         <div className="hotel-slider-caption">
                             <h3>{hotelImages.name}</h3>
-                            <p>{hotelImages.location}</p>
-                        
+                            <p>{hotelImages.location}</p>                       
                     </div>
                 </div>
                 ))}
