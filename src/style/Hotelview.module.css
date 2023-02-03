@@ -11,30 +11,39 @@
     border-bottom: 1px solid #AFB3BC;
 }
 
+.listSection h3{
+    text-align: left;
+}
+
 .sortSection{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width:30%;
+    width:40%;
 }
 
 .sortSection form{
-    width: 80%;
-    height: 3vh;
-    background-color: aqua;
+    width: 70%;
+    height: 4vh;
     display: flex;
     align-items: center;
+    border: 1px solid #000;
+    border-radius: 8px;
 }
 
 .sortSection form input{
     width: 100%;
     height: inherit;
+    outline: none;
+    border: none;
+    background-color: transparent;
 }
 
 .hotelContainer{
     background-color: #fff;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     margin: 5% 0%;
     border-radius: 8px;
@@ -78,25 +87,24 @@
 
 .categories{
     width: 40%;
+    height: inherit;
+    text-align: center;
 }
 
 .filter{
     width: 50%;
-}
-
-.active,
-.active2{
-    background-color: #2067A1;
-    color: #fff;
-    height: inherit;;
+    text-align: center;
+    height: inherit;
 }
 
 .active{
     width: 15%;
+    background-color: #2067A1;
 }
 
 .active2{
-    width:30%;;
+    width:30%;
+    background-color: #2067A1;
 }
 
 .starLowest, .house{
@@ -104,9 +112,13 @@
 }
 
 .house{
-    width: 50%
+    width: 50%;
+}
+
+.starHighest{
+    width: 50%;
 }
 
 .starLowest{
-    width: 30%;
+    width: 50%;
 }

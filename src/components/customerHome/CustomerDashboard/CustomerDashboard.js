@@ -15,16 +15,27 @@ import './CustomerDashboardCss.css';
 import moment from 'moment'
 //import { Line } from 'react-chartjs-2';
 import { useContext } from 'react';
+<<<<<<< HEAD
 import { HmsContext } from '../../navs/NavContext';
+=======
+import { DashboardContext } from '../../navs/navContext';
+>>>>>>> dc994bfd8e47f608bf0635a9b8d31d05c8e22656
 
 
 
 const CustomerDashboard = () => {
    // use state for the top layer of customer dashboard
+<<<<<<< HEAD
     // const [customer, setCutomerer] = useState(0);
     // const [hotels, setHotels] = useState(0);
     // const [transactions, setTransactions] = useState(0);
     const {customer, manager} = useContext(HmsContext);
+=======
+    const [customer, setCutomerer] = useState(0);
+    const [hotels, setHotels] = useState(0);
+    const [transactions, setTransactions] = useState(0);
+    const level = useContext(DashboardContext);
+>>>>>>> dc994bfd8e47f608bf0635a9b8d31d05c8e22656
     
   
    // useEffect(async () => {       
@@ -88,6 +99,7 @@ const CustomerDashboard = () => {
         <div className='rect-container'>
             <div className='rectangle' id='rect-1'>
                 <h2>Gender</h2>
+<<<<<<< HEAD
                 <p className='data'>{customer.gender}</p>
             </div>
             <div className='rectangle' id='rect-2'>
@@ -97,6 +109,17 @@ const CustomerDashboard = () => {
             <div className='rectangle' id='rect-3'>
                 <h2>Email</h2>
                 <p className='data'>{customer.email}</p>
+=======
+                <p className='data'>{level.gender}</p>
+            </div>
+            <div className='rectangle' id='rect-2'>
+                <h2>Username</h2>
+                <p className='data'>{level.userName}</p>
+            </div>
+            <div className='rectangle' id='rect-3'>
+                <h2>Email</h2>
+                <p className='data'>{level.email}</p>
+>>>>>>> dc994bfd8e47f608bf0635a9b8d31d05c8e22656
             </div>
         </div>
         <div className="hotel-slider-container">
