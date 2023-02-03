@@ -3,7 +3,7 @@ import NavLink from '../navs/NavLink';
 import Sidebar from '../navs/Sidebar';
 import Navbar from '../navs/Navbar';
 import UserTransactions from './usertransaction/UserTransactions';
-import HmsIntegration from '../navs/NavContext';
+import HmsIntegration from '../navs/DashboardContext';
 
 export default function Manager(){  
     

@@ -2,7 +2,7 @@ import Sidebar from '../navs/Sidebar';
 import NavLink from '../navs/NavLink';
 import NavbarCustomer from '../navs/Navbar';
 import CustomerDashboard from './CustomerDashboard/CustomerDashboard';
-import HmsIntegration from '../navs/NavContext';
+import HmsIntegration from '../navs/DashboardContext';
 
 export default function Dashboard() {
             

@@ -13,7 +13,7 @@ import { FaAngleRight } from "react-icons/fa";
 import {AiOutlinePlusCircle} from "react-icons/ai";
 // import {IoPersonAddOutline} from "react-icons/io";
 import {HiOutlineUserAdd} from "react-icons/hi";
-import HmsIntegration from '../navs/NavContext';
+import HmsIntegration from '../navs/DashboardContext';
 
 
 function ManagerDashboard() {

@@ -18,7 +18,7 @@ import moment from 'moment'
 //import { Line } from 'react-chartjs-2';
 import { useContext } from 'react';
 // import { DashboardContext } from '../navs/navContext';
-import {HmsContext} from '../navs/NavContext';
+import {HmsContext} from '../navs/DashboardContext';
 
 
 

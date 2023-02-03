@@ -4,7 +4,7 @@ import Dropdown from '../../../src/assets/Drop-down.svg';
 import Profile from '../../../src/assets/Profile.jpg';
 import '../../style/ProfileDropDown.css';
 import { useContext } from 'react';
-import { HmsContext } from './NavContext';
+import { HmsContext } from './DashboardContext';
 
 export default function Navbar(){
     const [open, setOpen] = useState(false);

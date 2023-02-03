@@ -15,7 +15,7 @@ import './CustomerDashboardCss.css';
 import moment from 'moment'
 //import { Line } from 'react-chartjs-2';
 import { useContext } from 'react';
-import { HmsContext } from '../../navs/NavContext';
+import { HmsContext } from '../../navs/DashboardContext';
 
 
 
