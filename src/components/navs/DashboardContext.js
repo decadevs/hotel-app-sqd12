@@ -23,7 +23,7 @@ export default function HmsIntegration({children}) {
 
         fetchData();
      
-    }, [])
+    }, [customerId])
 
 //Manager 
     useEffect( ()=>{
@@ -40,7 +40,7 @@ export default function HmsIntegration({children}) {
 
       fetchData();
    
-  }, [])
+  }, [managerId])
 
 
   return (

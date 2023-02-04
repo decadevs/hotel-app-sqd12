@@ -30,19 +30,38 @@ export default function Navbar(){
                             <img src={Bell} alt="Your SVG" />
                         </div>
                         <div className="name">
+                        {
+                         customer.firstName ?  
 
-                        {/* User Name */}
-                        {customer.firstName ?  `${customer.firstName} ${customer.lastName}` :  `${manager.firstName} ${manager.lastName}`}
+                        <div>
+                            {customer.firstName} {customer.lastName}
+                           
+                        </div>                       
+
+                         :  
+                         
+                         <div>
+                            {manager.firstName} {manager.lastName}
+                           
+                         </div> 
+                         
+                         }
                             
-                            <img src={Dropdown} alt="Your SVG" style={{"padding-left":"10px"}}/>
+                            
                         </div>
-                        <div className="profile">
+
+                        <div>
+                            <img src={Dropdown} alt="Your SVG" style={{"padding-top":"2.5rem"}}/>
+                        </div>
+                        
+                    <div className="profile">
                             {/* <img src={Profile} alt="Your SVG" style={{"width":"50px","border-radius":"50%"}}/> */}
 
                        <div className="dropdow-App">
                             <div className="menu-container">
                                 <div className='menu-trigger' onClick={() => {setOpen(!open)}}>
-                                                 <img  className='dropdownImg' src={Profile} style={{"width":"50px","border-radius":"50%"}} />
+                               
+                                                 <img  className='dropdownImg' src={Profile} alt="dropdown" style={{"width":"50px","border-radius":"50%"}} />
                                      </div>
                                         <div className={`dropdown-menu ${open? 'active' : 'inactive'}`} >
                                              <h3 className='dropdown-h3'>Profile<br/><span className='dropdown-span'>Website Designer</span>
@@ -65,7 +84,7 @@ export default function Navbar(){
 function DropdownItem(props) {
     return(
         <li className='dropdownItem'>
-            <img src={props.img}></img>
+            <img src={props.img} alt=""></img>
               <a> {props.text} </a>
         </li>
         )
