@@ -32,22 +32,15 @@ export default function Navbar(){
                         <div className="name">
                         {
                          customer.firstName ?  
-
                         <div>
                             {customer.firstName} {customer.lastName}
-                           
                         </div>                       
-
                          :  
                          
                          <div>
-                            {manager.firstName} {manager.lastName}
-                           
-                         </div> 
-                         
-                         }
-                            
-                            
+                            {manager.firstName} {manager.lastName}                          
+                         </div>                         
+                         }                                                        
                         </div>
 
                         <div>

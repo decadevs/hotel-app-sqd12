@@ -10,7 +10,7 @@ export default function HmsIntegration({children}) {
     const [customerId, setCustomerId] = useState(localStorage.getItem('customerId'))
     const [managerId, setManagerId] = useState(localStorage.getItem('managerId'))
 
-
+   
     useEffect( ()=>{
         async function fetchData(){
             localStorage.setItem('customerId', "f029bbff-2655-49ed-a032-63042175aa40");
@@ -19,6 +19,7 @@ export default function HmsIntegration({children}) {
             const response = await fetch(`https://localhost:7255/api/Customers/${Id}`);
             const payload = await response.json();
             setCustomer(payload.data.appUser);
+
         }
 
         fetchData();
