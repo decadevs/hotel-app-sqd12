@@ -11,7 +11,8 @@ import React, { useState, useEffect} from "react";
 // import axios from 'axios';
 import { FaEllipsisH, FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
-const url='https://localhost:44384/api/Transaction/GetAllUsersTransaction?pageNumber=1&pageSize=10'
+// const url='https://localhost:44384/api/Transaction/GetAllUsersTransaction?pageNumber=1&pageSize=10'
+const url = "https://localhost:7255/api/Transaction/GetAllUsersTransaction?pageNumber=1&pageSize=10"
 function UserTransactions() {
 
     const [currentPage, setCurrentPage] = useState(1);
