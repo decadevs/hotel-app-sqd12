@@ -5,6 +5,7 @@ import Profile from '../../../src/assets/Profile.jpg';
 import '../../style/ProfileDropDown.css';
 import { useContext } from 'react';
 import { HmsContext } from './DashboardContext';
+import ManagerRequest from './ManagerRequest/ManagerRequest';
 
 export default function Navbar(){
     const [open, setOpen] = useState(false);
@@ -24,6 +25,10 @@ export default function Navbar(){
                     </div>
                     <div>
                         <input type="text"/>
+                    </div>
+                    {/* ADD MANAGER REQUEST */}
+                    <div>
+                        <ManagerRequest/>
                     </div>
                     <div className="right-nav">
                         <div className="bell">
