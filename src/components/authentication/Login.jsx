@@ -1,7 +1,7 @@
 import React from "react";
 import "./Register.css";
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/auth/authContext";
 import { timedAlert } from "../../utils/alerts";
@@ -14,6 +14,7 @@ const initialData = {
 function Login() {
   const [data, setData] = useState(initialData);
   const { login } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleLogin = async () => {
     const { username, password } = data;
     if (username.trim() === "" || password.trim() === "") {
@@ -25,9 +26,11 @@ function Login() {
       return;
     }
     const res = await login(data);
-    console.log(res);
-    if (res.succeeded) timedAlert("top-end", "success", res.message);
-    else timedAlert("top-end", "error", res.message);
+    if (res.succeeded) {
+      console.log(res);
+      timedAlert("top-end", "success", res.message);
+      navigate("/customer-dashboard");
+    } else timedAlert("top-end", "error", res.message);
   };
   return (
     <div className="register">
@@ -69,7 +72,7 @@ function Login() {
         </button>
         <p>
           Don't have an account? <Link to="/register">Register</Link> or{" "}
-          <Link to="/change-password">Forget Password</Link>
+          <Link to="/forget-password">Forget Password</Link>
         </p>
       </div>
     </div>
