@@ -1,8 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../style/AddRoom.css";
 import myImage from "../../assets/cover.png";
+import { apiPostFormData } from "../../utils/apiHelpers";
 
 function AddRoom() {
+  const [roomType, setRoomType] = useState("");
+  const [roomNumber, setRoomNumber] = useState(0);
+  const [hotelName, sethotelName] = useState("");
+  const [isBooked, setIsBooked] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      // const { data } = await apiPostFormData(
+      //   `https://localhost:44384/api/Room/add-room?RoomType_ID=${roomType}&Hotel_Name=${hotelName}`,
+      //   {
+      //     roomNo: roomNumber,
+      //     isBooked,
+      //   }
+      // );
+      const { data } = await fetch(
+        `https://localhost:44384/api/Room/add-room?RoomType_ID=${roomType}&Hotel_Name=${hotelName}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json; charset=UTF-8", // <- HERE
+          },
+          //contentType: 'application/json; charset=UTF-8',
+          body: JSON.stringify({ roomNo: roomNumber, isBooked: isBooked }),
+        }
+      );
+
+      console.log(data);
+    } catch (error) {
+      alert(error);
+    }
+  };
   return (
     <div className="AddRoom">
       <p className="Tops">Managers Add Room</p>
@@ -15,49 +48,74 @@ function AddRoom() {
             alt="Pictorial Representation of the room"
           />
         </div>
+        <form onSubmit={handleSubmit}>
+          <div className="RoomType">
+            <div className="no">
+              <p className="see">Please Select Room Type </p>
 
-        <div className="RoomType">
-          <div className="no">
-            <p className="see">Please Select Room Type </p>
-
-            <select className="Drop" placeholder="Add A Room Here">
-              <option>Super Room</option>
-              <option>Master Room</option>
-              <option>Common Room</option>
-              <option>Luxury Room</option>
-            </select>
-          </div>
-          <div className="ken">
-            <p className="Loo">Please Type In The Room Number</p>
-            <input
-              type="text"
-              className="Doings"
-              placeholder="Room Number"
-            ></input>
-          </div>
-          <p className="Lin">Please Type In The Hotel Name</p>
-          <div className="has">
-            <input
-              type="text"
-              className="more"
-              placeholder="Hotel Name"
-            ></input>
-          </div>
-          <div className="Joo">
-            <div className="going">
-              <input type="radio" id="html" name="fav_language" value="HTML" />
-              <label for="html" className="Hin">
-                Room Available
-              </label>
-              <br />
+              <select
+                className="Drop"
+                placeholder="Add A Room Here"
+                onChange={(e) => setRoomType(e.target.value)}
+              >
+                <option value="1c44a012-a41d-4001-8619-4642ba14095d">
+                  Jacky
+                </option>
+                <option value="4559602d-245c-4f66-afb6-03abc2198a32">
+                  Claudie
+                </option>
+                <option value="0fc9eec6-f31a-4314-873b-f284ecfc93c1">
+                  Gretchen
+                </option>
+                <option value="15b178f3-a7d6-4add-8f9e-b3274f3faced">
+                  Franco
+                </option>
+              </select>
             </div>
-            <input type="radio" id="css" name="fav_language" value="CSS" />
-            <label for="css" className="Hin">
-              Room NotAvailable
-            </label>
+            <div className="ken">
+              <p className="Loo">Please Type In The Room Number</p>
+              <input
+                type="text"
+                className="Doings"
+                placeholder="Room Number"
+                onChange={(e) => setRoomNumber(e.target.value)}
+              ></input>
+            </div>
+            <p className="Lin">Please Type In The Hotel Name</p>
+            <div className="has">
+              <input
+                type="text"
+                className="more"
+                placeholder="Hotel Name"
+                onChange={(e) => sethotelName(e.target.value)}
+              ></input>
+            </div>
+            <div className="Joo">
+              <div className="going">
+                <input
+                  type="radio"
+                  id="html"
+                  name="fav_language"
+                  onChange={() => setIsBooked(true)}
+                />
+                <label for="html" className="Hin">
+                  Room Available
+                </label>
+                <br />
+              </div>
+              <input
+                type="radio"
+                id="css"
+                name="fav_language"
+                onChange={() => setIsBooked(false)}
+              />
+              <label for="css" className="Hin">
+                Room NotAvailable
+              </label>
+            </div>
+            <button className="room">Add Room</button>
           </div>
-          <button className="room">Add Room</button>
-        </div>
+        </form>
       </div>
     </div>
   );
