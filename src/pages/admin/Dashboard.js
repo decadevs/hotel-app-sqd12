@@ -14,13 +14,21 @@ import {
     LinearScale,
     PointElement
 } from 'chart.js';
+
+import { HmsContext } from "../../components/navs/DashboardContext";
+import { useContext } from "react";
+
 ChartJS.register(
     LineElement,
     CategoryScale,
     LinearScale,
     PointElement
 );
+
+
 const AdminDashboard=()=>{   
+
+    const {manager} = useContext(HmsContext)
     
     const data={
     labels :['Jan','Feb','Mar','April','May','June','July','Aug'],
@@ -64,20 +72,20 @@ const AdminDashboard=()=>{
         <div className="firstN">
             <div className="managers">
                 <div className="sub">
-                    <h2>Managers</h2>
+                    <h2>Username</h2>
                     <span className="bolddot">...</span>
                 </div>
                 <div>
-                    <h3 className="hh">15</h3>
+                    <h3 className="hh">{manager.userName}</h3>
                 </div>
             </div>
             <div className="managers">
                 <div className="sub">
-                    <h2>Hotels</h2>
+                    <h2>Gender</h2>
                     <span className="bolddot">...</span>
                 </div>
                 <div>
-                    <h3  className="hh">23</h3>
+                    <h3  className="hh">{manager.gender}</h3>
                 </div>
             </div>
             <div className="managers">

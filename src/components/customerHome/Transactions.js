@@ -2,8 +2,9 @@ import React from 'react';
 import NavLink from '../navs/NavLink';
 import Sidebar from '../navs/Sidebar';
 import Navbar from '../navs/Navbar';
-import UserTransactions from './usertransaction/UserTransactions';
+// import UserTransactions from './usertransaction/UserTransactions';
 import HmsIntegration from '../navs/DashboardContext';
+import Transactions from '../transaction/Transactions';
 
 export default function Manager(){  
     
@@ -11,7 +12,7 @@ export default function Manager(){
         <HmsIntegration>
             <Navbar/>
               <NavLink>
-                <UserTransactions/>
+                <Transactions/>
             </NavLink>
             <Sidebar roleValue={"Customer"}/>
         </HmsIntegration>

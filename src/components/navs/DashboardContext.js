@@ -9,11 +9,17 @@ export default function HmsIntegration({children}) {
     const [manager, setManager] = useState(4);
     const [customerId, setCustomerId] = useState(localStorage.getItem('customerId'))
     const [managerId, setManagerId] = useState(localStorage.getItem('managerId'))
+    const [ManagerBooking, setManagerBooking] = useState([])
+
+    localStorage.setItem('customerId', "f029bbff-2655-49ed-a032-63042175aa40");
+    localStorage.setItem('managerId', "333ef607-d562-4ab3-8c29-98b8c0f4b23f");
+
+
 
    
     useEffect( ()=>{
         async function fetchData(){
-            localStorage.setItem('customerId', "f029bbff-2655-49ed-a032-63042175aa40");
+            // localStorage.setItem('customerId', "f029bbff-2655-49ed-a032-63042175aa40");
             setCustomerId(localStorage.getItem("customerId"));
             const Id = customerId;
             const response = await fetch(`https://localhost:7255/api/Customers/${Id}`);
@@ -29,7 +35,7 @@ export default function HmsIntegration({children}) {
 //Manager 
     useEffect( ()=>{
       async function fetchData(){
-        localStorage.setItem('managerId', "333ef607-d562-4ab3-8c29-98b8c0f4b23f");
+        // localStorage.setItem('managerId', "333ef607-d562-4ab3-8c29-98b8c0f4b23f");
         setManagerId(localStorage.getItem("managerId"));
         const Id = managerId;
        
@@ -43,16 +49,33 @@ export default function HmsIntegration({children}) {
    
   }, [managerId])
 
+//Booking per manager
+  useEffect( ()=>{
+    async function fetchData(){
+   
+      // localStorage.setItem('managerId', "333ef607-d562-4ab3-8c29-98b8c0f4b23f");
+      setManagerId(localStorage.getItem("managerId"));
+      const Id = managerId;
+    
+      const response = await fetch(`https://localhost:7255/api/Booking/Per-Manager?managerId=${Id}`);
+      const payload = await response.json();
+  
+      setManagerBooking(payload.data);
+    }
+
+    fetchData();
+ 
+}, [managerId])
+
 
   return (
     <section className="section">
-      <HmsContext.Provider value={{customer, manager }}>
+      <HmsContext.Provider value={{customer, manager, ManagerBooking }}>
         {children}
       </HmsContext.Provider>
     </section>
   );
 }
-
 
 
 

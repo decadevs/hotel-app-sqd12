@@ -1,5 +1,4 @@
 
-
 import "./Booking.css";
 import Active from '../../../assets/Active.svg'
 import Inactive from '../../../assets/Inactive.svg';

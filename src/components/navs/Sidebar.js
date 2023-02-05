@@ -31,7 +31,7 @@ export default function Sidebar({roleValue}){
     }else if(roleValue === "Admin"){
         dashboard = "admin-dashboard";
         hotel = "admin-hotels";
-        plug = "admin-manager";
+        plug = "admin-bookings";
         transaction = "admin-transaction";
 
     }else if(roleValue === "Manager"){
@@ -68,7 +68,7 @@ export default function Sidebar({roleValue}){
                 </div>
                 <div id="plugTab">
                     <NavLink to={"/" +plug}  className="tab" ><img src={Manager} alt="Your SVG" /> 
-                        <div >{roleValue === "Customer" || roleValue === "Admin" ? roleValue === "Customer"?"Manager":"Manager":"Bookings"}</div>
+                        <div >{roleValue === "Customer"  ? "Manager" : roleValue === "manager"? "Booking" :  "Bookings"}</div>
                     </NavLink>
                 </div>
                 <div id="TransactionTab" >

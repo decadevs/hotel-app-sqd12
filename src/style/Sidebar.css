@@ -125,9 +125,8 @@
     height: 1.5rem;
 }
 .profile, .dropdownImg{
-    padding:0.3rem;
-    margin: 0.2rem;
-    margin-right: 25px;
+    padding:0.2rem;
+    padding-top: .1rem;
     font-size: 1.3em;
 }
 
