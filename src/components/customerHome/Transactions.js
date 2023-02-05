@@ -8,12 +8,12 @@ import UserTransactions from './usertransaction/UserTransactions';
 export default function Manager(){  
     
     return(
-        <HmsIntegration>
+        <>
             <Navbar/>
               <NavLink>
                 <UserTransactions/>
             </NavLink>
             <Sidebar roleValue={"Customer"}/>
-        </HmsIntegration>
+        </>
     );
 }

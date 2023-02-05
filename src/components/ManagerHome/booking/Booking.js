@@ -7,32 +7,47 @@ import Edit from '../../../assets/Edit.svg';
 import Delete from '../../../assets/Delete.svg';
 import Filter from '../../../assets/Filter.svg';
 import { HiMagnifyingGlass } from "react-icons/hi2";
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
+// import axios from 'axios';
 import { FaEllipsisH, FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import { useContext } from "react";
 import { HmsContext } from "../../navs/DashboardContext";
+import { useContext } from "react";
 
+// const url='https://localhost:44384/api/Transaction/GetAllUsersTransaction?pageNumber=1&pageSize=10'
+const url = "https://localhost:7255/api/Transaction/GetAllUsersTransaction?pageNumber=1&pageSize=10";
 
 function Booking() {
-    //Context
     const {ManagerBooking} = useContext(HmsContext);
-
-    const [transactions, setTransactions] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    let [transactionsPerPage,setTransactionPerPage] = useState(10);
+    const [transactions, setTransactions] = useState(ManagerBooking);
     
+    const[query, setQuery] = useState("");
+
+   
+    
+//  const getData= (url)=>{   
+//     fetch(url)
+//     .then(res=> res.json())
+//     .then(data=>{
+        
+//         setTransactions(data.data)
+//         console.log(data.data);
+//     })};
+//     useEffect(() => {
+//             getData(url)
+//           }, []);
 
     const handlePageChange = pageNumber => {
         setCurrentPage(pageNumber);
     };
-
-    const [currentPage, setCurrentPage] = useState(1);
-
-    let [transactionsPerPage,setTransactionPerPage] = useState(0);
+   
     const page = (transactionsPerPage) => {
         if (transactions.length < 10) {
             return transactionsPerPage = transactions.length;
         }
         else {
-            return transactionsPerPage = 10;
+            return transactionsPerPage;
         }
 
     }
@@ -46,19 +61,19 @@ function Booking() {
 
     // Change page
     //const paginate = (pageNumber) => setCurrentPage(pageNumber);
-    const handleEdit = (editedTransaction) => {
-        const updatedTransactions = transactions.map(transaction => {
-            if (transaction.id === editedTransaction) {
-                return editedTransaction;
+    const handleEdit = (id) => {
+        const updatedTransactions = transactions.map((transaction) => {
+            if (transaction.id === id) {
+                return transaction;
             }
             return transaction;
         });
         setTransactions(updatedTransactions);
     }
-    function handleDelete(transactionid) {
-        setTransactions(transactions.filter(transaction => transaction.id !== transactionid));
+    function handleDelete(id) {
+        setTransactions(transactions.filter((transaction) => transaction.id !== id));
     }
-    const activeUsers = transactions.filter(x=> x.status ===true).length;
+    const activeUsers = transactions.filter(x=> x.isactive ==="Yes").length;
 
     return (
 
@@ -68,7 +83,10 @@ function Booking() {
                 <img src={Filter} alt='Your SVG'/>
                 <div className="UserTransactionsearchInput">
                     <HiMagnifyingGlass className="UserTransactionSearchIcon" />
-                    <input type="text" placeholder="Search" />
+                    <input type="text" placeholder="Search" 
+                        className="search"
+                        onChange={(event)=> setQuery(event.target.value)}
+                    />
                 </div>
             </div>
             <table>
@@ -76,25 +94,31 @@ function Booking() {
                     <th className="UserTranCheckBox">
                         <input type="checkbox" />
                     </th>
-                    <th>BOOKING REFERENCE</th>
-                    <th>SERVICE NAME</th>
-                    {/* <th>PAYMENT STATUS</th> */}
-                    <th>NO OF PERSONS</th>
-                    {/* <th>DEPOSIT</th>
-                    <th>STATUS</th> */}
-                   {/* Q */}
+                    <th>Booking Reference</th>
+                    <th>Service Name</th>
+                    <th>No Of People</th>
+                    <th></th>
+                    <th></th>
+                    <th></th> 
+                    
+                    <th>
+                        <FaEllipsisH />
+                    </th>
                 </tr>
-                {ManagerBooking.map((transaction) => (
+                {currentTransactions.filter((transaction)=>
+                transaction.bookingReference.toLowerCase().includes(query) || transaction.noOfPeople.toLowerCase().includes(query))
+                .map((transaction) => (
                     <tr key={transaction.id}>
                         <th className="UserTranCheckBox">
                             <input type="checkbox" />
                         </th>
                         <th>{transaction.bookingReference}</th>
                         <th>{transaction.serviceName}</th>
-                        {/* <th>{transaction.paymentStatus}</th> */}
                         <th>{transaction.noOfPeople}</th>
-                        <th>{transaction.deposit}</th>
-                        <th>{transaction.paymentStatus ? <img alt="Your SVG" src={Active} /> : <img alt="Your SVG" src={Inactive} />}</th>
+                        <th>{transaction.paymentStatus}</th>
+                        {/* <th>{transaction.state}</th> */}
+                        <th>{transaction.isactive=== "Yes" ? <img alt="Your SVG" src={Active} /> : <img alt="Your SVG" src={Inactive} />}</th>
+                        
                         <th className="Action">
                             <img alt="Your SVG" src={Edit} onClick={() => handleEdit(transaction.id)} />
                             <img alt="Your SVG" src={Delete} onClick={() => handleDelete(transaction.id)} />...
@@ -111,20 +135,15 @@ function Booking() {
                     <label htmlFor="Transaction-dd">
                         <b>Rows per page </b>
                     </label>
-                    {/* <select id="Transaction-dd" name="number">
-                        <option value="null"> </option>
-                        <option value="five">5</option>
-                        <option value="ten">10</option>
-                        <option value="twenty">20</option>
-                    </select> */}
                     <input
                         type="number"
                         id="Transaction-dd"
                         name="number"
                         value={transactionsPerPage}
-                        onChange={event => setTransactionPerPage(event.target.value)}
+                        onChange={(event) => setTransactionPerPage(event.target.value)}
                     />
                     <div>
+                        
                         <h4>
                             {indexOfFirstTransaction + 1}-{indexOfLastTransaction} of {transactions.length}
                         </h4>
@@ -136,6 +155,7 @@ function Booking() {
                     </div>
                 </div>
             </div>
+            
         </div>
     );
 }
