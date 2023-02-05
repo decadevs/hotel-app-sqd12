@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/auth/authContext";
+import { timedAlert } from "../../utils/alerts";
 
 import "./Register.css";
 let intialData = {
@@ -20,7 +21,6 @@ function Register() {
   const navigate = useNavigate();
   const [data, setData] = useState(intialData);
   const [confPass, setConfPass] = useState("");
-  const [errMsg, setErrMsg] = useState("");
   const { register } = useContext(AuthContext);
   const handleRegister = async () => {
     const { firstName, lastName, gender, age, password, userName, phone } =
@@ -35,19 +35,29 @@ function Register() {
       userName == "" ||
       password == ""
     ) {
-      setErrMsg("Please no field should be empty");
+      timedAlert("top-end", "error", "Please no field should be empty");
       return;
     }
     if (confPass !== password) {
-      setErrMsg("Password should be equal to confirm password");
+      timedAlert(
+        "top-end",
+        "error",
+        "Password should be equal to confirm password"
+      );
       return;
     }
     //console.log(data);
     const res = await register(data);
-    if (res.status == 200) {
+    console.log(res);
+    if (res.data?.succeeded) {
+      timedAlert("top-end", "success", res.message);
       navigate("/login");
     } else
-      setErrMsg("Unable to register, check your profile and try again later");
+      timedAlert(
+        "top-end",
+        "error",
+        "Unable to register, check your profile and try again later"
+      );
   };
   return (
     <div className="register">
@@ -198,7 +208,6 @@ function Register() {
             Sex
           </label>
         </div>
-        {errMsg !== "" && <p>{errMsg}</p>}
         <button onClick={handleRegister} type="text" className="submit">
           Register
         </button>
