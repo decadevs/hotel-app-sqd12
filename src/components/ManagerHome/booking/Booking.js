@@ -9,14 +9,23 @@ import Filter from '../../../assets/Filter.svg';
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import React, { useState } from "react";
 import { FaEllipsisH, FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { useContext } from "react";
+import { HmsContext } from "../../navs/DashboardContext";
 
 
 function Booking() {
-    const [transactions, setTransactions] = useState([ ]);
+    //Context
+    const {ManagerBooking} = useContext(HmsContext);
+
+    const [transactions, setTransactions] = useState([]);
+    
+
     const handlePageChange = pageNumber => {
         setCurrentPage(pageNumber);
     };
+
     const [currentPage, setCurrentPage] = useState(1);
+
     let [transactionsPerPage,setTransactionPerPage] = useState(0);
     const page = (transactionsPerPage) => {
         if (transactions.length < 10) {
@@ -69,23 +78,23 @@ function Booking() {
                     </th>
                     <th>BOOKING REFERENCE</th>
                     <th>SERVICE NAME</th>
-                    <th>PAYMENT STATUS</th>
+                    {/* <th>PAYMENT STATUS</th> */}
                     <th>NO OF PERSONS</th>
                     {/* <th>DEPOSIT</th>
                     <th>STATUS</th> */}
                    {/* Q */}
                 </tr>
-                {currentTransactions.map((transaction) => (
+                {ManagerBooking.map((transaction) => (
                     <tr key={transaction.id}>
                         <th className="UserTranCheckBox">
                             <input type="checkbox" />
                         </th>
-                        <th>{transaction.name}</th>
-                        <th>{transaction.description}</th>
-                        <th>{transaction.rate}</th>
-                        <th>{transaction.balance}</th>
+                        <th>{transaction.bookingReference}</th>
+                        <th>{transaction.serviceName}</th>
+                        {/* <th>{transaction.paymentStatus}</th> */}
+                        <th>{transaction.noOfPeople}</th>
                         <th>{transaction.deposit}</th>
-                        <th>{transaction.status ? <img alt="Your SVG" src={Active} /> : <img alt="Your SVG" src={Inactive} />}</th>
+                        <th>{transaction.paymentStatus ? <img alt="Your SVG" src={Active} /> : <img alt="Your SVG" src={Inactive} />}</th>
                         <th className="Action">
                             <img alt="Your SVG" src={Edit} onClick={() => handleEdit(transaction.id)} />
                             <img alt="Your SVG" src={Delete} onClick={() => handleDelete(transaction.id)} />...

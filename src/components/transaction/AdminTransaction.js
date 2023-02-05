@@ -1,9 +1,10 @@
-import "./AdminTransactions.css";
+import "./AdminTransaction.css";
 import React from "react";
 import { BiFilter } from "react-icons/bi";
 import { AiOutlinePlus } from "react-icons/ai";
 import { FaSearch } from "react-icons/fa";
 import { MdMoreHoriz, MdOutlineModeEditOutline, MdOutlineDeleteForever } from "react-icons/md";
+
 export default function () {
     return (
         <div className="container">

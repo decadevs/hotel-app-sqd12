@@ -10,7 +10,7 @@ import ManagerHotel from "./components/ManagerHome/Hotels";
 import ManagerBookings from "./components/ManagerHome/Bookings";
 import ManagerTransactions from "./components/ManagerHome/Transactions";
 import AdminHotel from "./components/adminHome/Hotels";
-import {AdminManager} from "./components/ManagerHome/ManagerDashboard";
+import AdminBookings from "./components/adminHome/Bookings";
 import AdminTransaction from "./components/adminHome/Transactions";
 import Login from "./components/authentication/Login";
 import Register from "./components/authentication/Register";
@@ -79,7 +79,7 @@ function App() {
         <Route path="customer-manager" element={<CustomerManager />} />
         <Route path="customer-hotel" element={<CustomerHotel />} />
         <Route path="admin-transaction" element={<AdminTransaction />} />
-        <Route path="admin-manager" element={<AdminManager />} />
+        <Route path="admin-bookings" element={<AdminBookings />} />
         <Route path="admin-hotels" element={<AdminHotel />} />
         <Route path ="/profile" element={<ProfileLayout/>}/>
         <Route path="manager-transactions" element={<ManagerTransactions />} />

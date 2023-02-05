@@ -1,29 +1,33 @@
 import React, { useState, useEffect } from 'react'
 import { truncate } from 'lodash';
-import img1 from '../../customerHome/CustomerDashboardImages/Rectangle_21.png';
-import img2 from '../../customerHome/CustomerDashboardImages/Rectangle_22.png';
-import img3 from '../../customerHome/CustomerDashboardImages/Rectangle_23.png';
-import prevImg from '../../customerHome/CustomerDashboardImages/prevvector.svg';
-import nextImg from '../../customerHome/CustomerDashboardImages/nextvector.svg';
-import lagoselipse from '../../customerHome/CustomerDashboardImages/lagoselipse.png';
-import abujaelipse from '../../customerHome/CustomerDashboardImages/abujaelipse.png';
-import elipseLarge from '../../customerHome/CustomerDashboardImages/EllipseLarge.png';
-import elipseSmall from '../../customerHome/CustomerDashboardImages/EllipseSmall.png';
-import graph from '../../customerHome/CustomerDashboardImages/graph.png';
-import calender from '../../customerHome/CustomerDashboardImages/calender.png';
-import './CustomerDashboardCss.css';
+import img1 from '../customerHome/CustomerDashboardImages/Rectangle_21.png';
+import img2 from '../customerHome/CustomerDashboardImages/Rectangle_22.png';
+import img3 from '../customerHome/CustomerDashboardImages/Rectangle_23.png';
+import prevImg from '../customerHome/CustomerDashboardImages/prevvector.svg';
+import nextImg from '../customerHome/CustomerDashboardImages/nextvector.svg';
+import lagoselipse from '../customerHome/CustomerDashboardImages/lagoselipse.png';
+import abujaelipse from '../customerHome/CustomerDashboardImages/abujaelipse.png';
+import elipseLarge from '../customerHome/CustomerDashboardImages/EllipseLarge.png';
+import elipseSmall from '../customerHome/CustomerDashboardImages/EllipseSmall.png';
+import graph from '../customerHome/CustomerDashboardImages/graph.png';
+import calender from '../customerHome/CustomerDashboardImages/calender.png';
+import '../customerHome/CustomerDashboard/CustomerDashboardCss.css';
+
+
 import moment from 'moment'
 //import { Line } from 'react-chartjs-2';
 import { useContext } from 'react';
-import { HmsContext } from '../../navs/DashboardContext';
+// import { DashboardContext } from '../navs/navContext';
+import {HmsContext} from '../navs/DashboardContext';
 
 
 
-const CustomerDashboard = () => {
+const Dashboard = () => {
    // use state for the top layer of customer dashboard
     // const [customer, setCutomerer] = useState(0);
     // const [hotels, setHotels] = useState(0);
     // const [transactions, setTransactions] = useState(0);
+    // const level = useContext(DashboardContext);
     const {customer, manager} = useContext(HmsContext);
     
   
@@ -88,15 +92,15 @@ const CustomerDashboard = () => {
         <div className='rect-container'>
             <div className='rectangle' id='rect-1'>
                 <h2>Gender</h2>
-                <p className='data'>{customer.gender}</p>
+                <p className='data'>{manager.gender}</p>
             </div>
             <div className='rectangle' id='rect-2'>
                 <h2>Username</h2>
-                <p className='data'>{customer.userName}</p>
+                <p className='data'>{manager.userName}</p>
             </div>
             <div className='rectangle' id='rect-3'>
                 <h2>Email</h2>
-                <p className='data'>{customer.email}</p>
+                <p className='data'>{manager.email}</p>
             </div>
         </div>
         <div className="hotel-slider-container">
@@ -137,4 +141,4 @@ const CustomerDashboard = () => {
   )
 }
 
-export default CustomerDashboard
+export default Dashboard
