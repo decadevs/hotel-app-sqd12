@@ -4,6 +4,7 @@ import "./Login.css";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../context/auth/authContext";
+import { timedAlert } from "../../utils/alerts";
 
 const initialData = {
   username: "",
@@ -12,19 +13,24 @@ const initialData = {
 
 function Login() {
   const [data, setData] = useState(initialData);
-  const [errMsg, setErrMsg] = useState("");
   const { login } = useContext(AuthContext);
   const handleLogin = async () => {
     const { username, password } = data;
     if (username.trim() === "" || password.trim() === "") {
-      setErrMsg("Please put your username and password");
+      timedAlert(
+        "top-end",
+        "error",
+        "Please fill the username and password field"
+      );
       return;
     }
-    setErrMsg("");
     const res = await login(data);
+    console.log(res);
+    if (res.succeeded) timedAlert("top-end", "success", res.message);
+    else timedAlert("top-end", "error", res.message);
   };
   return (
-    <div className="login">
+    <div className="register">
       <div class="form">
         <div class="title">Login</div>
 
@@ -58,11 +64,6 @@ function Login() {
             Password
           </label>
         </div>
-        {errMsg !== "" ? (
-          <p style={{ color: "red", fontSize: "10px" }}>*** {errMsg} ***</p>
-        ) : (
-          <p></p>
-        )}
         <button onClick={handleLogin} type="text" class="submit">
           Login
         </button>
