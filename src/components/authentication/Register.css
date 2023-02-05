@@ -3,7 +3,7 @@
   padding: 20px 0;
 }
 
-.form {
+.register .form {
   background-color: #f4f7fc;
   border-radius: 20px;
   box-sizing: border-box;
@@ -12,7 +12,7 @@
   margin-inline: auto;
 }
 
-.title {
+.register .form .title {
   color: #2e3b52;
   font-family: sans-serif;
   font-size: 36px;
@@ -20,7 +20,7 @@
   margin-top: 30px;
 }
 
-.subtitle {
+.register .form .subtitle {
   color: #2e3b52;
   font-family: sans-serif;
   font-size: 16px;
@@ -28,21 +28,21 @@
   margin-top: 10px;
 }
 
-.input-container {
+.register .form .input-container {
   height: 50px;
   position: relative;
   width: 100%;
 }
 
-.ic1 {
+.register .form .ic1 {
   margin-top: 40px;
 }
 
-.ic2 {
+.register .form .ic2 {
   margin-top: 30px;
 }
 
-.input {
+.register .form .input-container .input {
   background-color: #dae1ec;
   border-radius: 12px;
   border: 0;
@@ -55,7 +55,7 @@
   width: 100%;
 }
 
-.cut {
+.register .form .input-container .cut {
   background-color: #f4f7fc;
   border-radius: 10px;
   height: 20px;
@@ -67,15 +67,15 @@
   width: 80px;
 }
 
-.cut-short {
+.register .form .input-container .cut-short {
   width: 50px;
 }
 
-.cut-mid {
+.register .form .input-container .cut-mid {
   width: 95px;
 }
 
-.cut-long {
+.register .form .input-container .cut-long {
   width: 115px;
 }
 
