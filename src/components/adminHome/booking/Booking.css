@@ -45,11 +45,10 @@
       top: 25%;
       left: 7px;
     }
-    td,
-    th {
+    td {
       text-align: center;
       padding: 18px 8px;
-      width: 200px;
+      width: 20rem;
     }
     .TransactionCrud {
       display: flex;

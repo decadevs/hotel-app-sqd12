@@ -1,22 +1,20 @@
 import Sidebar from '../navs/Sidebar';
 import NavLink from '../navs/NavLink';
 import Navbar from '../navs/Navbar';
-import CustomerDashboard from '../customerHome/CustomerDashboard/CustomerDashboard';
-import Section from '../navs/navContext';
-import { useEffect, useState } from 'react';
+import DashboardHome from './DashboardHome';
+import HmsIntegration from '../navs/DashboardContext';
 
 export default function Dashboard() {
-       const [payload, usePayload] = useState({})
-       
        
     return(
-        <Section>
+        <>
+        <HmsIntegration>
             <Navbar/>
             <NavLink>
-               <CustomerDashboard/>
+               <DashboardHome/>
             </NavLink> 
             <Sidebar roleValue={"Manager"}/>
-        </Section>
-        
+        </HmsIntegration>            
+        </>         
     )
 }
