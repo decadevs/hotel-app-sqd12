@@ -9,12 +9,12 @@ import HmsIntegration from '../navs/DashboardContext';
 export default function Manager(){  
 
     return(
-        <HmsIntegration>
+        <>
             <NavbarCustomer/>
               <NavLink>
                 <ManagerDashboard/>
             </NavLink>
             <Sidebar roleValue={"Customer"}/>
-        </HmsIntegration>
+        </>
     );
 }

@@ -9,12 +9,12 @@ import HmsIntegration from '../navs/DashboardContext';
 export default function Hotel(){  
     
     return(
-        <HmsIntegration>
+        <>
              <NavbarCustomer/>
               <NavLink>
                 <Hotelview/>
             </NavLink>
             <Sidebar roleValue={"Customer"}/>
-        </HmsIntegration>
+        </>
     );
 }

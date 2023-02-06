@@ -14,7 +14,7 @@ root.render(
         <AuthContext>
           <App />
         </AuthContext>
-      </Suspense>
+          </Suspense>
     </ErrorBoundary>
   </React.StrictMode>
 );

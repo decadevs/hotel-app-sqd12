@@ -7,13 +7,12 @@ import HmsIntegration from '../navs/DashboardContext';
 export default function Dashboard() {
             
     return(
-        <HmsIntegration>
+        <>
              <NavbarCustomer/>            
                 <NavLink>
                     <CustomerDashboard/>
                 </NavLink>          
              <Sidebar roleValue={"Customer"}/>
-        </HmsIntegration>
-        
+        </>
     )
 }
