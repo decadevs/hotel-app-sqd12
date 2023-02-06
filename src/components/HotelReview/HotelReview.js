@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Sidebar from "../navs/Sidebar";
 import { useState } from "react";
 
@@ -12,9 +12,20 @@ import reviewImg4 from "../../components/HotelReview/assets/review-img4.png";
 import { Rate } from "antd";
 import { Pagination } from "antd";
 import { Progress } from "antd";
+import axios from "axios";
+import SkeletonInput from "antd/es/skeleton/Input";
 // import HotelFilter from "../FilterCard";
 
-function HotelReview() {
+function HotelReview()
+{
+  const [data, setData] = useState([]);
+  useEffect(() =>
+  {
+    fetch('https://localhost:44384/api/Review/')
+      .then(response => response.json())
+      .then(data => SVGMetadataElement(data));
+
+  }, [])
   const [activeHotel, setActiveHotel] = useState(1);
   const [activePick, setActivePick] = useState(1);
   return (
@@ -123,77 +134,7 @@ function HotelReview() {
           </p>
         </div>
       </div>
-      <div className="review-list-card">
-        <div className="review-list-card-img">
-          <img src={reviewImg2} alt="Hotel Display" />
-          <p>Jessice Felicio</p>
-        </div>
-        <div className="review-list-card-content">
-          <h2 className="review-h2"> "Very nice hotel"</h2>
-          <div className="review-list-card-review">
-            <div className="review-text">
-              <p>
-                <Rate /> |<span className="review-h4"> Reviewed: </span>
-                2019-01-12{" "}
-              </p>
-            </div>
-          </div>
 
-          <p>
-            I recommend Radisson Blu as a hotel with very good service and
-            accommodation condition..Since is near to Coca Cola Plant in Ikeja
-            location is very good....The room was huge and very clean, internet
-            connection very fast without any interruptions.
-          </p>
-        </div>
-      </div>
-      <div className="review-list-card">
-        <div className="review-list-card-img">
-          <img src={reviewImg3} alt="Hotel Display" />
-          <p>Princess Akachi</p>
-        </div>
-        <div className="review-list-card-content">
-          <h2 className="review-h2"> "Stay at radisson"</h2>
-          <div className="review-list-card-review">
-            <div className="review-text">
-              <p>
-                <Rate /> |<span className="review-h4"> Reviewed: </span>
-                201-19-10{" "}
-              </p>
-            </div>
-          </div>
-
-          <p>
-            The hotel was like Heaven, everything was amazing and straight
-            forward. No issues occurred during the stay there. Would definitely
-            recommend for anyone to stay there again though the price is a bit
-            high.
-          </p>
-        </div>
-      </div>
-      <div className="review-list-card">
-        <div className="review-list-card-img">
-          <img src={reviewImg4} alt="Hotel Display" />
-          <p>Jack Finnigan</p>
-        </div>
-        <div className="review-list-card-content">
-          <h2 className="review-h2"> "Excellent stay/money well spent"</h2>
-          <div className="review-list-card-review">
-            <div className="review-text">
-              <p>
-                <Rate /> |<span className="review-h4"> Reviewed: </span>
-                2019-01-09{" "}
-              </p>
-            </div>
-          </div>
-
-          <p>
-            The rooms are very nice with modern feel/ the spa is amazing and a
-            must try/ the music in the bar was very nice lots do to within the
-            hotel if you don’t want to venture outside/money well spent!!!!!!’
-          </p>
-        </div>
-      </div>
       <div>
         <Pagination
           className="review-pagination"
