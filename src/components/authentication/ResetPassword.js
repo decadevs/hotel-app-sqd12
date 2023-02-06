@@ -1,5 +1,7 @@
 import React, { useState, useContext } from "react";
 import { AuthContext } from "../../context/auth/authContext";
+import { useNavigate } from "react-router";
+import { timedAlert } from "../../utils/alerts";
 import locked from "../../assets/Locked-Security.svg";
 import "./ResetPassword.css";
 
@@ -7,7 +9,7 @@ export default function ResetPassword() {
   const [CurrentPassword, setCurrentPassword] = useState("");
   const [NewPassword, setNewPassword] = useState("");
   const [ConfirmNewPassword, setConfirmNewPassword] = useState("");
-  const [errMsg, setErrMsg] = useState("");
+  const navigate = useNavigate();
   const { changePassword } = useContext(AuthContext);
 
   const changePswd = async (e) => {
@@ -17,11 +19,15 @@ export default function ResetPassword() {
       NewPassword.trim() === "" ||
       ConfirmNewPassword.trim() === ""
     ) {
-      setErrMsg("Please fill the password fields");
+      timedAlert("top-left", "error", "Please fill the password fields");
       return;
     }
     if (ConfirmNewPassword !== NewPassword.trim()) {
-      setErrMsg("Please fill the password fields");
+      timedAlert(
+        "top-left",
+        "error",
+        "Confirmed password not the same as new password"
+      );
       return;
     }
     var res = await changePassword({
@@ -29,7 +35,12 @@ export default function ResetPassword() {
       NewPassword,
       ConfirmNewPassword,
     });
-    console.log(res);
+    if (res.succeeded) {
+      timedAlert("top-rigth", "success", res.message);
+      navigate("/login");
+    } else {
+      timedAlert("top-left", "error", res.message);
+    }
     //some c# code to change the logged in user password
   };
   return (
