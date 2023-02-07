@@ -1,10 +1,15 @@
 import React from "react";
 import "../../style/AddRoom.css";
 import myImage from "../../assets/cover.png";
+import { Link, useNavigate } from "react-router-dom";
 
 function AddRoom() {
+  const navigate = useNavigate();
   return (
     <div className="AddRoom">
+      <Link to={'..'} onClick={(e) => { e.preventDefault(); navigate(-1);}}>
+                    <button className="back-btn">Back</button>
+      </Link>
       <p className="Tops">Managers Add Room</p>
 
       <div className="addRoom_cont">
@@ -57,6 +62,7 @@ function AddRoom() {
             </label>
           </div>
           <button className="room">Add Room</button>
+          
         </div>
       </div>
     </div>

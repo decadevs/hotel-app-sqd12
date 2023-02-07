@@ -1,6 +1,6 @@
 
 
-import "./UserTransaction.css";
+import "./Transaction.css";
 import Active from '../../../assets/Active.svg'
 import Inactive from '../../../assets/Inactive.svg';
 import Edit from '../../../assets/Edit.svg';
@@ -10,13 +10,11 @@ import { HiMagnifyingGlass } from "react-icons/hi2";
 import React, { useState, useEffect} from "react";
 // import axios from 'axios';
 import { FaEllipsisH, FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import { useContext } from "react";
-import { HmsContext } from "../../navs/DashboardContext";
 
 // const url='https://localhost:44384/api/Transaction/GetAllUsersTransaction?pageNumber=1&pageSize=10'
-const url = "https://localhost:7255/api/Transaction/GetAllUsersTransaction?pageNumber=1&pageSize=10"
-function UserTransactions() {
-    const {userTransactions} = useContext(HmsContext)
+const url = "https://localhost:7255/api/Transaction/DisplayAllTransactionforAdmin"
+function Transactions() {
+
     const [currentPage, setCurrentPage] = useState(1);
     let [transactionsPerPage,setTransactionPerPage] = useState(10);
     const [transactions, setTransactions] = useState([]);
@@ -53,7 +51,7 @@ function UserTransactions() {
     // Get current transactions
     const indexOfLastTransaction = currentPage * page(transactionsPerPage);
     const indexOfFirstTransaction = indexOfLastTransaction - page(transactionsPerPage);
-    const currentTransactions = userTransactions.slice(indexOfFirstTransaction, indexOfLastTransaction);
+    const currentTransactions = transactions.slice(indexOfFirstTransaction, indexOfLastTransaction);
     const totalPages = Math.ceil(transactions.length / transactionsPerPage);
 
     // Change page
@@ -88,15 +86,16 @@ function UserTransactions() {
             </div>
             <table>
                 <tr>
-                <th className="ManagerTranCheckBox">
+                    <th className="UserTranCheckBox">
                         <input type="checkbox" />
                     </th>
-                    <th></th>
-                    <th>TRANSACTION-REFERENCE</th>
+                    <th>TRANSACTION REFERENCE</th>
                     <th>AMOUNT</th>
-                    <th>PAYMENT-METHOD</th>
-                    <th></th>                    
                     <th>STATUS</th>
+                    <th>METHOD OF PAYMENT</th>
+                    <th></th>
+                    <th>ISACTIVE</th>
+                    
                     <th>
                         <FaEllipsisH />
                     </th>
@@ -105,15 +104,16 @@ function UserTransactions() {
                 transaction.transactionReference.toLowerCase().includes(query) || transaction.methodOfPayment.toLowerCase().includes(query))
                 .map((transaction) => (
                     <tr key={transaction.id}>
-                         <th className="ManagerTranCheckBox">
+                        <th className="UserTranCheckBox">
                             <input type="checkbox" />
                         </th>
-                        <th></th>
-                        <th>{transaction.transactionReference}</th>
+                        <th>{transaction.transactionReference +"," + transaction.lastName}</th>
                         <th>{transaction.amount}</th>
+                        <th>{transaction.status}</th>
                         <th>{transaction.methodOfPayment}</th>
-                        <th></th>                        
-                        <th>{transaction.status ? <img alt="Your SVG" src={Active} /> : <img alt="Your SVG" src={Inactive} />}</th>
+                        <th></th>
+                        <th>{transaction.isactive=== "Yes" ? <img alt="Your SVG" src={Active} /> : <img alt="Your SVG" src={Inactive} />}</th>
+                        
                         <th className="Action">
                             <img alt="Your SVG" src={Edit} onClick={() => handleEdit(transaction.id)} />
                             <img alt="Your SVG" src={Delete} onClick={() => handleDelete(transaction.id)} />...
@@ -154,5 +154,5 @@ function UserTransactions() {
         </div>
     );
 }
-export default UserTransactions;
+export default Transactions;
 

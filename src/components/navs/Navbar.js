@@ -3,6 +3,7 @@ import Bell from '../../../src/assets/Bell.svg';
 import Dropdown from '../../../src/assets/Drop-down.svg';
 import Profile from '../../../src/assets/Profile.jpg';
 import '../../style/ProfileDropDown.css';
+import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { HmsContext } from './DashboardContext';
 
@@ -62,8 +63,19 @@ export default function Navbar(){
                                              <h3 className='dropdown-h3'>Profile<br/><span className='dropdown-span'>Website Designer</span>
                                            </h3>
                                             <ul className='dropdown-ul'>
-                                               <DropdownItem img = {""} text = {"Picture"} />                    <DropdownItem img = {""} text = {"Profile"} />                    <DropdownItem img = {""} text = {"Settings"} /> 
-                                               <DropdownItem img = {""} text = {"Sign out"} />
+
+                                               {/* <DropdownItem img = {""} text = {"Picture"} />   */}
+                                               
+                                                <Link to="/profile">
+                                                    <DropdownItem img = {""} text = {"Profile"} />
+                                               </Link>
+
+                                                <DropdownItem img = {""} text = {"Settings"} /> 
+
+                                                <Link to="/login">
+                                                    <DropdownItem img = {""} text = {"Sign out"} />
+                                                </Link>             
+                                                                                                                                         
                                            </ul>
                                        </div>
                                 </div>

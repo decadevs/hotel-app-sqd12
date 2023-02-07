@@ -10,6 +10,11 @@ export default function HmsIntegration({children}) {
     const [customerId, setCustomerId] = useState(localStorage.getItem('customerId'))
     const [managerId, setManagerId] = useState(localStorage.getItem('managerId'))
     const [ManagerBooking, setManagerBooking] = useState([])
+    const [allBooking, setAllBooking] = useState([])
+    const [managerTransactions, SetManagerTransactions] = useState([])
+    const [userTransactions, SetUserTransactions] = useState([])
+    const [amenities, SetAmenities] = useState([])
+  
 
     localStorage.setItem('customerId', "f029bbff-2655-49ed-a032-63042175aa40");
     localStorage.setItem('managerId', "333ef607-d562-4ab3-8c29-98b8c0f4b23f");
@@ -25,7 +30,6 @@ export default function HmsIntegration({children}) {
             const response = await fetch(`https://localhost:7255/api/Customers/${Id}`);
             const payload = await response.json();
             setCustomer(payload.data.appUser);
-
         }
 
         fetchData();
@@ -68,9 +72,72 @@ export default function HmsIntegration({children}) {
 }, [managerId])
 
 
+//All bookings
+useEffect( ()=>{
+  async function fetchData(){
+ 
+    
+    const response = await fetch(`https://localhost:7255/api/Booking`);
+    const payload = await response.json();
+
+    setAllBooking(payload.data);
+  }
+
+  fetchData();
+
+}, [])
+
+
+//Manager Transaction
+useEffect( ()=>{
+  async function fetchData(){
+    setManagerId(localStorage.getItem("managerId"));
+      const Id = managerId;
+    
+    const response = await fetch(`https://localhost:7255/api/Transaction/GetAllTransactionByManager/${Id}?pageNumber=1&pageSize=12`);
+    const payload = await response.json();
+
+    SetManagerTransactions(payload.data);
+  }
+
+  fetchData();
+
+}, [])
+
+//user Transaction
+useEffect( ()=>{
+  async function fetchData(){
+      setCustomerId(localStorage.getItem("customerId"));
+      const Id = customerId;
+    
+    const response = await fetch(`https://localhost:7255/api/Transaction/GetUserTransaction/${Id}?pageNumber=1&pageSize=12`);
+    const payload = await response.json();
+
+    SetUserTransactions(payload.data);
+  }
+
+  fetchData();
+
+}, [])
+
+//Get amenities
+
+useEffect( ()=>{
+  async function fetchData(){
+          
+    const response = await fetch(`https://localhost:7255/api/Amenity/GetAmenities`);
+    const payload = await response.json();
+
+    SetAmenities(payload.data);
+  }
+
+  fetchData();
+
+}, [])
+
   return (
     <section className="section">
-      <HmsContext.Provider value={{customer, manager, ManagerBooking }}>
+      <HmsContext.Provider value={{customer, manager, ManagerBooking, allBooking, managerTransactions, userTransactions, amenities }}>
         {children}
       </HmsContext.Provider>
     </section>
@@ -79,33 +146,6 @@ export default function HmsIntegration({children}) {
 
 
 
-
-// export function Manager({children}) {
-//     const [payload, setPayload] = useState(4);
-//     const [storedId, setStoredId] = useState(localStorage.getItem('Id'))
-    
-   
-//     useEffect( ()=>{
-//         async function fetchData(){
-//             localStorage.setItem('managerId', "333ef607-d562-4ab3-8c29-98b8c0f4b23f");
-//             setStoredId(localStorage.getItem(""));
-//             const Id = storedId;
-//             const response = await fetch(`https://localhost:7255/api/Customers/Manager/${Id}`);
-//             const payload = await response.json();
-//             setPayload(payload.data.appUser);  
-//         }
-
-//         fetchData();
-     
-//     }, [])
-//   return (
-//     <section className="section">
-//       <ManagerContext.Provider value={payload}>
-//         {children}
-//       </ManagerContext.Provider>
-//     </section>
-//   );
-// }
 
 
 

@@ -114,3 +114,17 @@
     margin-left: 3.8rem;
  }
 
+ .back-btn{
+    width: 20%;;
+    color: green;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: #fff;
+    transition: all .4s ease-in;
+ }
+
+ .back-btn:hover{
+  background-color: green;
+  color: #fff;
+}
+

@@ -22,7 +22,7 @@ const Booking = () => {
         </div>
       </div>
       </NavLink>
-      <Sidebar roleValue={"Manager"}/>
+      <Sidebar roleValue={"Customer"}/>
     </>
   )
 }

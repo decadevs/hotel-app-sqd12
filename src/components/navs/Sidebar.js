@@ -8,8 +8,6 @@ import Logout from '../../../src/assets/Logout.svg';
 import {Link, NavLink} from 'react-router-dom';
 
 
-
-
 export default function Sidebar({roleValue}){
 
     function closeNav() {
@@ -24,8 +22,8 @@ export default function Sidebar({roleValue}){
 
     if(roleValue === "Customer"){
         dashboard = "customer-dashboard";
-        hotel = "customer-hotel";
-        plug = "customer-manager";
+        hotel = "customer-hotels";
+        plug = "customer-amenities";
         transaction = "customer-transaction";
 
     }else if(roleValue === "Admin"){
@@ -36,7 +34,7 @@ export default function Sidebar({roleValue}){
 
     }else if(roleValue === "Manager"){
         dashboard = "manager-dashboard";
-        hotel = "manager-hotel"
+        hotel = "manager-hotels"
         plug = "manager-bookings"
         transaction = "manager-transaction";
     }else{
@@ -68,7 +66,7 @@ export default function Sidebar({roleValue}){
                 </div>
                 <div id="plugTab">
                     <NavLink to={"/" +plug}  className="tab" ><img src={Manager} alt="Your SVG" /> 
-                        <div >{roleValue === "Customer"  ? "Manager" : roleValue === "manager"? "Booking" :  "Bookings"}</div>
+                        <div >{roleValue === "Customer"  ? "Ameneties" : roleValue === "manager"? "Booking" :  "Bookings"}</div>
                     </NavLink>
                 </div>
                 <div id="TransactionTab" >
