@@ -116,7 +116,7 @@ function Booking() {
                         <th>{transaction.serviceName}</th>
                         <th>{transaction.noOfPeople}</th>
                         <th>{transaction.paymentStatus}</th>
-                        <th></th>
+                        {/* <th>{transaction.state}</th> */}
                         <th>{transaction.isactive=== "Yes" ? <img alt="Your SVG" src={Active} /> : <img alt="Your SVG" src={Inactive} />}</th>
                         
                         <th className="Action">

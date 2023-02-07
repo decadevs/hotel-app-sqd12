@@ -6,12 +6,13 @@ import '../../style/ProfileDropDown.css';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { HmsContext } from './DashboardContext';
+import ManagerRequest from './ManagerRequest/ManagerRequest';
 
-export default function Navbar(){
-    const [open, setOpen] = useState(false);
-    // const closedropDown =() => setOpen(false);
-    const {customer, manager} = useContext(HmsContext);
-
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  // const closedropDown =() => setOpen(false);
+  const { customer, manager } = useContext(HmsContext);
+  
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
         document.getElementById("main").style.marginLeft = "250px";
@@ -25,6 +26,10 @@ export default function Navbar(){
                     </div>
                     <div>
                         <input type="text"/>
+                    </div>
+                    {/* ADD MANAGER REQUEST */}
+                    <div>
+                        <ManagerRequest/>
                     </div>
                     <div className="right-nav">
                         <div className="bell">
@@ -44,59 +49,67 @@ export default function Navbar(){
                          }                                                        
                         </div>
 
-                        {/* <div>
-                                <img src={Dropdown} alt="Your SVG" style={{"padding-top":"2.5rem"}}/>
-                        </div> */}
+          {/* <div>
+                <img src={Dropdown} alt="Your SVG" style={{"padding-top":"2.5rem"}}/>
+              </div> */}
 
-                        
-                    <div className="profile">
-                            {/* <img src={Profile} alt="Your SVG" style={{"width":"50px","border-radius":"50%"}}/> */}
+          
+          <div className="profile">
+            {/* <img src={Profile} alt="Your SVG" style={{"width":"50px","border-radius":"50%"}}/> */}
 
-                        <div className="dropdow-App">
-                            <div className="menu-container">
-                                <div className='menu-trigger' onClick={() => {setOpen(!open)}}>             
-                               
-                                            {/* <img  className='dropdownImg' src={Profile} alt="dropdown" style={{"width":"50px","border-radius":"50%"}} /> */}
-                                            <img src={Dropdown} alt="Your SVG" style={{"padding-top":"2.5rem"}}/>
-                                     </div>
-                                        <div className={`dropdown-menu ${open? 'active' : 'inactive'}`} >
-                                             <h3 className='dropdown-h3'>Profile<br/><span className='dropdown-span'>Website Designer</span>
-                                           </h3>
-                                            <ul className='dropdown-ul'>
+            <div className="dropdow-App">
+              <div className="menu-container">
+                <div className="menu-trigger" onClick={() => {setOpen(!open);}}>
+                  
+                  {/* <img  className='dropdownImg' src={Profile} alt="dropdown" style={{"width":"50px","border-radius":"50%"}} /> */}
+                  <img src={Dropdown} alt="Your SVG" style={{ "padding-top": "2.5rem" }}/>
+                </div>
+                <div className={`dropdown-menu ${open ? "active" : "inactive"}`} >
+                  <h3 className="dropdown-h3">
+                    Profile
+                    <br />
+                    <span className="dropdown-span">Website Designer</span>
+                  </h3>
+                  <ul className="dropdown-ul">
+                    <DropdownItem img={""} text={"Picture"} />{" "}
+                    <DropdownItem img={""} text={"Profile"} />{" "}
+                    <DropdownItem
+                      img={""}
+                      to={"/reset-password"}
+                      text={"Change Password"}
+                    />{" "}
+                    <DropdownItem img={""} text={"Settings"} />
+                    <DropdownItem img={""} text={"Sign out"} />
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                                               {/* <DropdownItem img = {""} text = {"Picture"} />   */}
-                                               
-                                                <Link to="/profile">
-                                                    <DropdownItem img = {""} text = {"Profile"} />
-                                               </Link>
-
-                                                <DropdownItem img = {""} text = {"Settings"} /> 
-
-                                                <Link to="/login">
-                                                    <DropdownItem img = {""} text = {"Sign out"} />
-                                                </Link>             
-                                                                                                                                         
-                                           </ul>
-                                       </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div>
-                            <img src={Profile} alt="dropdown" style={{"width":"50px","border-radius":"50%","padding":".3rem", "margin-top":".7rem", "margin-right":"2.5rem"}} />
-                        </div>
-                    </div>
-                </nav>
-            </header>
-    );
+          <div>
+            <img
+              src={Profile}
+              alt="dropdown"
+              style={{
+                width: "50px",
+                borderRadius: "50%",
+                padding: ".3rem",
+                marginTop: ".7rem",
+                marginRight: "2.5rem",
+              }}
+            />
+          </div>
+        </div>
+      </nav>
+    </header>
+  );
 }
 
 function DropdownItem(props) {
-    return(
-        <li className='dropdownItem'>
-            <img src={props.img} alt=""></img>
-              <a> {props.text} </a>
-        </li>
-        )
+  return (
+    <li className="dropdownItem">
+      <img src={props.img} alt=""></img>
+      <a> {props.text} </a>
+    </li>
+  );
 }
