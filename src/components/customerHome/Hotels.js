@@ -3,7 +3,6 @@ import NavLink from '../navs/NavLink';
 import Sidebar from '../navs/Sidebar';
 import NavbarCustomer from '../navs/Navbar';
 import Hotelview from '../../pages/customer/Hotelview';
-import HmsIntegration from '../navs/DashboardContext';
 
 
 export default function Hotel(){  

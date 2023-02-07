@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import "../../style/AddRoom.css";
 import myImage from "../../assets/cover.png";
 import { apiPostFormData } from "../../utils/apiHelpers";
+import { Link, useNavigate } from "react-router-dom";
 
 function AddRoom() {
   const [roomType, setRoomType] = useState("");
   const [roomNumber, setRoomNumber] = useState(0);
   const [hotelName, sethotelName] = useState("");
   const [isBooked, setIsBooked] = useState(false);
+  const navigate = useNavigate();
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -38,6 +41,9 @@ function AddRoom() {
   };
   return (
     <div className="AddRoom">
+      <Link to={'..'} onClick={(e) => { e.preventDefault(); navigate(-1);}}>
+                    <button className="back-btn">Back</button>
+      </Link>
       <p className="Tops">Managers Add Room</p>
 
       <div className="addRoom_cont">

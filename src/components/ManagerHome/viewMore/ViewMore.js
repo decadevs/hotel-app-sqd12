@@ -1,16 +1,16 @@
-import './viewMore.css'
-import viewMoreLogo from "../../assets/viewMoreLogo.jpeg"
-import RoomLogo from "../../assets/RoomLogo.jpeg"
-import locationIcon from '../../assets/locationIcon.svg'
-import Bell from '../../assets/Bell.svg'
+import './ViewMore.css'
+import viewMoreLogo from "../../../assets/viewMoreLogo.jpeg"
+import RoomLogo from "../../../assets/RoomLogo.jpeg"
+import locationIcon from '../../../assets/locationIcon.svg'
+import Bell from '../../../assets/Bell.svg'
 import React, {useState, useEffect} from 'react'
 import {useNavigate, Link} from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 
 
 
-const ViewMore = () => {
 
+const ViewMore = () => {
 const navigate = useNavigate();
 const [hotel, setHotel] = useState([])
 const { id } = useParams()
@@ -112,17 +112,14 @@ useEffect(() =>{
                         </div>
                     </div>
 
-                    <Link to='/booking'>
-                    <button className="addRoom-btn">book Room</button>
+                    <Link to='/addroom'>
+                    <button className="addRoom-btn">Add Rooms</button>
                     </Link>
 
-                    <Link to={'..'}>
-                    <button className="delete-request-btn" onClick={(e) => {e.preventDefault(); navigate(-1);}}>  Back
-                    </button>
+                    <Link to={'..'} onClick={(e) => { e.preventDefault(); navigate(-1);}}>
+                    <button className="delete-request-btn">Back</button>
                     </Link>
                    
-                    
-                 
                 </div>
             </div>
         </section>

@@ -3,6 +3,7 @@ import Bell from '../../../src/assets/Bell.svg';
 import Dropdown from '../../../src/assets/Drop-down.svg';
 import Profile from '../../../src/assets/Profile.jpg';
 import '../../style/ProfileDropDown.css';
+import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { HmsContext } from './DashboardContext';
 import ManagerRequest from './ManagerRequest/ManagerRequest';
@@ -26,10 +27,12 @@ export default function Navbar() {
                     <div>
                         <input type="text"/>
                     </div>
+
                     {/* ADD MANAGER REQUEST */}
                     <div>
                         <ManagerRequest/>
                     </div>
+                    
                     <div className="right-nav">
                         <div className="bell">
                             <img src={Bell} alt="Your SVG" />

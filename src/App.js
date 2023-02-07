@@ -36,6 +36,7 @@ import Error from "./components/modals/ErrorModal";
 import Success from "./components/modals/SuccessModal";
 import Booking from "./pages/customer/Booking";
 import ViewMore from "./components/viewMore/viewMore";
+import ManagerViewMore from "./components/ManagerHome/viewMore/ViewMore";
 import HotelListing from "./components/HotelListing/HotelListing";
 import HotelReview from "./components/HotelReview/HotelReview";
 import { ProfileLayout } from "./layouts/userProfileLayout/ProfileLayout";
@@ -60,31 +61,31 @@ function App() {
         <Route path="booking" element={<Booking />} />
         <Route path="user-transaction" element={<UserTransactions />} />
         <Route path="customer-transactions" element={<Transactions />} />
-        <Route path="pay-for-hotel" element={<PayForHotelForm />} />
         <Route path="addroom" element={<AddRoom />} />
         <Route path="create-modal" element={<Create />} />
         <Route path="delete-modal" element={<Delete />} />
         <Route path="update-modal" element={<Update />} />
         <Route path="error-modal" element={<Error />} />
         <Route path="success-modal" element={<Success />} />
-        <Route path="view-more" element={<ViewMore />} />
+        <Route name="view-more" path="view-more/:id" element={<ViewMore />} />
+        <Route name="manager-view-more" path="manager-view-more/:id" element={<ManagerViewMore />} />
         <Route path="hotel-listing" element={<HotelListing />} />
         <Route path="manager-dashboard" element={<Dashboard />} />
         <Route path="customer-dashboard" element={<CustomerDashboard />} />
         <Route path="admin-dashboard" element={<AdminDashboard />} />
         <Route path="manager-transaction" element={<ManagerTransactions />} />
         <Route path="manager-Bookings" element={<ManagerBookings />} />
-        <Route path="manager-hotel" element={<ManagerHotel />} />
+        <Route path="manager-hotels" element={<ManagerHotel />} />
         <Route path="customer-transaction" element={<CustomerTransaction />} />
         <Route path="customer-manager" element={<CustomerManager />} />
-        <Route path="customer-hotel" element={<CustomerHotel />} />
+        <Route path="customer-hotels" element={<CustomerHotel />} />
         <Route path="admin-transaction" element={<AdminTransaction />} />
         <Route path="admin-bookings" element={<AdminBookings />} />
         <Route path="admin-hotels" element={<AdminHotel />} />
         <Route path ="/profile" element={<ProfileLayout/>}/>
         <Route path="manager-transactions" element={<ManagerTransactions />} />
-        <Route path="/profile" element={<ProfileLayout />} />
-        <Route path="amenities" element={<Amenities />} />
+        <Route path="customer-amenities" element={<Amenities />} />
+        <Route path="create-amenity" element={<CreateAmenity />} />        
         <Route path="hotel-review" element={<HotelReview />} />
         <Route path="navbar" element={<Navbar />} />
         <Route path="sidebar" element={<Sidebar />} />

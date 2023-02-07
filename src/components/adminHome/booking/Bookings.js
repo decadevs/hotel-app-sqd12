@@ -14,7 +14,7 @@ import { HmsContext } from "../../navs/DashboardContext";
 
 function Booking() {
     //Context
-    const {ManagerBooking} = useContext(HmsContext);
+    const {allBooking} = useContext(HmsContext);
 
     const [transactions, setTransactions] = useState([]);
     
@@ -77,22 +77,20 @@ function Booking() {
                     </th>
                     <th>BOOKING REFERENCE</th>
                     <th>SERVICE NAME</th>
-                    {/* <th>PAYMENT STATUS</th> */}
                     <th>NO OF PERSONS</th>
-                    {/* <th>DEPOSIT</th>
-                    <th>STATUS</th> */}
-                   {/* Q */}
+                    <th>STATUS</th>
+                    <th></th>
+                    <th></th>
                 </tr>
-                {ManagerBooking.map((transaction) => (
+                {allBooking.map((transaction) => (
                     <tr key={transaction.id}>
                         <th className="UserTranCheckBox">
                             <input type="checkbox" />
                         </th>
                         <th>{transaction.bookingReference}</th>
                         <th>{transaction.serviceName}</th>
-                        {/* <th>{transaction.paymentStatus}</th> */}
                         <th>{transaction.noOfPeople}</th>
-                        <th>{transaction.deposit}</th>
+                        {/* <th>{transaction.deposit}</th> */}
                         <th>{transaction.paymentStatus ? <img alt="Your SVG" src={Active} /> : <img alt="Your SVG" src={Inactive} />}</th>
                         <th className="Action">
                             <img alt="Your SVG" src={Edit} onClick={() => handleEdit(transaction.id)} />

@@ -2,6 +2,11 @@
     text-align: center;
 }
 
+.container{
+    margin: 50px 60px 50px 200px;
+}
+
+
 .App-logo {
     height: 40vmin;
     pointer-events: none;
@@ -31,7 +36,7 @@
 
 
 .formBody {
-    width: 50%;
+    width: 65%;
     height: auto;
     background-color: #ffffff;
     border: 1px solid #173752;

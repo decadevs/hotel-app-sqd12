@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
-import HotelStyle from '../../style/Hotelview.module.css'
-import starrating from "../../assets/starrate.png";
-import chroniche from '../../assets/chroniche.png';
-import fraser from '../../assets/fraser.png'
-import presken from '../../assets/presken.png'
-import preskenAnnex from '../../assets/preskenAnnex.png'
-import radisson from '../../assets/radisson.png'
-import arrowdown from '../../assets/arrowdown.png'
+import HotelStyle from '../../../style/Hotelview.module.css'
+import starrating from "../../../assets/starrate.png";
+import chroniche from '../../../assets/chroniche.png';
+import fraser from '../../../assets/fraser.png'
+import presken from '../../../assets/presken.png'
+import preskenAnnex from '../../../assets/preskenAnnex.png'
+import radisson from '../../../assets/radisson.png'
+import arrowdown from '../../../assets/arrowdown.png'
 import {MdKeyboardArrowDown} from 'react-icons/md'
 import axios from 'axios'
 import { Link } from 'react-router-dom';
@@ -109,7 +109,10 @@ const Hotelview = () => {
                         {elem.discount}
                      </p>
 
-                     <Link to={{pathname: `/view-more/${elem.id}` }} > <button className={HotelStyle.viewMoreButton}>View more</button> </Link>
+                     <Link to={{pathname: `/manager-view-more/${elem.id}` }} > <button className={HotelStyle.viewMoreButton}>View more</button> </Link>
+
+                     <Link to={{pathname: `/create-amenity` }} > <button className={HotelStyle.AddAmenityButton}>Add Amenity</button> </Link>
+
                      <div>
                          <img src={starrating} alt="" />
                          <img src={starrating} alt="" />

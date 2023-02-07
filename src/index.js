@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 // import reportWebVitals from "./reportWebVitals";
 import ErrorBoundary from "./components/common/ErrorBoundary";
+import HmsIntegration from "./components/navs/DashboardContext";
 import AuthContext from "./context/auth/authContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -11,10 +12,12 @@ root.render(
     <ErrorBoundary>
       <Suspense fallback="loading" />
       <Suspense fallback="loading">
-        <AuthContext>
-          <App />
-        </AuthContext>
-          </Suspense>
+        <HmsIntegration>
+            <AuthContext>
+                  <App />
+            </AuthContext>
+        </HmsIntegration>
+      </Suspense>
     </ErrorBoundary>
   </React.StrictMode>
 );
