@@ -27,10 +27,12 @@ export default function Navbar() {
                     <div>
                         <input type="text"/>
                     </div>
+
                     {/* ADD MANAGER REQUEST */}
                     <div>
                         <ManagerRequest/>
                     </div>
+                    
                     <div className="right-nav">
                         <div className="bell">
                             <img src={Bell} alt="Your SVG" />
