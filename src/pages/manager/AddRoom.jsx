@@ -40,21 +40,24 @@ function AddRoom() {
     }
   };
   return (
+    
+   <div>
     <div className="AddRoom">
-      <Link to={'..'} onClick={(e) => { e.preventDefault(); navigate(-1);}}>
-                    <button className="back-btn">Back</button>
-      </Link>
-      <p className="Tops">Managers Add Room</p>
-
-      <div className="addRoom_cont">
+      
         <div className="high">
           <img
             className="roomPicture"
             src={myImage}
             alt="Pictorial Representation of the room"
-          />
+          /> 
+          
         </div>
-        <form onSubmit={handleSubmit}>
+      <div className="form-container">
+      <Link to={'..'} onClick={(e) => { e.preventDefault(); navigate(-1);}}>
+                    <button className="back">Back</button>
+       </Link>
+        <p className="Tops">Managers Add Room</p>
+        <form onSubmit={handleSubmit} className="form-form">
           <div className="RoomType">
             <div className="no">
               <p className="see">Please Select Room Type </p>
@@ -77,38 +80,36 @@ function AddRoom() {
                   Franco
                 </option>
               </select>
-            </div>
-            <div className="ken">
-              <p className="Loo">Please Type In The Room Number</p>
+              <p>Please Type In The Room Number</p>
               <input
+              className="room-number"
                 type="text"
-                className="Doings"
                 placeholder="Room Number"
                 onChange={(e) => setRoomNumber(e.target.value)}
               ></input>
-            </div>
-            <p className="Lin">Please Type In The Hotel Name</p>
-            <div className="has">
+            
+             <p>Please Type In The Hotel Name</p>
               <input
+               className="HotelName"
                 type="text"
-                className="more"
                 placeholder="Hotel Name"
                 onChange={(e) => sethotelName(e.target.value)}
               ></input>
             </div>
-            <div className="Joo">
-              <div className="going">
+
+                 <div className="down">
                 <input
                   type="radio"
                   id="html"
                   name="fav_language"
                   onChange={() => setIsBooked(true)}
                 />
+              
                 <label for="html" className="Hin">
                   Room Available
                 </label>
                 <br />
-              </div>
+             
               <input
                 type="radio"
                 id="css"
@@ -118,12 +119,15 @@ function AddRoom() {
               <label for="css" className="Hin">
                 Room NotAvailable
               </label>
-            </div>
-            <button className="room">Add Room</button>
+              </div>
+            <button className="back-btn">Add Room</button>
           </div>
         </form>
       </div>
+      </div>
     </div>
+  
+    
   );
 }
 export default AddRoom;
