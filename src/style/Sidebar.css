@@ -91,10 +91,10 @@
 }
 
 .nav input{
-    padding:0.7rem;
+    padding:0.3rem;
     margin: 1rem;
     margin-left: 15rem;
-    width: 17rem;
+    width: 15rem;
     background: url(../assets/Search.svg) no-repeat scroll left;
     background-color: #F6FCFF;
     padding-left:30px;

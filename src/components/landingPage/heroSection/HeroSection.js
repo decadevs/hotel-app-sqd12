@@ -14,8 +14,7 @@ function HeroSection() {
             Convenience
         </h1>
         <p className='hero-p'>
-            Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit mentitum.
-        </p>
+        Discover the perfect blend of comfort and convenience at our hotels. Whether you're here for business or leisure, our hotels offer a comfortable and affordable stay for everyone. Our spacious rooms are elegantly designed with your comfort in mind.        </p>
         <Link to='/' className='play'>
             <i class="fa fa-circle-play"></i> --------- DISCOVER
         </Link>

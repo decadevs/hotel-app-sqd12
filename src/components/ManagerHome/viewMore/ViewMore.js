@@ -24,7 +24,6 @@ useEffect(() =>{
 
         setHotel(jsonResult.data)
 
-        console.log(jsonResult);
     }
 
     fetchData()
@@ -111,14 +110,17 @@ useEffect(() =>{
                             <p>FITNESS CENTER</p>
                         </div>
                     </div>
+                    
+                    <div>
+                            <Link to={{pathname:`/addroom/${hotel.name}`}}>
+                            <button className="btn-nav">Add Rooms</button>
+                            </Link>
 
-                    <Link to='/addroom'>
-                    <button className="addRoom-btn">Add Rooms</button>
-                    </Link>
-
-                    <Link to={'..'} onClick={(e) => { e.preventDefault(); navigate(-1);}}>
-                    <button className="delete-request-btn">Back</button>
-                    </Link>
+                            <Link to={'..'} onClick={(e) => { e.preventDefault(); navigate(-1);}}>
+                            <button className="btn-nav">Back</button>
+                            </Link>
+                    </div>
+                    
                    
                 </div>
             </div>

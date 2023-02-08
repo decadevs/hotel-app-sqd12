@@ -6,10 +6,7 @@ function Footer() {
         <div className='container-footer'>
             <div id='oneF'>
                 <p className='footerCol1'>
-                Lorem ipsum dolor amet, 
-                consectetur adipiscing elit. 
-                Eget nisl nunc quam ac sed turpis volutpat. 
-                Cursus sed massa non nisi, placerat.
+                Experience luxury, comfort, and ease with our state-of-the-art Hotel Management System. Book now and elevate your stay with us.
                 <br/>
                 <br/>
                   
