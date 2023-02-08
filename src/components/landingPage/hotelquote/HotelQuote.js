@@ -10,7 +10,7 @@ function HotelQuote() {
     <div className='containerQuote'>
         <div id='pix1'>
             <img src={hotelQ1} alt='hotel quote' className='hotelq1_img'/>
-            <p id='pchild'><span className='quote'>"</span>Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum.</p>           
+            <p id='pchild'><span className='quote'>"</span>Unleash the full potential of your hotel with our user-friendly hotel management system.</p>           
         </div>
 
         <div id='pix2'>

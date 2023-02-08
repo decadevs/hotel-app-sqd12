@@ -126,3 +126,87 @@ margin-left: 3.5rem;
   background-color:aquamarine;
 
 }
+    /* border: 2px solid red;
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center; 
+    width: 650px;
+    height: 500px;
+    box-sizing: border-box;
+    margin-top: 60px;
+    background-color: rgba(246, 243, 243, 0.775);
+    box-shadow: rgba(233, 229, 226, 0.3) rgba(233, 229, 226, 0.3);
+  } */
+  .roomPicture{
+    width: 250px;
+    height: 500px;
+    flex-flow: column;
+    margin-right: 100px;
+    border-radius: 20px;
+    
+  }
+  .Tops{
+    margin-top: 30px;
+  }
+  .back{
+    margin-left: 220px;
+    width: 90px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(79, 144, 240);  
+    color: whitesmoke;
+
+  }
+  .form-form{
+    /* margin-left: 20px;
+    font-size: 15px; */
+  }
+ .ken input{
+   width: 100px;
+ }
+ .Doing{
+  width: 100px;
+ }
+ input.Doing{
+  padding: 10px;  
+ }
+ .Drop{
+  width: 300px;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(233, 229, 226);
+
+ }
+ .room-number{
+  width: 300px;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(233, 229, 226);
+
+ }
+ .HotelName{
+  width: 300px;
+  height: 30px;
+  border-radius: 15px;
+  border: none;
+  background-color: rgb(233, 229, 226);
+ }
+ .down{
+  margin: 30px;
+ }
+ .back-btn{
+  width: 90px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(79, 144, 240);
+  color: whitesmoke;
+ }
+
+ .no{
+  margin-right: 30px;
+ }

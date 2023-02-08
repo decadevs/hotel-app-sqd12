@@ -8,7 +8,7 @@ function ContactUs() {
     <div className='contact-container contact-image-container'>
         <img className='contact_img' id='contactImg' src={contactImg}/> 
         <h5 className='contacth2'>Contact Us</h5>
-        <p className='contactP'>Lorem ipsum dolor sit amet eam quas malorum accusam</p>
+        <p className='contactP'> Get in Touch with Us - Your Feedback Matters</p>
         <EmailForm/>       
     </div>
   )

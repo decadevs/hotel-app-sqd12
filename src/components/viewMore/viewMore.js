@@ -123,11 +123,8 @@ useEffect(() =>{
                             <button className="btn-nav" onClick={(e) => {e.preventDefault(); navigate(-1);}}>  Back
                             </button>
                             </Link>
-                    </div>
-                   
-                   
-                    
-                 
+                    </div>             
+                                  
                 </div>
             </div>
         </section>

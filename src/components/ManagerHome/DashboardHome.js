@@ -40,8 +40,7 @@ const Dashboard = () => {
           
           //   setCutomerer(response.customer);
           //   setHotels(response.hotels);
-          //   setTransactions(response.transactions);
-    
+          //   setTransactions(response.transactions);    
       //}, []);
 
     //use state for image slider
