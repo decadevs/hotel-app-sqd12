@@ -17,7 +17,7 @@ export default function HmsIntegration({children}) {
   
 
     localStorage.setItem('customerId', "1908c1c2-f35e-444f-a413-53dcb47d9574");
-    localStorage.setItem('managerId', "64a46b1f-e453-4f91-8fae-0a5bf9cae674");
+    localStorage.setItem('managerId', "333ef607-d562-4ab3-8c29-98b8c0f4b23f");
 
    
     useEffect( ()=>{
