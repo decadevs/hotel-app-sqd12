@@ -11,31 +11,42 @@
     padding: 120px;
 }
 
-.oneF {
+#oneF {
     /* background: yellow; */
     grid-area: oneF;
+    margin-top: 80px;
+    /* font-weight: normal; */
 }
 
 #twoF {
     /* background: rgb(148, 202, 0); */
     grid-area: twoF;
+    margin-left: auto;
     /* margin-bottom: 30px; */
 }
 #threeF {
     /* background: rgb(0, 255, 204); */
     grid-area: threeF;
+    margin-left: auto;
+
 }
 #fourF {
     /* background: rgb(0, 136, 255); */
     grid-area: fourF;
+    margin-left: auto;
+
 }
 #fiveF {
     /* background: rgb(0, 255, 225); */
     grid-area: fiveF;
+    margin-left: auto;
+
 }
 #sixF {
     /* background: rgb(255, 0, 179); */
     grid-area: sixF;
+    margin-left: auto;
+
 }
 
 
