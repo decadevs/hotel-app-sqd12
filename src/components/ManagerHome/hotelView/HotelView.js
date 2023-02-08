@@ -111,7 +111,7 @@ const Hotelview = () => {
 
                      <Link to={{pathname: `/manager-view-more/${elem.id}` }} > <button className={HotelStyle.viewMoreButton}>View more</button> </Link>
 
-                     <Link to={{pathname: `/create-amenity` }} > <button className={HotelStyle.AddAmenityButton}>Add Amenity</button> </Link>
+                     <Link to={{pathname: `/create-amenity/${elem.id}` }} > <button className={HotelStyle.AddAmenityButton}>Add Amenity</button> </Link>
 
                      <div>
                          <img src={starrating} alt="" />

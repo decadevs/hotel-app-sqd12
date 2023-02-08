@@ -23,7 +23,7 @@ const CustomerDashboard = () => {
   // const [customer, setCutomerer] = useState(0);
   // const [hotels, setHotels] = useState(0);
   // const [transactions, setTransactions] = useState(0);
-  const { customer, manager } = useContext(HmsContext);
+  const { customer, manager} = useContext(HmsContext);
   const { user } = useContext(AuthContext);
   console.log("Dashboard", user);
 
@@ -91,15 +91,15 @@ const CustomerDashboard = () => {
       <div className="rect-container">
         <div className="rectangle" id="rect-1">
           <h2>Gender</h2>
-          <p className="data">{user?.gender || "Male"}</p>
+          <p className="data">{customer.gender || "Male"}</p>
         </div>
         <div className="rectangle" id="rect-2">
           <h2>Username</h2>
-          <p className="data">{user.username}</p>
+          <p className="data">{customer.userName}</p>
         </div>
         <div className="rectangle" id="rect-3">
           <h2>Email</h2>
-          <p className="data">{user?.email || "example@gmail.com"}</p>
+          <p className="data">{customer.email || "example@gmail.com"}</p>
         </div>
       </div>
       <div className="hotel-slider-container">
