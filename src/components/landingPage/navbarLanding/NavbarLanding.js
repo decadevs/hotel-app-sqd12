@@ -42,7 +42,7 @@ function NavbarLanding() {
                 </li>
                 <li className='nav-item'>
                     <Link to='/hotel-listing' className='nav-links' onClick={closeMobileMenu}>
-                        listing
+                        Listing
                     </Link>
                 </li><li className='nav-item'>
                     <Link to='/' className='nav-links' onClick={closeMobileMenu}>
