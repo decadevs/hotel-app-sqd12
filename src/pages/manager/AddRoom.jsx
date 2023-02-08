@@ -1,15 +1,28 @@
 import React, { useState } from "react";
 import "../../style/AddRoom.css";
 import myImage from "../../assets/cover.png";
-import { apiPostFormData } from "../../utils/apiHelpers";
+// import { apiPostFormData } from "../../utils/apiHelpers";
 import { Link, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import Swal from "sweetalert2";
+
 
 function AddRoom() {
+  const {hotelName} =useParams();
   const [roomType, setRoomType] = useState("");
   const [roomNumber, setRoomNumber] = useState(0);
-  const [hotelName, sethotelName] = useState("");
   const [isBooked, setIsBooked] = useState(false);
   const navigate = useNavigate();
+
+  const showAlert = () => {
+          Swal.fire({
+            title: "Success",
+            text: "Room Added Successfully",
+            icon: "success",
+         }
+    )
+  }
+
   
 
   const handleSubmit = async (e) => {
@@ -22,8 +35,10 @@ function AddRoom() {
       //     isBooked,
       //   }
       // );
-      const { data } = await fetch(
-        `https://localhost:44384/api/Room/add-room?RoomType_ID=${roomType}&Hotel_Name=${hotelName}`,
+  
+      await fetch(
+        // `https://localhost:44384/api/Room/add-room?RoomType_ID=${roomType}&Hotel_Name=${hotelName}`,
+         `https://localhost:7255/api/Room/add-room?RoomType_ID=${roomType}&Hotel_Name=${hotelName}`,
         {
           method: "POST",
           headers: {
@@ -32,18 +47,23 @@ function AddRoom() {
           //contentType: 'application/json; charset=UTF-8',
           body: JSON.stringify({ roomNo: roomNumber, isBooked: isBooked }),
         }
-      );
-
-      console.log(data);
+      ).then(response => response.json())
+       .then(data=>{
+        setRoomType('');
+        setRoomNumber('');
+        setIsBooked(false);
+        console.log(data);
+        showAlert();
+        navigate("/manager-dashboard");
+      })
+      
     } catch (error) {
       alert(error);
     }
   };
   return (
     <div className="AddRoom">
-      <Link to={'..'} onClick={(e) => { e.preventDefault(); navigate(-1);}}>
-                    <button className="back-btn">Back</button>
-      </Link>
+      
       <p className="Tops">Managers Add Room</p>
 
       <div className="addRoom_cont">
@@ -87,15 +107,15 @@ function AddRoom() {
                 onChange={(e) => setRoomNumber(e.target.value)}
               ></input>
             </div>
-            <p className="Lin">Please Type In The Hotel Name</p>
+            {/* <p className="Lin">Please Type In The Hotel Name</p>
             <div className="has">
               <input
                 type="text"
                 className="more"
                 placeholder="Hotel Name"
-                onChange={(e) => sethotelName(e.target.value)}
+                onChange={(e) => setHotelName(e.target.value)}
               ></input>
-            </div>
+            </div> */}
             <div className="Joo">
               <div className="going">
                 <input
@@ -122,6 +142,9 @@ function AddRoom() {
             <button className="room">Add Room</button>
           </div>
         </form>
+        <Link to={'..'} onClick={(e) => { e.preventDefault(); navigate(-1);}}>
+                    <button className="back-btn">Back</button>
+      </Link>
       </div>
     </div>
   );

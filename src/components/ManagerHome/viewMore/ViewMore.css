@@ -155,23 +155,23 @@
 }
 
 
-.delete-request-btn:hover {
-    background-color: #ff8788;
-    color: #fff;
-}
-
-.addRoom-btn{
-    width: 100%;
-    color: green;
-    padding: 10px 20px;
+.btn-nav{
+    width: 6rem;
+    margin: 3px;
+    border-radius: 5px;
+    background-color: rgb(193, 193, 235);
+    color: black;
+    padding:8px;
     font-weight: bold;
-    background-color: #fff;
     transition: all .4s ease-in;
+    cursor: pointer;
+    
+   
 }
 
-.addRoom-btn:hover{
+.btn-nav:active{
     background-color: green;
-    color: #fff;
+    color: black;
 }
 
 @media(max-width: 1300px) {

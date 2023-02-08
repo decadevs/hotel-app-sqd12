@@ -19,8 +19,6 @@ export default function HmsIntegration({children}) {
     localStorage.setItem('customerId', "f029bbff-2655-49ed-a032-63042175aa40");
     localStorage.setItem('managerId', "333ef607-d562-4ab3-8c29-98b8c0f4b23f");
 
-
-
    
     useEffect( ()=>{
         async function fetchData(){
@@ -137,7 +135,7 @@ useEffect( ()=>{
 
   return (
     <section className="section">
-      <HmsContext.Provider value={{customer, manager, ManagerBooking, allBooking, managerTransactions, userTransactions, amenities }}>
+      <HmsContext.Provider value={{customer, manager, ManagerBooking, allBooking, managerTransactions, userTransactions, amenities, customerId }}>
         {children}
       </HmsContext.Provider>
     </section>

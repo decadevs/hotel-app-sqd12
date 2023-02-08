@@ -19,5 +19,5 @@ root.render(
         </HmsIntegration>
       </Suspense>
     </ErrorBoundary>
-  </React.StrictMode>
+  </React.StrictMode> 
 );

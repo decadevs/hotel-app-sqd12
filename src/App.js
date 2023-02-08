@@ -58,10 +58,10 @@ function App() {
         <Route path="user-transaction" element={<UserTransactions />} />
         <Route path="customer-transactions" element={<Transactions />} />
         <Route path="pay-for-hotel" element={<PayForHotelForm />} />
-        <Route path="booking" element={<Booking />} />
+        <Route path="booking/:id/:hotelId" element={<Booking />} />
         <Route path="user-transaction" element={<UserTransactions />} />
         <Route path="customer-transactions" element={<Transactions />} />
-        <Route path="addroom" element={<AddRoom />} />
+        <Route path="addroom/:hotelName" element={<AddRoom />} />
         <Route path="create-modal" element={<Create />} />
         <Route path="delete-modal" element={<Delete />} />
         <Route path="update-modal" element={<Update />} />
@@ -85,7 +85,7 @@ function App() {
         <Route path ="/profile" element={<ProfileLayout/>}/>
         <Route path="manager-transactions" element={<ManagerTransactions />} />
         <Route path="customer-amenities" element={<Amenities />} />
-        <Route path="create-amenity" element={<CreateAmenity />} />        
+        <Route path="create-amenity/:id" element={<CreateAmenity />} />        
         <Route path="hotel-review" element={<HotelReview />} />
         <Route path="navbar" element={<Navbar />} />
         <Route path="sidebar" element={<Sidebar />} />

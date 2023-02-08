@@ -29,9 +29,9 @@ export default function Navbar() {
                     </div>
 
                     {/* ADD MANAGER REQUEST */}
-                    <div>
+                    {/* <div>
                         <ManagerRequest/>
-                    </div>
+                    </div> */}
                     
                     <div className="right-nav">
                         <div className="bell">
