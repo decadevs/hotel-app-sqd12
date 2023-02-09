@@ -6,12 +6,12 @@ import '../../style/ProfileDropDown.css';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { HmsContext } from './DashboardContext';
-import ManagerRequest from './ManagerRequest/ManagerRequest';
+// import ManagerRequest from './ManagerRequest/ManagerRequest';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   // const closedropDown =() => setOpen(false);
-  const { customer, manager } = useContext(HmsContext);
+  const { customer, manager, managerId } = useContext(HmsContext);
   
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
@@ -73,15 +73,18 @@ export default function Navbar() {
                     <span className="dropdown-span">Website Designer</span>
                   </h3>
                   <ul className="dropdown-ul">
-                    <DropdownItem img={""} text={"Picture"} />{" "}
-                    <DropdownItem img={""} text={"Profile"} />{" "}
+                    {/* <DropdownItem img={""} text={"Picture"} to={""}/>{" "} */}
+                    <DropdownItem img={""} text={"Profile"} to={"/profile"}/>{" "}
                     <DropdownItem
                       img={""}
                       to={"/reset-password"}
                       text={"Change Password"}
-                    />{" "}
-                    <DropdownItem img={""} text={"Settings"} />
-                    <DropdownItem img={""} text={"Sign out"} />
+                    />
+
+                    {manager.firstName?  <DropdownItem img={""} text={"Add Hotel"} to={{pathname:`/add-hotel/${managerId}`}}/> : ""  }
+
+                    <DropdownItem img={""} text={"Settings"} to={"/setting"}/>
+                    <DropdownItem img={""} text={"Sign out"} to={"/login"}/>
                   </ul>
                 </div>
               </div>
@@ -111,7 +114,7 @@ function DropdownItem(props) {
   return (
     <li className="dropdownItem">
       <img src={props.img} alt=""></img>
-      <a> {props.text} </a>
+      <Link to={props.to}>{props.text}</Link>
     </li>
   );
 }
