@@ -37,7 +37,6 @@ const Booking = () => {
           setNoOfPeople('');
           setServiceName('');
           setRoomType('');
-          console.log(data);
           window.location.href = 'https://paystack.com/pay/hms-sq012';
         })
 

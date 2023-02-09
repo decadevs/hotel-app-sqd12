@@ -8,14 +8,52 @@
 }
 
 .main-section-container {
-    display: grid;
-    place-items: center;
+    /* display: grid; */
     height: 100vh;
-    gap: 20px;
+    width: 100vh;
+    display: flex;
+    margin: auto;
+}
+.landingSection{
+    border: 1px solid;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.leftSection{
+    margin-left: 20px;
+}
+.rightSection{
+margin-left: 40px;
+margin-top: 100px;
+
+
+}
+.btnDiv{
+    /* justify-content: space-between; */
+}
+.buttonFlexDiv{
+    /* margin-bottom: 15px; */
+    background-color: #d7e1e9;
+    margin-right: 20px;
+    width: 250px;
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.buttonFlexDiv,.icon, p{
+    padding: 7px;
+    /* align-items: center; */
+}
+.buttonFlexDiv p{
+    align-items: center;
+    margin-top: 10px;
+    font-size: 12px;
 }
 
-.landing-section {
-    min-width: 60vw;
+/* .landing-section {
+    min-width: 0vw;
     display: flex;
     place-items: center;
     justify-content: space-between;
@@ -23,15 +61,15 @@
     gap: 10px;
     border: 1px solid lightslategray;
     border-radius: 10px;
-}
+} */
 
-.left-landing-section {
+/* .left-landing-section {
     display: flex;
     flex: 2;
     flex-direction: column;
     gap: 10px;
     width: 30vw;
-}
+} */
 
 .landing-section p {
     font-size: 12px;
@@ -51,6 +89,11 @@
     color: rgb(0, 178, 139);
     font-weight: bold;
 }
+.icon small-icon {
+    position: absolute;
+    width: 40px;
+    height: 15px;
+}
 
 .address-div {
     display: flex;
@@ -58,8 +101,11 @@
     color: var(--font-color);
 }
 
-.address-div .small-icon {
-    width: 14px;
+.address-div .icon {
+    width: 100px;
+}
+icon1{
+    
 }
 
 .main-img-div {
@@ -124,14 +170,14 @@
     gap: 20px;
 }
 
+/* 
 .button-flex-div {
-    width: 80%;
+    width: 80%/;
     display: flex;
-    gap: 20px;
     background-color: rgba(0, 178, 139, 0.1);
-    padding: 30px;
+    padding: 10px;
     font-weight: bold;
-}
+} */
 
 /* .button-flex-div:nth-child(1) div {
     display: flex;

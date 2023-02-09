@@ -7,7 +7,15 @@ import React, {useState, useEffect} from 'react'
 import {useNavigate, Link} from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import { HmsContext } from '../navs/DashboardContext'
+<<<<<<< HEAD
 import { useContext } from 'react'  
+=======
+import { useContext } from 'react'
+import nairalogo from "../../assets/nairalogo.svg"
+import Greenchecker from "../../assets/Greenchecker.svg"
+import handBell from "../../assets/handBell.svg"
+import fitnessN from "../../assets/fitnessN.svg"
+>>>>>>> abb11e14f119fa3cb75c8bbf01a6742627d97c65
 
 
 
@@ -36,8 +44,8 @@ useEffect(() =>{
 
     return (
         <section className="main-section-container">
-            <div className="landing-section">
-                <div className="left-landing-section">
+            <div className="landingSection">
+                <div className="leftSection">
                     <div className="header-div">
                         <div className="head-div">
                         <h2>{hotel.name}</h2>
@@ -46,7 +54,7 @@ useEffect(() =>{
                         </div>
                         </div>
                         <div className="address-div">
-                            <img className="icon small-icon" src={locationIcon} />
+                            <img className="icon" src={locationIcon} />
                             <p>{hotel.address}</p>
                         </div>
                     </div>
@@ -87,28 +95,29 @@ useEffect(() =>{
                         </div>
                 </div>
 
-                <div className="right-landing-section">
-                    <div className="btn-div">
-                        <div className="button-flex-div">
-                            <img className="icon small-icon" src={Bell} />
+                <div className="rightSection">
+                    <div className="btnDiv">
+                        <div className="buttonFlexDiv">
+                            <img className="icon small-icon" src={nairalogo} width="50" height="50" />
                             <hr/>
-                            <p>200,000 per Night</p>
+                            <p>200,000</p> 
+                            <p>per Night</p>
                         </div>
 
-                        <div className="button-flex-div">
-                            <img className="icon small-icon" src={Bell} />
+                        <div className="buttonFlexDiv">
+                            <img className="icon small-icon" src={Greenchecker} width="50" height="50" />
                             <hr/>
                             <p>AVAILABLE</p>
                         </div>
 
-                        <div className="button-flex-div">
-                            <img className="icon small-icon" src={Bell} />
+                        <div className="buttonFlexDiv">
+                            <img className="icon small-icon" src={handBell} width="50" height="50"  />
                             <hr/>
                             <p>ROOM SERVICE 24H</p>
                         </div>
 
-                        <div className="button-flex-div">
-                            <img className="icon small-icon" src={Bell} />
+                        <div className="buttonFlexDiv">
+                            <img className="icon small-icon" src={fitnessN} width="50" height="50" />
                             <hr/>
                             <p>FITNESS CENTER</p>
                         </div>
