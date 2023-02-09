@@ -40,7 +40,7 @@ import ManagerViewMore from "./components/ManagerHome/viewMore/ViewMore";
 import HotelListing from "./components/HotelListing/HotelListing";
 import HotelReview from "./components/HotelReview/HotelReview";
 import { ProfileLayout } from "./layouts/userProfileLayout/ProfileLayout";
-
+import AddHotel from "./components/ManagerHome/addHotel/AddHotel";
 
 
 function App() {
@@ -83,6 +83,7 @@ function App() {
         <Route path="admin-bookings" element={<AdminBookings />} />
         <Route path="admin-hotels" element={<AdminHotel />} />
         <Route path ="/profile" element={<ProfileLayout/>}/>
+        <Route path ="/add-hotel/:id" element={<AddHotel/>}/>
         <Route path="manager-transactions" element={<ManagerTransactions />} />
         <Route path="customer-amenities" element={<Amenities />} />
         <Route path="create-amenity/:id" element={<CreateAmenity />} />        

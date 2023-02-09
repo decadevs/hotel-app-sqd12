@@ -17,7 +17,8 @@ const Booking = () => {
       const [roomType, setRoomType] = useState('');
       const { id, customer } = useParams()
           
-      const addBooking =async (noOfPeople, serviceName, roomType, id, hotelId) =>{
+      const addBooking =async (noOfPeople, serviceName, roomType, id, customer) =>{
+        alert(serviceName)
         await fetch( `https://localhost:7255/api/Booking`, {
           method: 'Post',
           body:JSON.stringify({
@@ -65,10 +66,10 @@ const Booking = () => {
                   {/* </div> */}
                   <div className="input-container">
                     <input type="text" disabled placeholder="Room Type" onChange={(e) => setRoomType(e.target.value)}/>
-                    <select className="02eec545-7d7c-4758-ad39-6a7e6c9e27f1" placeholder="Room Type">
-                      <option value="088e5374-9dd5-465a-8006-cd568ab82a0f">Standard Room</option>
-                      <option value="185ead6f-5f42-49aa-968c-2a433f917b9e">Superior Room-Pool View</option>
-                      <option value="295dfa27-a8db-4f77-8d13-ace7b0e9a75c">Premium Room</option>
+                    <select className="room-type" placeholder="Room Type">
+                      <option value="9b8c6634-2a31-40ef-8c4e-f7959dfc5c59">Standard Room</option>
+                      <option value="aefc62d4-2127-446a-af63-a786ca41a167">Superior Room-Pool View</option>
+                      <option value="fa258904-46ac-4785-bd02-4493aab50b71">Premium Room</option>
                     </select>
                     <div className="icon-box">
                       <MdOutlineBedroomParent className="icon" />
@@ -82,8 +83,8 @@ const Booking = () => {
                     </div>
                   </div>
                   <div className="input-container">
-                    <input type="text" disabled placeholder="Service" onChange={(e) => setServiceName(e.target.value)}/>
-                    <select className="input-service general" placeholder="Service">
+                    <input type="text" disabled placeholder="Service" />
+                    <select className="input-service general" placeholder="Service" onChange={(e) => setServiceName(e.target.value)}>
                       <option value="Personal Service">Personal Service</option>
                       <option value="Hotel Service">Hotel Service</option>
                     </select>

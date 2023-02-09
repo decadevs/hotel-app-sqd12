@@ -66,7 +66,7 @@ export default function Sidebar({roleValue}){
                 </div>
                 <div id="plugTab">
                     <NavLink to={"/" +plug}  className="tab" ><img src={Manager} alt="Your SVG" /> 
-                        <div >{roleValue === "Customer"  ? "Ameneties" : roleValue === "manager"? "Booking" :  "Bookings"}</div>
+                        <div >{roleValue === "Customer"  ? "Amenities" : roleValue === "manager"? "Booking" :  "Bookings"}</div>
                     </NavLink>
                 </div>
                 <div id="TransactionTab" >
@@ -76,7 +76,7 @@ export default function Sidebar({roleValue}){
                 </div>
                 <div className="logout"> 
                     <div>
-                        <Link to="/login">Logout <img src={Logout} alt="Your SVG"/> </Link>
+                        <Link to="/login"><img src={Logout} alt="Your SVG"/> Logout  </Link>
                     </div>                 
                  </div>                
             </div>         
