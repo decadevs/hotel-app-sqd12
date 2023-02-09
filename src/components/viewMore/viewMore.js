@@ -7,15 +7,11 @@ import React, {useState, useEffect} from 'react'
 import {useNavigate, Link} from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import { HmsContext } from '../navs/DashboardContext'
-<<<<<<< HEAD
-import { useContext } from 'react'  
-=======
 import { useContext } from 'react'
 import nairalogo from "../../assets/nairalogo.svg"
 import Greenchecker from "../../assets/Greenchecker.svg"
 import handBell from "../../assets/handBell.svg"
 import fitnessN from "../../assets/fitnessN.svg"
->>>>>>> abb11e14f119fa3cb75c8bbf01a6742627d97c65
 
 
 
